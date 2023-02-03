@@ -1,5 +1,10 @@
 using System;
+using CodeBase.Infrastructure.AssetManagement;
+using CodeBase.Infrastructure.Factory;
 using CodeBase.Services;
+using CodeBase.Services.PersistentProgress;
+using CodeBase.Services.Randomizer;
+using CodeBase.Services.StaticData;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -26,7 +31,27 @@ namespace CodeBase.Infrastructure.States
 
         private void RegisterServices()
         {
-            
+            RegisterStaticDataService();
+            RegisterAssetProvider();
+            _services.RegisterSingle<IGameFactory>(new GameFactory(
+                _services.Single<IAssetProvider>(),
+                _services.Single<IStaticDataService>(),
+                _services.Single<IRandomService>(),
+                _services.Single<IPersistentProgressService>(),
+                _services.Single<IGameStateMachine>()
+            ));
+        }
+        private void RegisterStaticDataService()
+        {
+            IStaticDataService staticData = new StaticDataService();
+          //  staticData.Load();
+            _services.RegisterSingle(staticData);
+        }
+        private void RegisterAssetProvider()
+        {
+            AssetProvider assetProvider = new AssetProvider();
+            _services.RegisterSingle<IAssetProvider>(assetProvider);
+            assetProvider.Initialize();
         }
         private void EnterLoadLevel() =>
             _stateMachine.Enter<LoadProgressState>();
