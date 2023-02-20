@@ -9,7 +9,6 @@ using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.Randomizer;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
-using ModestTree.Util;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Object = UnityEngine.Object;
@@ -92,32 +91,32 @@ namespace CodeBase.Infrastructure.Factory
 
         public Task<GameObject> CreateHero(Vector3 at)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<GameObject> CreateHero(MyTile at)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<GameObject> CreateHud()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<GameObject> CreateMonster(MonsterTypeId typeId, Transform parent)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<GameObject> CreateMonster(MonsterTypeId typeId, MyTile parent)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task<LootPiece> CreateLoot()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
 

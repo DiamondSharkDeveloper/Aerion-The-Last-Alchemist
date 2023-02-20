@@ -6,9 +6,11 @@ namespace CodeBase.StaticData
     [CreateAssetMenu(fileName = "LevelData", menuName = "Static Data/Level")]
     public class LevelStaticData : ScriptableObject
     {
-        public string LevelKey;
-        public List<EnemySpawnerStaticData> EnemySpawners;
-        public Vector3 InitialHeroPosition;
-        public LevelTransferStaticData LevelTransfer;
+        public string levelKey;
+        public int seaInterval = 3;
+        public int mapSize = 10;
+        public int waterSize = 1;
+        public int swampSize = 1;
+        public int rocksSize = 1;
     }
 }

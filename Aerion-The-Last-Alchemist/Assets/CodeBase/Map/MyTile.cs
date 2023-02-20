@@ -14,11 +14,10 @@ namespace CodeBase.Infrastructure.Factory
         public readonly Tile Tile;
         public readonly bool IsEdge;
 
-        public MyTile(Vector3Int cellPosition, TileTypeEnum type,bool isEdge, Tile tile)
+        public MyTile(Vector3Int cellPosition, TileTypeEnum type,bool isEdge)
         {
             CellPosition = cellPosition;
             Type = type;
-            Tile = tile;
             IsEdge = isEdge;
         }
     
