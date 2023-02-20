@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.Factory;
 using CodeBase.Services;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.Randomizer;
+using CodeBase.Services.SaveLoad;
 using CodeBase.Services.StaticData;
 
 namespace CodeBase.Infrastructure.States
@@ -40,6 +41,10 @@ namespace CodeBase.Infrastructure.States
                 _services.Single<IPersistentProgressService>(),
                 _services.Single<IGameStateMachine>()
             ));
+          
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(
+                _services.Single<IPersistentProgressService>(),
+                _services.Single<IGameFactory>()));
         }
         private void RegisterStaticDataService()
         {

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using CodeBase.Enemy;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.PersistentProgress;
@@ -32,7 +34,16 @@ namespace CodeBase.Infrastructure.Factory
             _persistentProgressService = persistentProgressService;
             _stateMachine = stateMachine;
         }
+
+        public List<ISavedProgressReader> ProgressReaders { get; }
+        public List<ISavedProgress> ProgressWriters { get; }
+
         public Task<GameObject> CreateHero(Vector3 at)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<GameObject> CreateHero(MyTile at)
         {
             throw new System.NotImplementedException();
         }
@@ -41,6 +52,24 @@ namespace CodeBase.Infrastructure.Factory
         {
             throw new System.NotImplementedException();
         }
+
+        public Task<GameObject> CreateMonster(MonsterTypeId typeId, Transform parent)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<GameObject> CreateMonster(MonsterTypeId typeId, MyTile parent)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<LootPiece> CreateLoot()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        
+
         public void Cleanup()
         {
             throw new System.NotImplementedException();
@@ -49,11 +78,6 @@ namespace CodeBase.Infrastructure.Factory
         {
             throw new System.NotImplementedException();
         }
-
-
-        public Task CreateLevelTransfer(Vector3 at)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
