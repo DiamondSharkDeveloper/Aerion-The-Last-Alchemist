@@ -16,7 +16,23 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 4fbb7472c00cddd478478a1284afa6a0
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 801db961344582744a19b5b37e702adb
+    m_Address: Materials/Tile/GrassTileMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ad2fa7ff1874e649abf2488d4166b44
+    m_Address: Materials/Tile/RockTileMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdd20486067cd5842b55ebd4ec1beb1c
+    m_Address: Materials/Tile/SwampTileMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8679a7fa2de60394bad568e3a2060982
+    m_Address: Materials/Tile/WaterTileMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

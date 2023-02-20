@@ -2,10 +2,9 @@ namespace CodeBase.Enums
 {
     public enum TileTypeEnum
     {
-        Ground=2,
-        Sand=3,
+        Swamp=2,
         Water=0,
         Grass=1,
-        Rock=4
+        Rock=3
     }
 }
