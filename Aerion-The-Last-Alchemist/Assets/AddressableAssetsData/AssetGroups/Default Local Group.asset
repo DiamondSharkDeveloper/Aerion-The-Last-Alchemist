@@ -16,7 +16,27 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 4fbb7472c00cddd478478a1284afa6a0
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: a41d53d07000dff4fbb25f1aad54834e
+    m_Address: Map
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83c6ae5fd4caddd4f8a6ad2aff7ed4c8
+    m_Address: RockGexPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0726d0ccbfb893449957e86dcac8a083
+    m_Address: SwampGexPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdf5f290451de3044a28e2e5ae320bb9
+    m_Address: WaterGexPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 07c99847bc4c607449df80dac668b208
+    m_Address: GrassGexPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:
