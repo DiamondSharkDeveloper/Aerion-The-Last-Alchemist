@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.Factory;
+using CodeBase.Map;
 using CodeBase.Services.Randomizer;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;

@@ -1,10 +1,12 @@
 using System.Threading.Tasks;
+using Cinemachine;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CodeBase.Infrastructure.States
@@ -35,6 +37,8 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
 
             await _gameFactory.CreateMap(_levelGenerator.GetMap(levelData));
+            GameObject hero=await _gameFactory.CreateHero(levelData.heroPositionTileX,levelData.heroPositionTileY);
+            await SetCameraTarget(hero);
         }
         public void Enter(string sceneName)
         {
@@ -54,5 +58,16 @@ namespace CodeBase.Infrastructure.States
         }
         private LevelStaticData LevelStaticData() => 
             _staticData.ForLevel("forest");
+
+        Task SetCameraTarget(GameObject target)
+        {
+            if (Camera.main)
+            {
+                CinemachineVirtualCamera camera = Camera.main.GetComponent<CinemachineVirtualCamera>();
+               camera.LookAt = target.transform;
+               camera.Follow = target.transform;
+            }
+            return Task.CompletedTask;
+        }
     }
 }

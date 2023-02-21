@@ -37,6 +37,10 @@ MonoBehaviour:
     m_Address: GrassGexPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6dd136b82c367ad46bd0fe6af4d27c08
+    m_Address: Hero
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

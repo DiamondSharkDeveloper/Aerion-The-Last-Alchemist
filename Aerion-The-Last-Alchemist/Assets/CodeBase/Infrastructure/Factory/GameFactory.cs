@@ -5,6 +5,7 @@ using CodeBase.Enemy;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.States;
+using CodeBase.Map;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.Randomizer;
 using CodeBase.Services.StaticData;
@@ -25,6 +26,8 @@ namespace CodeBase.Infrastructure.Factory
         private readonly IGameStateMachine _stateMachine;
         private Tilemap _tilemap;
         private GameObject _mapGameObject;
+        private GameObject _hero;
+        private List<MyTile> _mapCoordinates;
 
         public GameFactory(
             IAssetProvider assets,
@@ -45,17 +48,19 @@ namespace CodeBase.Infrastructure.Factory
 
         public async Task CreateMap(List<MyTile> mapCoordinates)
         {
-           await CreateTileMap();
-           int count;
-           for (var i = 0; i < mapCoordinates.Count; i++)
-           {
-               count = i;
-               _tilemap.SetTile(mapCoordinates[count].CellPosition, mapCoordinates[count].Tile);
-               mapCoordinates[count].StartWorldPosition = _tilemap.CellToWorld(mapCoordinates[count].CellPosition);
-               mapCoordinates[count].Tile.gameObject =await GetTyleByType(mapCoordinates[count].Type,
-                   mapCoordinates[count].StartWorldPosition);
-               mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
-           }
+            await CreateTileMap();
+            int count;
+            _mapCoordinates = mapCoordinates;
+            for (var i = 0; i < mapCoordinates.Count; i++)
+            {
+                count = i;
+                _tilemap.SetTile(mapCoordinates[count].CellPosition, mapCoordinates[count].Tile);
+                mapCoordinates[count].IsAvailable = mapCoordinates[count].Type == TileTypeEnum.Grass;
+                mapCoordinates[count].StartWorldPosition = _tilemap.CellToWorld(mapCoordinates[count].CellPosition);
+                mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
+                    mapCoordinates[count].StartWorldPosition);
+                mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
+            }
         }
 
         private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
@@ -77,8 +82,9 @@ namespace CodeBase.Infrastructure.Factory
                     path = AssetAddress.RockGexPath;
                     break;
             }
-            GameObject prefab =   await _assets.Load<GameObject>(path);
-            return InstantiateRegistered(prefab, at);
+
+            GameObject prefab = await _assets.Load<GameObject>(path);
+            return InstantiateRegistered(prefab, at, _tilemap.transform);
         }
 
         private async Task CreateTileMap()
@@ -88,14 +94,22 @@ namespace CodeBase.Infrastructure.Factory
             _tilemap = _mapGameObject.GetComponentInChildren<Tilemap>();
         }
 
-        public Task<GameObject> CreateHero(Vector3 at)
+        public async Task<GameObject> CreateHero(Vector3 at)
         {
-            throw new NotImplementedException();
+            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
+            return InstantiateRegistered(prefab, at);
         }
 
-        public Task<GameObject> CreateHero(MyTile at)
+        public async Task<GameObject> CreateHero(int xTilePosition, int yTilePosition)
         {
-            throw new NotImplementedException();
+            return await CreateHero(_mapCoordinates[xTilePosition * yTilePosition]);
+        }
+
+        public async Task<GameObject> CreateHero(MyTile at)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
+            _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            return _hero;
         }
 
         public Task<GameObject> CreateHud()
@@ -121,8 +135,8 @@ namespace CodeBase.Infrastructure.Factory
 
         public void Cleanup()
         {
-       //     ProgressReaders.Clear();
-        //    ProgressWriters.Clear();
+            //     ProgressReaders.Clear();
+            //    ProgressWriters.Clear();
 
             _assets.Cleanup();
         }
@@ -130,6 +144,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task WarmUp()
         {
             await _assets.Load<GameObject>(AssetAddress.MapPath);
+            await _assets.Load<GameObject>(AssetAddress.HeroPath);
             await _assets.Load<GameObject>(AssetAddress.GrassGexPath);
             await _assets.Load<GameObject>(AssetAddress.RockGexPath);
             await _assets.Load<GameObject>(AssetAddress.SwampGexPath);
@@ -141,6 +156,13 @@ namespace CodeBase.Infrastructure.Factory
             GameObject gameObject = Object.Instantiate(prefab, at, Quaternion.identity);
             RegisterProgressWatchers(gameObject);
 
+            return gameObject;
+        }
+
+        private GameObject InstantiateRegistered(GameObject prefab, Vector3 at, Transform perent)
+        {
+            GameObject gameObject = Object.Instantiate(prefab, at, Quaternion.identity, perent);
+            RegisterProgressWatchers(gameObject);
             return gameObject;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CodeBase.Infrastructure.Factory;
+using CodeBase.Map;
 using CodeBase.StaticData;
 
 namespace CodeBase.Services.Level

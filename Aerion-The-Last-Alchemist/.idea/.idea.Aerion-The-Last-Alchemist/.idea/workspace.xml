@@ -75,7 +75,7 @@
       <workItem from="1675373204177" duration="6809000" />
       <workItem from="1676350984694" duration="305000" />
       <workItem from="1676755336699" duration="21782000" />
-      <workItem from="1676946200808" duration="6847000" />
+      <workItem from="1676946200808" duration="13034000" />
     </task>
     <servers />
   </component>
@@ -93,26 +93,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>56</line>
+          <line>61</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="56" containingFunctionPresentation="method 'CreateMap'">
             <startOffsets>
-              <option value="2199" />
+              <option value="2458" />
             </startOffsets>
             <endOffsets>
-              <option value="2292" />
+              <option value="2551" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>54</line>
+          <line>59</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="54" containingFunctionPresentation="method 'CreateMap'">
             <startOffsets>
-              <option value="2035" />
+              <option value="2291" />
             </startOffsets>
             <endOffsets>
-              <option value="2183" />
+              <option value="2441" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
