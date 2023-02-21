@@ -11,7 +11,7 @@ namespace CodeBase.Infrastructure.Factory
     {
         List<ISavedProgressReader> ProgressReaders { get; }
         List<ISavedProgress> ProgressWriters { get; }
-        void CreateMap(List<MyTile>mapCoordinates);
+        Task CreateMap(List<MyTile>mapCoordinates);
         Task<GameObject> CreateHero(Vector3 at);
         Task<GameObject> CreateHero(MyTile at);
         Task<GameObject> CreateHud();

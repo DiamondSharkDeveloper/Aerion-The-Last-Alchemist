@@ -8,22 +8,22 @@ using UnityEngine;
 
 namespace CodeBase.Services.Level
 {
-    public class LevelGenerator : IService, ILevelGenerator
+    public class LevelGenerator :  ILevelGenerator
     {
         private IStaticDataService _staticDataService;
         private IRandomService _randomService;
         private readonly List<MyTile> _mapCoordinates = new List<MyTile>();
-        
-        LevelGenerator(IStaticDataService staticDataService,IRandomService randomService)
+
+        public LevelGenerator(IStaticDataService staticDataService,IRandomService randomService)
         {
             _staticDataService = staticDataService;
             _randomService = randomService;
         }
       
 
-        public List<MyTile> GetMap(string level)
+        public List<MyTile> GetMap(LevelStaticData staticData)
         {
-            GenerateMap(_staticDataService.ForLevel(level));
+            GenerateMap(staticData);
             return _mapCoordinates;
         }
 

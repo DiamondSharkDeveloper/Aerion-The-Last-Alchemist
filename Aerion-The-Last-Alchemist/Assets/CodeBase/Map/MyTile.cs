@@ -19,6 +19,7 @@ namespace CodeBase.Infrastructure.Factory
             CellPosition = cellPosition;
             Type = type;
             IsEdge = isEdge;
+            Tile = ScriptableObject.CreateInstance<Tile>();
         }
     
     }

@@ -43,22 +43,22 @@ namespace CodeBase.Infrastructure.Factory
         public List<ISavedProgressReader> ProgressReaders { get; }
         public List<ISavedProgress> ProgressWriters { get; }
 
-        public void CreateMap(List<MyTile> mapCoordinates)
+        public async Task CreateMap(List<MyTile> mapCoordinates)
         {
-            CreateTileMap();
-            foreach (MyTile mapCoordinate in mapCoordinates)
-            {
-                _tilemap.SetTile(mapCoordinate.CellPosition, mapCoordinate.Tile);
-                mapCoordinate.StartWorldPosition = _tilemap.CellToWorld(mapCoordinate.CellPosition);
-                GetTyleByType(mapCoordinate.Type, mapCoordinate.StartWorldPosition, tile =>
-                {
-                    tile.transform.localRotation = Quaternion.Euler(-90, 30, 0);
-                    mapCoordinate.Tile.gameObject = tile;
-                });
-            }
+           await CreateTileMap();
+           int count;
+           for (var i = 0; i < mapCoordinates.Count; i++)
+           {
+               count = i;
+               _tilemap.SetTile(mapCoordinates[count].CellPosition, mapCoordinates[count].Tile);
+               mapCoordinates[count].StartWorldPosition = _tilemap.CellToWorld(mapCoordinates[count].CellPosition);
+               mapCoordinates[count].Tile.gameObject =await GetTyleByType(mapCoordinates[count].Type,
+                   mapCoordinates[count].StartWorldPosition);
+               mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
+           }
         }
 
-        private async void GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at, Action<GameObject> action)
+        private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
         {
             string path = AssetAddress.WaterGexPath;
             switch (mapCoordinateType)
@@ -77,9 +77,8 @@ namespace CodeBase.Infrastructure.Factory
                     path = AssetAddress.RockGexPath;
                     break;
             }
-
-            GameObject prefab = await _assets.Load<GameObject>(path);
-            action.Invoke(InstantiateRegistered(prefab, at));
+            GameObject prefab =   await _assets.Load<GameObject>(path);
+            return InstantiateRegistered(prefab, at);
         }
 
         private async Task CreateTileMap()
@@ -122,8 +121,8 @@ namespace CodeBase.Infrastructure.Factory
 
         public void Cleanup()
         {
-            ProgressReaders.Clear();
-            ProgressWriters.Clear();
+       //     ProgressReaders.Clear();
+        //    ProgressWriters.Clear();
 
             _assets.Cleanup();
         }
