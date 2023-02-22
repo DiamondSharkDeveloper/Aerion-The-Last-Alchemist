@@ -18,7 +18,7 @@ MonoBehaviour:
   waterSize: 40
   swampSize: 40
   rocksSize: 40
-  heroPositionTileX: 40
+  heroPositionTileX: 20
   heroPositionTileY: 20
   labPositionTileX: 21
   labPositionTileY: 20

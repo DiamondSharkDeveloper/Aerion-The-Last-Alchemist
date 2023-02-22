@@ -60,6 +60,7 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
+                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]);
             }
         }
 

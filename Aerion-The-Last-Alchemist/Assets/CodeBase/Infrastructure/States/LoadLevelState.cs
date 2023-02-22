@@ -2,12 +2,13 @@ using System.Threading.Tasks;
 using Cinemachine;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
+using CodeBase.Services.Input;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using CodeBase.Hero;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -20,8 +21,9 @@ namespace CodeBase.Infrastructure.States
         private readonly IPersistentProgressService _progressService;
         private readonly IStaticDataService _staticData;
         private readonly ILevelGenerator _levelGenerator;
+        private readonly IInputService _inputService;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain, IGameFactory gameFactory, IPersistentProgressService progressService, IStaticDataService staticDataService,ILevelGenerator  levelGenerator)
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain, IGameFactory gameFactory, IPersistentProgressService progressService, IStaticDataService staticDataService,ILevelGenerator  levelGenerator,IInputService inputService)
         {
             _stateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
@@ -30,6 +32,7 @@ namespace CodeBase.Infrastructure.States
             _progressService = progressService;
             _staticData = staticDataService;
             _levelGenerator = levelGenerator;
+            _inputService = inputService;
 
         }
         private async Task InitGameWorld()
@@ -37,8 +40,14 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
 
             await _gameFactory.CreateMap(_levelGenerator.GetMap(levelData));
-            GameObject hero=await _gameFactory.CreateHero(levelData.heroPositionTileX,levelData.heroPositionTileY);
-            await SetCameraTarget(hero);
+            GameObject heroGameObject=await _gameFactory.CreateHero(levelData.heroPositionTileX,levelData.heroPositionTileY);
+            Hero.Hero hero;
+            if (heroGameObject.TryGetComponent(out hero))
+            {
+                hero.Construct(_inputService);
+            }
+            
+            await SetCameraTarget(heroGameObject);
         }
         public void Enter(string sceneName)
         {
