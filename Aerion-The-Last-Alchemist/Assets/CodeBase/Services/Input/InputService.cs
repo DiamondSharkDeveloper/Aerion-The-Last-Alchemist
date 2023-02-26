@@ -12,16 +12,14 @@ namespace CodeBase.Services.Input
         }
 
         public event Action<WorldTile> OnTileClick;
-        void FixedUpdate()
+        void Update()
         {
             RaycastHit hit;
             Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
             if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Click");
                 if (Physics.Raycast(rayOrigin, out hit))
                 {
-                    Debug.Log("Ray");
                     WorldTile worldTile;
                     if (hit.transform.TryGetComponent(out worldTile))
                     {

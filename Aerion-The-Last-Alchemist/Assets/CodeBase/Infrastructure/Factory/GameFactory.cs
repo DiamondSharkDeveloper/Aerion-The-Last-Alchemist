@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CodeBase.Data;
 using CodeBase.Enemy;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.AssetManagement;
@@ -49,18 +50,21 @@ namespace CodeBase.Infrastructure.Factory
         public async Task CreateMap(List<MyTile> mapCoordinates)
         {
             await CreateTileMap();
-            int count;
-            _mapCoordinates = mapCoordinates;
             for (var i = 0; i < mapCoordinates.Count; i++)
             {
-                count = i;
+                int count = i;
                 _tilemap.SetTile(mapCoordinates[count].CellPosition, mapCoordinates[count].Tile);
                 mapCoordinates[count].IsAvailable = mapCoordinates[count].Type == TileTypeEnum.Grass;
                 mapCoordinates[count].StartWorldPosition = _tilemap.CellToWorld(mapCoordinates[count].CellPosition);
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
-                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]);
+                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]); 
+                if (mapCoordinates[count].TileObjectType == TileObjectType.Ingredient)
+                {
+                    await CreateLoot(mapCoordinates[count]);
+                }
+                
             }
         }
 
@@ -94,38 +98,42 @@ namespace CodeBase.Infrastructure.Factory
             _mapGameObject = InstantiateRegistered(prefab, Vector3.zero);
             _tilemap = _mapGameObject.GetComponentInChildren<Tilemap>();
         }
-
-        public async Task<GameObject> CreateHero(Vector3 at)
-        {
-            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
-            return InstantiateRegistered(prefab, at);
-        }
-
-        public async Task<GameObject> CreateHero(int xTilePosition, int yTilePosition)
-        {
-            return await CreateHero(_mapCoordinates[xTilePosition * yTilePosition]);
-        }
-
         public async Task<GameObject> CreateHero(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
             _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
             return _hero;
         }
+        public async Task<GameObject> CreateLoot(MyTile at)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
+            _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            return _hero;
+        }
+
+        public async Task<GameObject> CreateHouse(MyTile parent)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
+            return InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
+        }
 
         public Task<GameObject> CreateHud()
         {
             throw new NotImplementedException();
         }
-
-        public Task<GameObject> CreateMonster(MonsterTypeId typeId, Transform parent)
+        
+        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<GameObject> CreateMonster(MonsterTypeId typeId, MyTile parent)
-        {
-            throw new NotImplementedException();
+            string path = AssetAddress.CreaturePath;
+            // switch (typeId)
+            // {
+            //     case CreatureTypeId.Frog:
+            //         
+            //         break;
+            //         
+            // }
+            GameObject prefab = await _assets.Load<GameObject>(path);
+            return InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
         }
 
         public Task<LootPiece> CreateLoot()
@@ -145,6 +153,9 @@ namespace CodeBase.Infrastructure.Factory
         public async Task WarmUp()
         {
             await _assets.Load<GameObject>(AssetAddress.MapPath);
+          
+            await _assets.Load<GameObject>(AssetAddress.HousePath);
+            await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);
             await _assets.Load<GameObject>(AssetAddress.GrassGexPath);
             await _assets.Load<GameObject>(AssetAddress.RockGexPath);

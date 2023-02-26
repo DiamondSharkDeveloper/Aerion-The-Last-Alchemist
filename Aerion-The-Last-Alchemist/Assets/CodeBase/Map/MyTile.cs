@@ -1,3 +1,4 @@
+using CodeBase.Data;
 using CodeBase.Enums;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -13,6 +14,7 @@ namespace CodeBase.Map
         public readonly Tile Tile;
         public readonly bool IsEdge;
         public bool IsAvailable;
+        public TileObjectType TileObjectType;
 
         public MyTile(Vector3Int cellPosition, TileTypeEnum type,bool isEdge)
         {
@@ -21,6 +23,14 @@ namespace CodeBase.Map
             IsEdge = isEdge;
             Tile = ScriptableObject.CreateInstance<Tile>();
         }
-    
+
+        public MyTile( Vector3Int cellPosition, TileTypeEnum type, bool isEdge, TileObjectType tileObjectType)
+        {
+            CellPosition = cellPosition;
+            Type = type;
+            Tile = ScriptableObject.CreateInstance<Tile>();
+            IsEdge = isEdge;
+            TileObjectType = tileObjectType;
+        }
     }
 }

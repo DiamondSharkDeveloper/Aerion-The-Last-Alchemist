@@ -41,6 +41,18 @@ MonoBehaviour:
     m_Address: Hero
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bb6286c1c830ed743bfa767850599817
+    m_Address: HousePrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 977cbd1dd9cd22f4480eba22ef316f76
+    m_Address: LootPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ac3c392f29fa5d41ab7817ef632762c
+    m_Address: Creature
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

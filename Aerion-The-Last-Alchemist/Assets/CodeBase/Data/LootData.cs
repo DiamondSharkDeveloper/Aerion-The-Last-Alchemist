@@ -10,16 +10,16 @@ namespace CodeBase.Data
     
         public Action Changed;
 
-        public void Collect(Loot loot)
-        {
-            Collected += loot.Value;
-            Changed?.Invoke();
-        }
+        // public void Collect(Loot loot)
+        // {
+        //     Collected += loot.Value;
+        //     Changed?.Invoke();
+        // }
 
-        public void Add(int lootValue)
-        {
-            Collected += lootValue;
-            Changed?.Invoke();
-        }
+        // public void Add(int lootValue)
+        // {
+        //     Collected += lootValue;
+        //     Changed?.Invoke();
+        // }
     }
 }

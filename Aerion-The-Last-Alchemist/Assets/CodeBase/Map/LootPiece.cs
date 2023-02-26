@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace CodeBase.Enemy
 {
-  public class LootPiece : MonoBehaviour, ISavedProgress
-  { private GameObject _lootObject;
-    private GameObject _pickupFxPrefab;
+  public class LootPiece : MonoBehaviour
+  { public GameObject lootObject;
+    public GameObject pickupFxPrefab;
+    public GameObject fxPrefab;
 
     private WorldData _worldData;
     private Loot _loot;
@@ -24,8 +25,8 @@ namespace CodeBase.Enemy
     public void Initialize(Loot loot) => 
       _loot = loot;
 
-    private void Start() => 
-      _id = GetComponent<UniqueId>().Id;
+    // private void Start() => 
+    //   _id = GetComponent<UniqueId>().Id;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -63,12 +64,12 @@ namespace CodeBase.Enemy
 
     private void UpdateWorldData()
     {
-      UpdateCollectedLootAmount();
-      RemoveLootPieceFromSavedPieces();
+      // UpdateCollectedLootAmount();
+      // RemoveLootPieceFromSavedPieces();
     }
 
-    private void UpdateCollectedLootAmount() =>
-      _worldData.LootData.Collect(_loot);
+    // private void UpdateCollectedLootAmount() =>
+    //   _worldData.LootData.Collect(_loot);
 
     private void RemoveLootPieceFromSavedPieces()
     {
@@ -79,9 +80,9 @@ namespace CodeBase.Enemy
     }
 
     private void HideLootObject() =>
-      _lootObject.SetActive(false);
+      lootObject.SetActive(false);
 
     private void PlayPickupFx() =>
-      Instantiate(_pickupFxPrefab, transform.position, Quaternion.identity);
+      Instantiate(pickupFxPrefab, transform.position, Quaternion.identity);
   }
 }

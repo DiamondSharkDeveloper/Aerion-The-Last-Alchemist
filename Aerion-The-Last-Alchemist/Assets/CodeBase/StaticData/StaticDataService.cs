@@ -16,7 +16,7 @@ namespace CodeBase.StaticData
                 .ToDictionary(x => x.levelKey, x => x);
         }
 
-        public MonsterStaticData ForMonster(MonsterTypeId typeId)
+        public MonsterStaticData ForMonster(CreatureTypeId typeId)
         {
             throw new System.NotImplementedException();
         }

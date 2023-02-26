@@ -1,12 +1,12 @@
 using System;
-using DG.Tweening;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Data
 {
     [Serializable]
     public class Loot
     {
-        public LootType Type;
-        public int Value;
+        public TileObjectType type;
+        public int value;
     }
 }
