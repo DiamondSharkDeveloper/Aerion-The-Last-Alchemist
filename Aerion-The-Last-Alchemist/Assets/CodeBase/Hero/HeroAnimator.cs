@@ -7,7 +7,7 @@ namespace CodeBase.Hero
     public class HeroAnimator: MonoBehaviour,IAnimationStateReader
     {
         [SerializeField] public Animator _animator;
-        private static readonly int MoveHash = Animator.StringToHash("Walking");
+        private static readonly int MoveHash = Animator.StringToHash("Walk");
         private readonly int _idleStateHash = Animator.StringToHash("Idle");
         private readonly int _run = Animator.StringToHash("Run");
         public AnimatorState State { get; private set; }
@@ -19,6 +19,10 @@ namespace CodeBase.Hero
             StateEntered?.Invoke(State);
         }
 
+        public void PlayMoveAnimation(bool isMove)
+        {
+            _animator.SetBool(MoveHash,isMove);
+        }
         public void ExitedState(int stateHash)
         {
             StateExited?.Invoke(StateFor(stateHash));

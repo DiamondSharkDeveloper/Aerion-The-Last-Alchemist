@@ -72,16 +72,12 @@ namespace CodeBase.Services.Level
         private void GenerateHeroTile(LevelStaticData staticData)
         {
             _mapCoordinates[staticData.heroPosition].TileObjectType = TileObjectType.Hero;
-            foreach (int neighbour in GetNeighbours(staticData.heroPosition, staticData.mapSize))
-            {
-                _mapCoordinates[neighbour].TileObjectType = TileObjectType.Unavailable;
-            }
         }
 
         private void GenerateCreatureTile(LevelStaticData staticData)
         {
             _mapCoordinates[staticData.creaturePosition].TileObjectType = TileObjectType.Creature;
-            foreach (int neighbour in GetNeighbours(staticData.creaturePosition, staticData.mapSize))
+            foreach (int neighbour in GetNeighbours(staticData.housePosition, staticData.mapSize))
             {
                 _mapCoordinates[neighbour].TileObjectType = TileObjectType.Unavailable;
             }

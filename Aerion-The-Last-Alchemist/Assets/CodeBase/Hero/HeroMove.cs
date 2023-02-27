@@ -2,6 +2,8 @@ using System;
 using CodeBase.Map;
 using CodeBase.Services.Input;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -11,7 +13,8 @@ namespace CodeBase.Hero
         private IInputService _inputService;
         private MyTile _currentTile;
         [SerializeField] private float moveSpeed = 30;
-      
+        private TweenerCore<Vector3, Vector3, VectorOptions> _core;
+        public event Action<bool> _isMove;
 
         public void Construct(IInputService inputService)
         {
@@ -23,27 +26,14 @@ namespace CodeBase.Hero
         {
             if (tile.IsAvailable && _currentTile != tile)
             {
+                _core?.Kill();
                 transform.SetParent(tile.Tile.gameObject.transform);
-                transform.DOMove(transform.parent.position, 10);
+                _core = transform.DOMove(transform.parent.position, 10);
+                _core.onComplete += () => { _isMove?.Invoke(false); };
+                _core.onKill += () => { _isMove?.Invoke(false); };
                 _currentTile = tile;
                 transform.LookAt(transform.parent);
-            }
-        }
-
-        private void Update()
-        {
-            DoMove();
-        }
-
-        private void DoMove()
-        {
-            if (Vector3.Distance(transform.parent.position, transform.position) > 0.1f)
-            {
-                Vector3.MoveTowards(transform.position, transform.parent.position, moveSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.position = transform.parent.position;
+                _isMove?.Invoke(true);
             }
         }
     }

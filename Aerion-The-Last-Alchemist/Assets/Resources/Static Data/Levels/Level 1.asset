@@ -18,6 +18,8 @@ MonoBehaviour:
   waterSize: 40
   swampSize: 40
   rocksSize: 40
-  lootOnTheMap:
-  - Type: 0
-    Value: 0
+  ingredientsValue: 10
+  heroPosition: 220
+  housePosition: 311
+  creaturePosition: 624
+  creatureTypeId: 0
