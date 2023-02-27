@@ -107,8 +107,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
-            _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
-            return _hero;
+            return InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
         }
 
         public async Task<GameObject> CreateHouse(MyTile parent)
@@ -133,7 +132,9 @@ namespace CodeBase.Infrastructure.Factory
             //         
             // }
             GameObject prefab = await _assets.Load<GameObject>(path);
-            return InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
+            GameObject creature=InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
+            creature.AddComponent<Creature.Creature>().Construct(_hero);
+            return creature;
         }
 
         public Task<LootPiece> CreateLoot()
@@ -157,6 +158,7 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.HousePath);
             await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);
+            await _assets.Load<GameObject>(AssetAddress.CreaturePath);
             await _assets.Load<GameObject>(AssetAddress.GrassGexPath);
             await _assets.Load<GameObject>(AssetAddress.RockGexPath);
             await _assets.Load<GameObject>(AssetAddress.SwampGexPath);

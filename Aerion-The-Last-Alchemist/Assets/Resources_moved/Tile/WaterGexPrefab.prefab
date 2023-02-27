@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8174177695473404817}
   - component: {fileID: 5106898201887245364}
   - component: {fileID: 7006386689077866750}
-  - component: {fileID: 5741875805822347255}
+  - component: {fileID: 435798172891279521}
   m_Layer: 0
   m_Name: WaterGexPrefab
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5741875805822347255
-BoxCollider:
+--- !u!64 &435798172891279521
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1644793, y: 1.0084687, z: 0.20000015}
-  m_Center: {x: 0.000000005960466, y: -0.0000000015971027, z: 0.10000003}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2750352479312598713, guid: 5935f787edab60248bf5397ac239c010, type: 3}

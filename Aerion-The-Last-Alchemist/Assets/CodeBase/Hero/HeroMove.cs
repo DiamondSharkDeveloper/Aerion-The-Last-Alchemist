@@ -1,9 +1,11 @@
 using System;
+using CodeBase.Logic;
 using CodeBase.Map;
 using CodeBase.Services.Input;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -14,12 +16,14 @@ namespace CodeBase.Hero
         private MyTile _currentTile;
         [SerializeField] private float moveSpeed = 30;
         private TweenerCore<Vector3, Vector3, VectorOptions> _core;
+        private LookAtTarget _lookAtTarget;
         public event Action<bool> _isMove;
 
         public void Construct(IInputService inputService)
         {
             _inputService = inputService;
             _inputService.OnTileClick += tile => { Move(tile.MyTile); };
+            _lookAtTarget = transform.AddComponent<LookAtTarget>();
         }
 
         private void Move(MyTile tile)
@@ -32,7 +36,7 @@ namespace CodeBase.Hero
                 _core.onComplete += () => { _isMove?.Invoke(false); };
                 _core.onKill += () => { _isMove?.Invoke(false); };
                 _currentTile = tile;
-                transform.LookAt(transform.parent);
+                _lookAtTarget.StartRotation(_currentTile.Tile.gameObject.transform);
                 _isMove?.Invoke(true);
             }
         }

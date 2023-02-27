@@ -44,13 +44,14 @@ namespace CodeBase.Infrastructure.States
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
             await _gameFactory.CreateMap(mapCoordinates);
             await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition]);
-            await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition]);
+
             GameObject heroGameObject = await _gameFactory.CreateHero(mapCoordinates[levelData.heroPosition]);
             if (heroGameObject.TryGetComponent(out Hero.Hero hero))
             {
                 hero.Construct(_inputService);
             }
-            
+
+            await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition]);
             await SetCameraTarget(heroGameObject);
         }
 

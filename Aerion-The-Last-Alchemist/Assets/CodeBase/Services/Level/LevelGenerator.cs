@@ -107,7 +107,7 @@ namespace CodeBase.Services.Level
                 {
                     if (amount > 0)
                     {
-                        if (_mapCoordinates.Count >= neighbours[i] - 1 && neighbours[i] >= 0)
+                        if (_mapCoordinates.Count >= neighbours[i]&&_mapCoordinates.Count >= neighbours[i] - 1 && neighbours[i] >= 0)
                         {
                             if (_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
