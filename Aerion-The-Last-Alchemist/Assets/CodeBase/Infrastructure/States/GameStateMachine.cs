@@ -24,6 +24,7 @@ namespace CodeBase.Infrastructure.States
                     allServices.Single<IPersistentProgressService>(), allServices.Single<IStaticDataService>(),allServices.Single<ILevelGenerator>(),allServices.Single<IInputService>()),
                 [typeof(LoadProgressState)] = new LoadProgressState(this),
                 [typeof(GameLoopState)] = new GameLoopState(this),
+                [typeof(LabState)] = new LabState(this,sceneLoader,allServices,loadingCurtain),
             };
         }
 

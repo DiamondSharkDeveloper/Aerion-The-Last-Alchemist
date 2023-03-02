@@ -1,3 +1,4 @@
+using System;
 using CodeBase.Data;
 using CodeBase.Enums;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace CodeBase.Map
         public readonly bool IsEdge;
         public bool IsAvailable;
         public TileObjectType TileObjectType;
+        public  Action OnStandAction;
 
         public MyTile(Vector3Int cellPosition, TileTypeEnum type,bool isEdge)
         {

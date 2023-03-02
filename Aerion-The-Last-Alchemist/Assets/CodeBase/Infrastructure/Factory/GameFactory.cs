@@ -58,7 +58,7 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].StartWorldPosition = _tilemap.CellToWorld(mapCoordinates[count].CellPosition);
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
-                mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(-90, 30, 0);
+                mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
                 mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]); 
                 if (mapCoordinates[count].TileObjectType == TileObjectType.Ingredient)
                 {
@@ -104,24 +104,34 @@ namespace CodeBase.Infrastructure.Factory
             _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
             return _hero;
         }
+
+        public async Task<GameObject> CreateHouse(MyTile parent, Action action)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
+            parent.OnStandAction = new Action(action);
+            return InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
+            
+        }
+
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
-            return InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            GameObject loot=InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+           LootPiece lootPiece= loot.AddComponent<LootPiece>();
+           at.OnStandAction = () =>
+           {
+               lootPiece.Pickup();
+           };
+           return loot;
         }
-
-        public async Task<GameObject> CreateHouse(MyTile parent)
-        {
-            GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
-            return InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
-        }
+        
 
         public Task<GameObject> CreateHud()
         {
             throw new NotImplementedException();
         }
-        
-        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent)
+
+        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
         {
             string path = AssetAddress.CreaturePath;
             // switch (typeId)
@@ -132,10 +142,13 @@ namespace CodeBase.Infrastructure.Factory
             //         
             // }
             GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creature=InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
-            creature.AddComponent<Creature.Creature>().Construct(_hero);
-            return creature;
+            GameObject creatureGameObject=InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
+           Creature.Creature creature= creatureGameObject.AddComponent<Creature.Creature>();
+           creature.Construct(_hero);
+           parent.OnStandAction= action;
+            return creatureGameObject;
         }
+        
 
         public Task<LootPiece> CreateLoot()
         {

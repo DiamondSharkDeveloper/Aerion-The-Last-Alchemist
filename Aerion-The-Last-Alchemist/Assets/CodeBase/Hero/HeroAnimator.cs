@@ -8,6 +8,7 @@ namespace CodeBase.Hero
     {
         [SerializeField] public Animator _animator;
         private static readonly int MoveHash = Animator.StringToHash("Walk");
+        private static readonly int GrabHash = Animator.StringToHash("Grab");
         private readonly int _idleStateHash = Animator.StringToHash("Idle");
         private readonly int _run = Animator.StringToHash("Run");
         public AnimatorState State { get; private set; }
@@ -22,6 +23,10 @@ namespace CodeBase.Hero
         public void PlayMoveAnimation(bool isMove)
         {
             _animator.SetBool(MoveHash,isMove);
+        }
+        public void PlayGrab()
+        {
+            _animator.SetTrigger(GrabHash);
         }
         public void ExitedState(int stateHash)
         {

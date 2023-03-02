@@ -18,6 +18,7 @@ namespace CodeBase.Hero
         private TweenerCore<Vector3, Vector3, VectorOptions> _core;
         private LookAtTarget _lookAtTarget;
         public event Action<bool> _isMove;
+        public event Action OnInteractiveObject;
 
         public void Construct(IInputService inputService)
         {
@@ -31,14 +32,39 @@ namespace CodeBase.Hero
             if (tile.IsAvailable && _currentTile != tile)
             {
                 _core?.Kill();
+                if (_currentTile!=null)
+                {
+                    _currentTile.OnStandAction-=TileOnOnStandAction;
+                }
                 transform.SetParent(tile.Tile.gameObject.transform);
                 _core = transform.DOMove(transform.parent.position, 10);
-                _core.onComplete += () => { _isMove?.Invoke(false); };
-                _core.onKill += () => { _isMove?.Invoke(false); };
+                if (tile.OnStandAction!=null)
+                {
+                    tile.OnStandAction+=TileOnOnStandAction;
+                }
+               
+                _core.onComplete += () =>
+                {
+                   
+                    _isMove?.Invoke(false);
+                    tile.OnStandAction?.Invoke();
+                    
+                };
+                _core.onKill += () =>
+                {
+                    _isMove?.Invoke(false);
+                };
                 _currentTile = tile;
                 _lookAtTarget.StartRotation(_currentTile.Tile.gameObject.transform);
                 _isMove?.Invoke(true);
             }
         }
+
+        private void TileOnOnStandAction()
+        {
+         OnInteractiveObject?.Invoke();
+        }
+
+      
     }
 }
