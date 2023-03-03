@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Services;
+using CodeBase.Services.Input;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
@@ -20,11 +21,11 @@ namespace CodeBase.Infrastructure.States
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, allServices),
                 [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain, allServices.Single<IGameFactory>(),
-                    allServices.Single<IPersistentProgressService>(), allServices.Single<IStaticDataService>(),allServices.Single<ILevelGenerator>()),
-
-
+                    allServices.Single<IPersistentProgressService>(), allServices.Single<IStaticDataService>(),allServices.Single<ILevelGenerator>(),allServices.Single<IInputService>()),
                 [typeof(LoadProgressState)] = new LoadProgressState(this),
                 [typeof(GameLoopState)] = new GameLoopState(this),
+                [typeof(LabState)] = new LabState(this,sceneLoader,allServices,loadingCurtain),
+                [typeof(CreatureState)] = new CreatureState(this,sceneLoader,loadingCurtain)
             };
         }
 

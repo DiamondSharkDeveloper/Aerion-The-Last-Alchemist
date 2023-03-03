@@ -37,6 +37,38 @@ MonoBehaviour:
     m_Address: GrassGexPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6dd136b82c367ad46bd0fe6af4d27c08
+    m_Address: Hero
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ff8b8f5ee99d82f43ada7e2afa89e03e
+    m_Address: HousePrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a723af5ce05806b4a86847707d9e7705
+    m_Address: LootPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ac3c392f29fa5d41ab7817ef632762c
+    m_Address: Creature
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f5738bfb06b8b664f8165c74ec50881a
+    m_Address: WaterGexPrefab1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f7ff2900d66e7bc4fa8b3214486aa170
+    m_Address: RockGexPrefab1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dcf682d7e73d63e4db2f3cea8bdac239
+    m_Address: GrassGexPrefab1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d4c13e0a31c558d44a8f388a79193a00
+    m_Address: SwampGexPrefab1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

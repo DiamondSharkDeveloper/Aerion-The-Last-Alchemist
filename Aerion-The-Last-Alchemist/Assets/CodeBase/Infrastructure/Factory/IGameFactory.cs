@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Enemy;
+using CodeBase.Map;
 using CodeBase.Services;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
@@ -12,11 +14,10 @@ namespace CodeBase.Infrastructure.Factory
         List<ISavedProgressReader> ProgressReaders { get; }
         List<ISavedProgress> ProgressWriters { get; }
         Task CreateMap(List<MyTile>mapCoordinates);
-        Task<GameObject> CreateHero(Vector3 at);
-        Task<GameObject> CreateHero(MyTile at);
+        Task<GameObject> CreateHero(MyTile parent);
+        Task<GameObject> CreateHouse(MyTile parent,Action action);
         Task<GameObject> CreateHud();
-        Task<GameObject> CreateMonster(MonsterTypeId typeId, Transform parent);
-        Task<GameObject> CreateMonster(MonsterTypeId typeId, MyTile parent);
+        Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent,Action action);
         Task<LootPiece> CreateLoot();
         void Cleanup();
         Task WarmUp();

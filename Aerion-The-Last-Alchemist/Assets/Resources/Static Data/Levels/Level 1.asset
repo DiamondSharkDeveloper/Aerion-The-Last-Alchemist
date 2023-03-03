@@ -15,6 +15,11 @@ MonoBehaviour:
   levelKey: forest
   seaInterval: 3
   mapSize: 40
-  waterSize: 40
-  swampSize: 40
+  waterSize: 60
+  swampSize: 60
   rocksSize: 40
+  ingredientsValue: 10
+  heroPosition: 220
+  housePosition: 311
+  creaturePosition: 624
+  creatureTypeId: 0

@@ -9,7 +9,6 @@ namespace CodeBase.Infrastructure.States
         public LoadProgressState(GameStateMachine gameStateMachine)
         {
             _gameStateMachine = gameStateMachine;
-  
         }
 
         public void Enter()
