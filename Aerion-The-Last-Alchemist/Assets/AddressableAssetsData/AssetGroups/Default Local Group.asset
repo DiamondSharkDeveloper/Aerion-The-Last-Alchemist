@@ -41,11 +41,11 @@ MonoBehaviour:
     m_Address: Hero
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bb6286c1c830ed743bfa767850599817
+  - m_GUID: ff8b8f5ee99d82f43ada7e2afa89e03e
     m_Address: HousePrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 977cbd1dd9cd22f4480eba22ef316f76
+  - m_GUID: a723af5ce05806b4a86847707d9e7705
     m_Address: LootPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []

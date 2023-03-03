@@ -88,7 +88,7 @@ namespace CodeBase.Services.Level
             _mapCoordinates[staticData.housePosition].TileObjectType = TileObjectType.House;
             foreach (int neighbour in GetNeighbours(staticData.housePosition, staticData.mapSize))
             {
-                _mapCoordinates[neighbour].TileObjectType = TileObjectType.Unavailable;
+                _mapCoordinates[neighbour].TileObjectType = TileObjectType.House;
             }
         }
 
@@ -109,7 +109,7 @@ namespace CodeBase.Services.Level
                     {
                         if (_mapCoordinates.Count >= neighbours[i]&&_mapCoordinates.Count >= neighbours[i] - 1 && neighbours[i] >= 0)
                         {
-                            if (_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
+                            if (_mapCoordinates.Count>neighbours[i]&&_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
                                 _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Unavailable;
                                 _mapCoordinates[neighbours[i]].Type = type;

@@ -44,9 +44,9 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
             await _gameFactory.CreateMap(mapCoordinates);
-           GameObject lab= await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
-               () => { _stateMachine.Enter<LabState>();});
-         
+            GameObject lab = await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
+                () => { _stateMachine.Enter<LabState>(); });
+
 
             GameObject heroGameObject = await _gameFactory.CreateHero(mapCoordinates[levelData.heroPosition]);
             if (heroGameObject.TryGetComponent(out Hero.Hero hero))
@@ -54,10 +54,11 @@ namespace CodeBase.Infrastructure.States
                 hero.Construct(_inputService);
             }
 
-            await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],() => {});
+            await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
+                () => { _stateMachine.Enter<CreatureState>(); });
             await SetCameraTarget(heroGameObject);
         }
-        
+
         public void Enter(string sceneName)
         {
             _loadingCurtain.Show();

@@ -21,7 +21,7 @@ namespace CodeBase.Services.Input
                 if (Physics.Raycast(rayOrigin, out hit))
                 {
                     WorldTile worldTile;
-                    if (hit.transform.TryGetComponent(out worldTile))
+                    if (hit.transform.TryGetComponent(out worldTile)||hit.transform.parent.transform.TryGetComponent(out worldTile))
                     {
                         OnTileClick?.Invoke(worldTile);
                     }

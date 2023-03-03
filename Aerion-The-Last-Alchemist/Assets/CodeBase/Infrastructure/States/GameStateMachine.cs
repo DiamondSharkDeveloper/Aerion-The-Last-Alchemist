@@ -25,6 +25,7 @@ namespace CodeBase.Infrastructure.States
                 [typeof(LoadProgressState)] = new LoadProgressState(this),
                 [typeof(GameLoopState)] = new GameLoopState(this),
                 [typeof(LabState)] = new LabState(this,sceneLoader,allServices,loadingCurtain),
+                [typeof(CreatureState)] = new CreatureState(this,sceneLoader,loadingCurtain)
             };
         }
 

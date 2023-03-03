@@ -109,15 +109,17 @@ namespace CodeBase.Infrastructure.Factory
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
             parent.OnStandAction = new Action(action);
-            return InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
-            
+             GameObject house=InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
+             house.transform.localRotation= Quaternion.Euler(-90, 0, 0);
+             return house;
+
         }
 
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
             GameObject loot=InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
-           LootPiece lootPiece= loot.AddComponent<LootPiece>();
+           LootPiece lootPiece= loot.GetComponent<LootPiece>();
            at.OnStandAction = () =>
            {
                lootPiece.Pickup();

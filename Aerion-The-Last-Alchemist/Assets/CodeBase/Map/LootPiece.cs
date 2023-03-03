@@ -9,14 +9,13 @@ namespace CodeBase.Enemy
 {
     public class LootPiece : MonoBehaviour
     {
-        public GameObject lootObject;
+        public MeshRenderer lootObjectRenderer;
         public GameObject pickupFxPrefab;
-        public GameObject fxPrefab;
         public Action OnAction;
         private WorldData _worldData;
         private Loot _loot;
 
-        private const float DelayBeforeDestroying = 1.5f;
+        private const float DelayBeforeDestroying = 1f;
 
         private string _id;
 
@@ -30,10 +29,7 @@ namespace CodeBase.Enemy
 
         private void Start()
         {
-            OnAction = () =>
-            {
-                Pickup();
-            };
+            OnAction = () => { Pickup(); };
         }
 
 
@@ -53,12 +49,12 @@ namespace CodeBase.Enemy
         {
         }
 
-       public void Pickup()
+        public void Pickup()
         {
-            UpdateWorldData();
-            HideLootObject();
-            PlayPickupFx();
-
+           // UpdateWorldData();
+            
+           // PlayPickupFx();
+            //HideLootObject();
             Destroy(gameObject, DelayBeforeDestroying);
         }
 
@@ -80,9 +76,9 @@ namespace CodeBase.Enemy
         }
 
         private void HideLootObject() =>
-            lootObject.SetActive(false);
+            lootObjectRenderer.enabled=false;
 
         private void PlayPickupFx() =>
-            Instantiate(pickupFxPrefab, transform.position, Quaternion.identity);
+            pickupFxPrefab.SetActive(true);
     }
 }

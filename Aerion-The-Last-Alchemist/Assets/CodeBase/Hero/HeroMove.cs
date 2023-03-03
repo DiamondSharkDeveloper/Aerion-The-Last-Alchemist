@@ -14,7 +14,7 @@ namespace CodeBase.Hero
     {
         private IInputService _inputService;
         private MyTile _currentTile;
-        [SerializeField] private float moveSpeed = 30;
+        [SerializeField] private float moveSpeed = 2;
         private TweenerCore<Vector3, Vector3, VectorOptions> _core;
         private LookAtTarget _lookAtTarget;
         public event Action<bool> _isMove;
@@ -32,28 +32,19 @@ namespace CodeBase.Hero
             if (tile.IsAvailable && _currentTile != tile)
             {
                 _core?.Kill();
-                if (_currentTile!=null)
-                {
-                    _currentTile.OnStandAction-=TileOnOnStandAction;
-                }
                 transform.SetParent(tile.Tile.gameObject.transform);
-                _core = transform.DOMove(transform.parent.position, 10);
-                if (tile.OnStandAction!=null)
-                {
-                    tile.OnStandAction+=TileOnOnStandAction;
-                }
-               
+                _core = transform.DOMove(tile.StartWorldPosition,
+                    Vector3.Distance(transform.position, tile.StartWorldPosition) / moveSpeed);
                 _core.onComplete += () =>
                 {
-                   
                     _isMove?.Invoke(false);
-                    tile.OnStandAction?.Invoke();
-                    
+                    if (tile.OnStandAction != null)
+                    {
+                        TileOnOnStandAction();
+                        tile.OnStandAction.Invoke();
+                    }
                 };
-                _core.onKill += () =>
-                {
-                    _isMove?.Invoke(false);
-                };
+                _core.onKill += () => { _isMove?.Invoke(false); };
                 _currentTile = tile;
                 _lookAtTarget.StartRotation(_currentTile.Tile.gameObject.transform);
                 _isMove?.Invoke(true);
@@ -62,9 +53,7 @@ namespace CodeBase.Hero
 
         private void TileOnOnStandAction()
         {
-         OnInteractiveObject?.Invoke();
+            OnInteractiveObject?.Invoke();
         }
-
-      
     }
 }
