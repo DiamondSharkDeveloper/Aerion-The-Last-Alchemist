@@ -11,6 +11,7 @@ namespace CodeBase.Infrastructure.Factory
         public const string SwampGexPath = "SwampGexPrefab1";
         public const string WaterGexPath = "WaterGexPrefab1";
         public const string GrassGexPath = "GrassGexPrefab1";
+        public const string HUDPath = "HUD";
         
     }
 }

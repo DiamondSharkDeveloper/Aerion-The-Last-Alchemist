@@ -9,6 +9,8 @@ using CodeBase.Services.Randomizer;
 using CodeBase.Services.SaveLoad;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
+using CodeBase.UI.Services.Factory;
+using CodeBase.UI.Windows;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -35,6 +37,11 @@ namespace CodeBase.Infrastructure.States
         {
         }
 
+        public bool IsOnPause()
+        {
+            return true;
+        }
+
         private void RegisterServices()
         {
             _services.RegisterSingle<IGameStateMachine>(_stateMachine);
@@ -42,14 +49,20 @@ namespace CodeBase.Infrastructure.States
             RegisterStaticDataService();
             RegisterAssetProvider();
             _services.RegisterSingle<IRandomService>(new RandomService());
+            _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
+         
+            _services.RegisterSingle<IUIFactory>(new UIFactory(
+                _services.Single<IAssetProvider>(),
+                _services.Single<IStaticDataService>(),
+                _services.Single<IPersistentProgressService>(),_stateMachine));
+            _services.RegisterSingle<IWindowService>(new WindowService(_services.Single<IUIFactory>()));
             _services.RegisterSingle<IGameFactory>(new GameFactory(
                 _services.Single<IAssetProvider>(),
                 _services.Single<IStaticDataService>(),
                 _services.Single<IRandomService>(),
                 _services.Single<IPersistentProgressService>(),
-                _services.Single<IGameStateMachine>()
+                _services.Single<IGameStateMachine>(),_services.Single<IWindowService>()
             ));
-          
             _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(
                 _services.Single<IPersistentProgressService>(),
                 _services.Single<IGameFactory>()));
@@ -59,6 +72,7 @@ namespace CodeBase.Infrastructure.States
         private void RegisterInputService()
         {
             _services.RegisterSingle<IInputService>( Object.Instantiate(new GameObject()).AddComponent<InputService>());
+            _services.Single<IInputService>().Construct(_stateMachine);
         }
 
         private void RegisterStaticDataService()

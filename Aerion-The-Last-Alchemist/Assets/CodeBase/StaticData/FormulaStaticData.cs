@@ -7,7 +7,8 @@ namespace CodeBase.StaticData
     [CreateAssetMenu(fileName = "FormulaData", menuName = "Static Data/Formula")]
     public class FormulaStaticData : ScriptableObject
     {
-        public List<IngredientStaticData> _ingredients = new List<IngredientStaticData>();
+        public Sprite sprite;
+        public List<IngredientStaticData> ingredients = new List<IngredientStaticData>();
         public PotionType potionType;
         [Range(1,4)]
         public int potionLevel;

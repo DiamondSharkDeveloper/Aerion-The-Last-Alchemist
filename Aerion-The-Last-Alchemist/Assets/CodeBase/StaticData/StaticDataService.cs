@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using CodeBase.Enums;
 using CodeBase.Services.StaticData;
+using CodeBase.StaticData.Windows;
 using UnityEngine;
 
 namespace CodeBase.StaticData
@@ -8,12 +10,23 @@ namespace CodeBase.StaticData
     internal class StaticDataService : IStaticDataService
     {
         private const string LevelsDataPath = "Static Data/Levels";
+        private const string StaticDataWindowPath = "Static Data/UI/WindowStaticData";
+        private const string StaticDataIngredientsPath = "Static Data/Ingredients";
         private Dictionary<string, LevelStaticData> _levels;
+        private List<IngredientStaticData> _ingredients; 
+        private Dictionary<WindowId, WindowConfig> _windowConfigs;
+
         public void Load()
         {
+            
+            _windowConfigs = Resources
+                .Load<WindowStaticData>(StaticDataWindowPath)
+                .configs
+                .ToDictionary(x => x.WindowId, x => x);
             _levels = Resources
                 .LoadAll<LevelStaticData>(LevelsDataPath)
                 .ToDictionary(x => x.levelKey, x => x);
+            _ingredients = Resources.LoadAll<IngredientStaticData>(StaticDataIngredientsPath).ToList();
         }
 
         public MonsterStaticData ForMonster(CreatureTypeId typeId)
@@ -25,5 +38,12 @@ namespace CodeBase.StaticData
             _levels.TryGetValue(sceneKey, out LevelStaticData staticData)
                 ? staticData
                 : null;
+
+        public WindowConfig ForWindow(WindowId windowId) =>
+            _windowConfigs.TryGetValue(windowId, out WindowConfig windowConfig)
+                ? windowConfig
+                : null;
+
+        public List<IngredientStaticData> ForIngredients() => _ingredients;
     }
 }

@@ -56,6 +56,7 @@ namespace CodeBase.Infrastructure.States
 
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
+            await _gameFactory.CreateHud();
             await SetCameraTarget(heroGameObject);
         }
 
@@ -69,6 +70,11 @@ namespace CodeBase.Infrastructure.States
 
         public void Exit() =>
             _loadingCurtain.Hide();
+
+        public bool IsOnPause()
+        {
+            return true;
+        }
 
         private async void OnLoaded()
         {

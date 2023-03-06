@@ -12,7 +12,7 @@ namespace CodeBase.Enemy
         public MeshRenderer lootObjectRenderer;
         public GameObject pickupFxPrefab;
         public Action OnAction;
-        private WorldData _worldData;
+        private GameData _gameData;
         private Loot _loot;
 
         private const float DelayBeforeDestroying = 1f;
@@ -21,8 +21,8 @@ namespace CodeBase.Enemy
 
         private bool _pickedUp = false;
 
-        public void Construct(WorldData worldData) =>
-            _worldData = worldData;
+        public void Construct(GameData gameData) =>
+            _gameData = gameData;
 
         public void Initialize(Loot loot) =>
             _loot = loot;
@@ -33,52 +33,24 @@ namespace CodeBase.Enemy
         }
 
 
-        public void UpdateProgress(PlayerProgress progress)
-        {
-            if (_pickedUp)
-                return;
-
-            LootPieceDataDictionary lootPiecesOnScene = progress.WorldData.LootData.LootPiecesOnScene;
-
-            if (!lootPiecesOnScene.Dictionary.ContainsKey(_id))
-                lootPiecesOnScene.Dictionary
-                    .Add(_id, new LootPieceData(transform.position.AsVectorData(), _loot));
-        }
-
         public void LoadProgress(PlayerProgress progress)
         {
         }
 
         public void Pickup()
         {
-           // UpdateWorldData();
-            
-           // PlayPickupFx();
-            //HideLootObject();
             Destroy(gameObject, DelayBeforeDestroying);
+            UpdateWorldData();
         }
 
         private void UpdateWorldData()
         {
-            // UpdateCollectedLootAmount();
-            // RemoveLootPieceFromSavedPieces();
+            UpdateCollectedLootAmount();
         }
 
-        // private void UpdateCollectedLootAmount() =>
-        //   _worldData.LootData.Collect(_loot);
-
-        private void RemoveLootPieceFromSavedPieces()
+        private void UpdateCollectedLootAmount()
         {
-            LootPieceDataDictionary savedLootPieces = _worldData.LootData.LootPiecesOnScene;
-
-            if (savedLootPieces.Dictionary.ContainsKey(_id))
-                savedLootPieces.Dictionary.Remove(_id);
+            _gameData.lootData?.Collect(_loot);
         }
-
-        private void HideLootObject() =>
-            lootObjectRenderer.enabled=false;
-
-        private void PlayPickupFx() =>
-            pickupFxPrefab.SetActive(true);
     }
 }

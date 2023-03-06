@@ -24,6 +24,11 @@ namespace CodeBase.Infrastructure.States
             _loadingCurtain.Hide();
         }
 
+        public bool IsOnPause()
+        {
+            return false;
+        }
+
         public void Enter()
         {
             _loadingCurtain.Show();

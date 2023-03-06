@@ -5,13 +5,11 @@ namespace CodeBase.Data
     [Serializable]
     public class LootPieceData
     {
-        public Vector3Data Position;
-        public Loot Loot;
+        public Loot loot;
 
-        public LootPieceData(Vector3Data position, Loot loot)
+        public LootPieceData( Loot loot)
         {
-            Position = position;
-            Loot = loot;
+            this.loot = loot;
         }
     }
 }

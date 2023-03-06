@@ -10,6 +10,11 @@ namespace CodeBase.Infrastructure.States
         {
         }
 
+        public bool IsOnPause()
+        {
+            return false;
+        }
+
         public void Enter()
         {
         }

@@ -7,12 +7,15 @@ namespace CodeBase.Infrastructure.States
         private LaboratoryWindow _laboratoryWindow;
         public void Exit()
         {
-            throw new System.NotImplementedException();
+        }
+
+        public bool IsOnPause()
+        {
+            return true;
         }
 
         public void Enter()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using CodeBase.StaticData;
+﻿using System.Collections.Generic;
+using CodeBase.Enums;
+using CodeBase.StaticData;
+using CodeBase.StaticData.Windows;
 
 namespace CodeBase.Services.StaticData
 {
@@ -7,5 +10,8 @@ namespace CodeBase.Services.StaticData
         void Load();
         MonsterStaticData ForMonster(CreatureTypeId typeId);
         LevelStaticData ForLevel(string sceneKey);
+
+        WindowConfig ForWindow(WindowId inventoryId);
+        List<IngredientStaticData> ForIngredients();
     }
 }

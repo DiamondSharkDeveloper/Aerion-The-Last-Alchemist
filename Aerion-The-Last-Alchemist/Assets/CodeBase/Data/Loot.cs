@@ -6,7 +6,13 @@ namespace CodeBase.Data
     [Serializable]
     public class Loot
     {
-        public TileObjectType type;
+        public string name;
         public int value;
+
+        public Loot(string name, int value)
+        {
+            this.name = name;
+            this.value = value;
+        }
     }
 }

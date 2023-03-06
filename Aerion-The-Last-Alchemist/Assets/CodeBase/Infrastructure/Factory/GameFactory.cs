@@ -11,6 +11,8 @@ using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.Randomizer;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
+using CodeBase.UI.Elements;
+using CodeBase.UI.Windows;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Object = UnityEngine.Object;
@@ -24,24 +26,31 @@ namespace CodeBase.Infrastructure.Factory
         private readonly IRandomService _randomService;
         private readonly IPersistentProgressService _persistentProgressService;
         private GameObject _heroGameObject;
+        private readonly IWindowService _windowService;
         private readonly IGameStateMachine _stateMachine;
         private Tilemap _tilemap;
         private GameObject _mapGameObject;
         private GameObject _hero;
         private List<MyTile> _mapCoordinates;
+        private List<string> _ingredients = new List<string>();
 
         public GameFactory(
             IAssetProvider assets,
             IStaticDataService staticData,
             IRandomService randomService,
             IPersistentProgressService persistentProgressService,
-            IGameStateMachine stateMachine)
+            IGameStateMachine stateMachine, IWindowService windowService)
         {
             _assets = assets;
             _staticData = staticData;
             _randomService = randomService;
             _persistentProgressService = persistentProgressService;
+            _windowService = windowService;
             _stateMachine = stateMachine;
+            foreach (IngredientStaticData ingredientStaticData in _staticData.ForIngredients())
+            {
+                _ingredients.Add(ingredientStaticData.name);
+            }
         }
 
         public List<ISavedProgressReader> ProgressReaders { get; }
@@ -59,12 +68,11 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
-                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]); 
+                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]);
                 if (mapCoordinates[count].TileObjectType == TileObjectType.Ingredient)
                 {
                     await CreateLoot(mapCoordinates[count]);
                 }
-                
             }
         }
 
@@ -98,6 +106,7 @@ namespace CodeBase.Infrastructure.Factory
             _mapGameObject = InstantiateRegistered(prefab, Vector3.zero);
             _tilemap = _mapGameObject.GetComponentInChildren<Tilemap>();
         }
+
         public async Task<GameObject> CreateHero(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
@@ -109,28 +118,33 @@ namespace CodeBase.Infrastructure.Factory
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
             parent.OnStandAction = new Action(action);
-             GameObject house=InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
-             house.transform.localRotation= Quaternion.Euler(-90, 0, 0);
-             return house;
-
+            GameObject house =
+                InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
+            house.transform.localRotation = Quaternion.Euler(-90, 0, 0);
+            return house;
         }
 
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
-            GameObject loot=InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
-           LootPiece lootPiece= loot.GetComponent<LootPiece>();
-           at.OnStandAction = () =>
-           {
-               lootPiece.Pickup();
-           };
-           return loot;
+            GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            LootPiece lootPiece = loot.GetComponent<LootPiece>();
+            at.OnStandAction = () =>
+            {
+                lootPiece.Pickup();
+            };
+            lootPiece.Construct(_persistentProgressService.Progress.gameData);
+            lootPiece.Initialize(new Loot(_ingredients[_randomService.Next(0, _ingredients.Count - 1)],
+                _randomService.Next(1, 5)));
+            return loot;
         }
-        
 
-        public Task<GameObject> CreateHud()
+
+        public async Task<GameObject> CreateHud()
         {
-            throw new NotImplementedException();
+            GameObject hud = await InstantiateRegisteredAsync(AssetAddress.HUDPath);
+            hud.GetComponent<HUD>().Construct(_windowService);
+            return hud;
         }
 
         public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
@@ -144,13 +158,14 @@ namespace CodeBase.Infrastructure.Factory
             //         
             // }
             GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creatureGameObject=InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,parent.Tile.gameObject.transform);
-           Creature.Creature creature= creatureGameObject.AddComponent<Creature.Creature>();
-           creature.Construct(_hero);
-           parent.OnStandAction= action;
+            GameObject creatureGameObject = InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,
+                parent.Tile.gameObject.transform);
+            Creature.Creature creature = creatureGameObject.AddComponent<Creature.Creature>();
+            creature.Construct(_hero);
+            parent.OnStandAction = action;
             return creatureGameObject;
         }
-        
+
 
         public Task<LootPiece> CreateLoot()
         {
@@ -160,8 +175,8 @@ namespace CodeBase.Infrastructure.Factory
 
         public void Cleanup()
         {
-            //     ProgressReaders.Clear();
-            //    ProgressWriters.Clear();
+            // ProgressReaders.Clear();
+            // ProgressWriters.Clear();
 
             _assets.Cleanup();
         }
@@ -169,7 +184,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task WarmUp()
         {
             await _assets.Load<GameObject>(AssetAddress.MapPath);
-          
+
             await _assets.Load<GameObject>(AssetAddress.HousePath);
             await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);

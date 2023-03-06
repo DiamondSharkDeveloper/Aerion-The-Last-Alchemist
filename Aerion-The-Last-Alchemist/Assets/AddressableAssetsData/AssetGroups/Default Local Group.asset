@@ -69,6 +69,14 @@ MonoBehaviour:
     m_Address: SwampGexPrefab1
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c68add8da85bbab4c9928401833aab94
+    m_Address: Inventory Window
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f517a93979d53db4aba3462ad41da1e7
+    m_Address: HUD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:
