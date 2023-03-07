@@ -32,7 +32,7 @@ namespace CodeBase.UI.Services.Factory
         public void CreateInventory()
         {
             WindowConfig config = _staticData.ForWindow(WindowId.Inventory);
-            InventoryWindow window = Object.Instantiate(config.Template, _uiRoot) as InventoryWindow;
+            IngredientsWindow window = Object.Instantiate(config.Template, _uiRoot) as IngredientsWindow;
             if (window != null)
             {
                 _stateMachine.Enter<MenuState>();
@@ -53,6 +53,16 @@ namespace CodeBase.UI.Services.Factory
         public void CreatePotions()
         {
             WindowConfig config = _staticData.ForWindow(WindowId.Potions);
+           PotionsWindow window = Object.Instantiate(config.Template, _uiRoot) as PotionsWindow;
+            if (window != null)
+            {
+                _stateMachine.Enter<MenuState>();
+                window.Construct(_progressService, () =>
+                {
+                    _stateMachine.Enter<GameLoopState>();
+                });
+                window.Initialize(_staticData.ForFormulas());
+            }
         }
 
         public void CreateFormula()

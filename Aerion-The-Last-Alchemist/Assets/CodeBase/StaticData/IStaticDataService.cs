@@ -13,5 +13,6 @@ namespace CodeBase.Services.StaticData
 
         WindowConfig ForWindow(WindowId inventoryId);
         List<IngredientStaticData> ForIngredients();
+        List<FormulaStaticData> ForFormulas();
     }
 }

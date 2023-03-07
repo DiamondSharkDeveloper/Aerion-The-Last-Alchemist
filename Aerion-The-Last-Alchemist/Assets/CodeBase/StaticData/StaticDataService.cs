@@ -12,8 +12,10 @@ namespace CodeBase.StaticData
         private const string LevelsDataPath = "Static Data/Levels";
         private const string StaticDataWindowPath = "Static Data/UI/WindowStaticData";
         private const string StaticDataIngredientsPath = "Static Data/Ingredients";
+        private const string StaticDataFormulasPath = "Static Data/Formulas";
         private Dictionary<string, LevelStaticData> _levels;
         private List<IngredientStaticData> _ingredients; 
+        private List<FormulaStaticData> _formulas; 
         private Dictionary<WindowId, WindowConfig> _windowConfigs;
 
         public void Load()
@@ -27,6 +29,7 @@ namespace CodeBase.StaticData
                 .LoadAll<LevelStaticData>(LevelsDataPath)
                 .ToDictionary(x => x.levelKey, x => x);
             _ingredients = Resources.LoadAll<IngredientStaticData>(StaticDataIngredientsPath).ToList();
+            _formulas=Resources.LoadAll<FormulaStaticData>(StaticDataFormulasPath).ToList();
         }
 
         public MonsterStaticData ForMonster(CreatureTypeId typeId)
@@ -45,5 +48,6 @@ namespace CodeBase.StaticData
                 : null;
 
         public List<IngredientStaticData> ForIngredients() => _ingredients;
+        public List<FormulaStaticData> ForFormulas() => _formulas;
     }
 }
