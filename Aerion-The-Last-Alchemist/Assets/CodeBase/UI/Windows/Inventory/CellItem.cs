@@ -2,29 +2,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CellItem:MonoBehaviour
+namespace CodeBase.UI.Windows.Inventory
 {
-    [SerializeField] private Image _itemImage;
-    [SerializeField] private TextMeshProUGUI _itemCountText;
-
-    public void SetItemSprite(Sprite sprite)
+    public class CellItem:MonoBehaviour
     {
-        _itemImage.sprite = sprite;
-    }
+        [SerializeField] private Image _itemImage;
+        [SerializeField] private TextMeshProUGUI _itemCountText;
 
-    public void SetItemCount(int count)
-    {
-        _itemImage.color = count > 0 ? Color.white : Color.grey;
-        _itemCountText.text = count.ToString();
-    }
+        public void SetItemSprite(Sprite sprite)
+        {
+            _itemImage.sprite = sprite;
+        }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+        public void SetItemCount(int count)
+        {
+            _itemImage.color = count > 0 ? Color.white : Color.grey;
+            _itemCountText.text = count.ToString();
+        }
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

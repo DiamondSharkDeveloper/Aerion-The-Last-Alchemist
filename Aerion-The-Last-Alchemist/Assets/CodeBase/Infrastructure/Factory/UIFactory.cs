@@ -68,6 +68,16 @@ namespace CodeBase.UI.Services.Factory
         public void CreateFormula()
         {
             WindowConfig config = _staticData.ForWindow(WindowId.Formula);
+            FormulaWindow window = Object.Instantiate(config.Template, _uiRoot) as FormulaWindow;
+            if (window != null)
+            {
+                _stateMachine.Enter<MenuState>();
+                window.Construct(_progressService, () =>
+                {
+                    _stateMachine.Enter<GameLoopState>();
+                });
+                window.Initialize(_staticData.ForFormulas());
+            }
         }
     }
 }

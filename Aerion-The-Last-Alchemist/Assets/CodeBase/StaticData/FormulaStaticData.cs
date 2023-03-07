@@ -12,5 +12,6 @@ namespace CodeBase.StaticData
         public PotionType potionType;
         [Range(1,4)]
         public int potionLevel;
+        public string description;
     }
 }
