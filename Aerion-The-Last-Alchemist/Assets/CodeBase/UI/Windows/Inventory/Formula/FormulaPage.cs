@@ -12,7 +12,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
 
         public void SetPage(FormulaStaticData staticData)
         {
-            potionNameText.text = staticData.potionType + " Potion" + " Level" + staticData.potionLevel;
+            potionNameText.text = staticData.potionType + " Potion" + " Level " + staticData.potionLevel;
             descriptionText.text = staticData.description;
             potion.SetItemSprite(staticData.sprite);
             for (var i = 0; i < staticData.ingredients.Count; i++)

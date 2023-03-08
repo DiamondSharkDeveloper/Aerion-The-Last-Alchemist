@@ -86,7 +86,6 @@ namespace CodeBase.Infrastructure.Factory
                     break;
                 case TileTypeEnum.Swamp:
                     path = AssetAddress.SwampGexPath;
-                    ;
                     break;
                 case TileTypeEnum.Water:
                     path = AssetAddress.WaterGexPath;
