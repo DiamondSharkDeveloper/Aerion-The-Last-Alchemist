@@ -7,6 +7,7 @@ namespace CodeBase.Data
         Ingredient,
         Hero,
         House,
-        Creature
+        Creature,
+        Trees
     }
 }

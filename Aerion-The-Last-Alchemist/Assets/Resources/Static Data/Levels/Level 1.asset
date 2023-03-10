@@ -16,9 +16,10 @@ MonoBehaviour:
   seaInterval: 3
   mapSize: 40
   waterSize: 60
-  swampSize: 60
-  rocksSize: 40
-  ingredientsValue: 10
+  swampSize: 160
+  rocksSize: 80
+  treesSize: 560
+  ingredientsValue: 30
   heroPosition: 220
   housePosition: 311
   creaturePosition: 624

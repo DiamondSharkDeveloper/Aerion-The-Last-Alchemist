@@ -73,6 +73,26 @@ MonoBehaviour:
     m_Address: HUD
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1ce77532781f55940ae45a8f3ed57111
+    m_Address: TreesPrefab06
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5386d9c29987b3940a90df49468b8327
+    m_Address: TreesPrefab04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a91389a278e20fc4e9f512ac6d44a05e
+    m_Address: TreesPrefab03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b4b1c7a1a4b374240af451d7fe8a2a2c
+    m_Address: TreesPrefab02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c116d1c99fce799418f01bbc0ba4d3a3
+    m_Address: TreesPrefab01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

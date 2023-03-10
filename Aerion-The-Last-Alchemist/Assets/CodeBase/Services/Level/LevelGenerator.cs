@@ -51,6 +51,7 @@ namespace CodeBase.Services.Level
             GenerateCreatureTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.swampSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize);
@@ -111,8 +112,16 @@ namespace CodeBase.Services.Level
                         {
                             if (_mapCoordinates.Count>neighbours[i]&&_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
-                                _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Unavailable;
-                                _mapCoordinates[neighbours[i]].Type = type;
+                                if (type==TileTypeEnum.Grass)
+                                {
+                                    _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Trees;
+                                }
+                                else
+                                {
+                                    _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Unavailable;
+                                    _mapCoordinates[neighbours[i]].Type = type;
+                                }
+                               
                                 amount--;
                             }
                         }

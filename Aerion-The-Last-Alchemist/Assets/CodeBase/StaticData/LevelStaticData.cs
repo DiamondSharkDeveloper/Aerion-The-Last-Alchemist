@@ -15,6 +15,7 @@ namespace CodeBase.StaticData
         public int waterSize = 1;
         public int swampSize = 1;
         public int rocksSize = 1;
+        public int treesSize = 1;
         
         public int ingredientsValue=10;
         public int heroPosition=220;

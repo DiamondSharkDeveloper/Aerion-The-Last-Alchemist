@@ -33,6 +33,7 @@ namespace CodeBase.Infrastructure.Factory
         private GameObject _hero;
         private List<MyTile> _mapCoordinates;
         private List<string> _ingredients = new List<string>();
+        private List<string> _treesPath = new List<string>();
 
         public GameFactory(
             IAssetProvider assets,
@@ -51,6 +52,12 @@ namespace CodeBase.Infrastructure.Factory
             {
                 _ingredients.Add(ingredientStaticData.name);
             }
+
+            _treesPath.Add(AssetAddress.TreePrefab01);
+            _treesPath.Add(AssetAddress.TreePrefab02);
+            _treesPath.Add(AssetAddress.TreePrefab03);
+            _treesPath.Add(AssetAddress.TreePrefab04);
+            _treesPath.Add(AssetAddress.TreePrefab06);
         }
 
         public List<ISavedProgressReader> ProgressReaders { get; }
@@ -73,7 +80,19 @@ namespace CodeBase.Infrastructure.Factory
                 {
                     await CreateLoot(mapCoordinates[count]);
                 }
+                else if (mapCoordinates[count].TileObjectType == TileObjectType.Trees)
+                {
+                    await CreateTree(mapCoordinates[count]);
+                }
             }
+        }
+
+        private async Task CreateTree(MyTile mapCoordinate)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
+                InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
+                mapCoordinate.Tile.gameObject.transform);
+          
         }
 
         private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
@@ -128,10 +147,7 @@ namespace CodeBase.Infrastructure.Factory
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
             GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
             LootPiece lootPiece = loot.GetComponent<LootPiece>();
-            at.OnStandAction = () =>
-            {
-                lootPiece.Pickup();
-            };
+            at.OnStandAction = () => { lootPiece.Pickup(); };
             lootPiece.Construct(_persistentProgressService.Progress.gameData);
             lootPiece.Initialize(new Loot(_ingredients[_randomService.Next(0, _ingredients.Count - 1)],
                 _randomService.Next(1, 5)));
@@ -192,6 +208,12 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.RockGexPath);
             await _assets.Load<GameObject>(AssetAddress.SwampGexPath);
             await _assets.Load<GameObject>(AssetAddress.WaterGexPath);
+
+            await _assets.Load<GameObject>(AssetAddress.TreePrefab01);
+            await _assets.Load<GameObject>(AssetAddress.TreePrefab02);
+            await _assets.Load<GameObject>(AssetAddress.TreePrefab03);
+            await _assets.Load<GameObject>(AssetAddress.TreePrefab04);
+            await _assets.Load<GameObject>(AssetAddress.TreePrefab06);
         }
 
         private GameObject InstantiateRegistered(GameObject prefab, Vector3 at)
