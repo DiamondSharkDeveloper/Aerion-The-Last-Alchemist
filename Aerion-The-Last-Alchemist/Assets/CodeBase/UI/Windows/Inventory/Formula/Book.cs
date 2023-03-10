@@ -29,7 +29,6 @@ public class Book : MonoBehaviour
     //represent the index of the sprite shown in the right page
     public int currentPage = 0;
     public int previousPage = 0;
-    public event Action OnPageChange;
 
     public int TotalPageCount
     {

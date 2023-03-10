@@ -69,10 +69,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23656">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3688">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23656" />
+      <option name="pid" value="3688" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -96,7 +96,7 @@
       <workItem from="1677271857850" duration="14013000" />
       <workItem from="1677805908564" duration="4699000" />
       <workItem from="1677972754697" duration="21290000" />
-      <workItem from="1678159115489" duration="20940000" />
+      <workItem from="1678159115489" duration="38096000" />
     </task>
     <servers />
   </component>
@@ -153,31 +153,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaBook.cs</url>
-          <line>53</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaBook.cs" initialLine="52" containingFunctionPresentation="method 'ShowCurrentPages'">
+          <line>65</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaBook.cs" initialLine="60" containingFunctionPresentation="method 'ShowCurrentPages'">
             <startOffsets>
-              <option value="1890" />
+              <option value="1902" />
             </startOffsets>
             <endOffsets>
-              <option value="1921" />
+              <option value="1929" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaBook.cs</url>
-          <line>50</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaBook.cs" initialLine="50" containingFunctionPresentation="method 'ShowCurrentPages'">
-            <startOffsets>
-              <option value="1770" />
-              <option value="1795" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1826" />
-              <option value="1822" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
