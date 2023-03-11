@@ -57,7 +57,7 @@ namespace CodeBase.Infrastructure.States
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
             await _gameFactory.CreateHud();
-            await SetCameraTarget(heroGameObject);
+          //  await SetCameraTarget(heroGameObject);
         }
 
         public void Enter(string sceneName)
