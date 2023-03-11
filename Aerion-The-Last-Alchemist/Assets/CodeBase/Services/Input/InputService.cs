@@ -19,23 +19,25 @@ namespace CodeBase.Services.Input
         public void Construct(IGameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
-            _stateMachine.OnStateChange += StateMachineOnOnStateChange;
         }
 
-        private void StateMachineOnOnStateChange(IExitableState obj)
-        {
-            _canRayCast = !obj.IsOnPause();
-        }
 
         public event Action<WorldTile> OnTileClick;
 
+        private bool CanRaycast()
+        {
+            return (UnityEngine.Input.GetMouseButtonDown(0) && (UnityEngine.Input.GetAxis("Mouse Y") == 0) &&
+                    UnityEngine.Input.GetAxis("Mouse Y") ==0 &&
+                    !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject());
+        }
+
         void Update()
         {
-            if (!_canRayCast)
+            if (!CanRaycast())
                 return;
             RaycastHit hit;
             Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
-            if (UnityEngine.Input.GetMouseButtonDown(0))
+            if (CanRaycast())
             {
                 if (Physics.Raycast(rayOrigin, out hit))
                 {

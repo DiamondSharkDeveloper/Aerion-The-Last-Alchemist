@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mushroom
   m_EditorClassIdentifier: 
   name: Mushroom
-  lootIcon: {fileID: 21300000, guid: 5343b7115bd89c64982db3f2216a0c0f, type: 3}
+  lootIcon: {fileID: 21300000, guid: 10f69159a55f79848ab2c16c7ee27d43, type: 3}

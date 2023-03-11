@@ -236,7 +236,7 @@ MonoBehaviour:
   InvertDragging: 1
   MovementSpeed: 10
   FastMovementMultiplier: 3
-  DraggingSpeed: 3
+  DraggingSpeed: 0.8
   ConstrainPosition: 1
   MinPosition: {x: -20, y: 0, z: -20}
   MaxPosition: {x: 50, y: 1, z: 50}

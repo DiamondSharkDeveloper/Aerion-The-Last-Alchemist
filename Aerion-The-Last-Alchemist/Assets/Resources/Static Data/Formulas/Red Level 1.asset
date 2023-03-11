@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af831b908744e81a660b8165d68805c, type: 3}
   m_Name: Red Level 1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: c2e882058c776c244adf87fa24d5282f, type: 3}
+  sprite: {fileID: 21300000, guid: 355a111c5eadda146a0c0caf902883ad, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 76903a2847d63694f9f1a4b6e8cd7700, type: 2}
   - {fileID: 11400000, guid: a5199b013101fee49851e47663db2872, type: 2}
   potionType: 0
   potionLevel: 1
+  description: 
