@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Cinemachine;
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Lab;
 using CodeBase.Logic;
 using CodeBase.Map;
 using CodeBase.Services.Input;
@@ -57,7 +55,7 @@ namespace CodeBase.Infrastructure.States
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
             await _gameFactory.CreateHud();
-          //  await SetCameraTarget(heroGameObject);
+            //  await SetCameraTarget(heroGameObject);
         }
 
         public void Enter(string sceneName)
@@ -84,17 +82,5 @@ namespace CodeBase.Infrastructure.States
 
         private LevelStaticData LevelStaticData() =>
             _staticData.ForLevel("forest");
-
-        Task SetCameraTarget(GameObject target)
-        {
-            if (Camera.main)
-            {
-                CinemachineVirtualCamera camera = Camera.main.GetComponent<CinemachineVirtualCamera>();
-                camera.LookAt = target.transform;
-                camera.Follow = target.transform;
-            }
-
-            return Task.CompletedTask;
-        }
     }
 }
