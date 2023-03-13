@@ -19,6 +19,7 @@ namespace CodeBase.Infrastructure.Factory
         Task<GameObject> CreateHud();
         Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent,Action action);
         Task<LootPiece> CreateLoot();
+        Task<GameObject> CreateCameraController();
         void Cleanup();
         Task WarmUp();
     }

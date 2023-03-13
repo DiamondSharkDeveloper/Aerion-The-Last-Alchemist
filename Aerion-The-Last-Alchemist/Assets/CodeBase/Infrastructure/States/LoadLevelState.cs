@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Infrastructure.Factory;
@@ -52,10 +53,15 @@ namespace CodeBase.Infrastructure.States
                 hero.Construct(_inputService);
             }
 
+            GameObject cameraController = await _gameFactory.CreateCameraController();
+            _stateMachine.OnStateChange += state =>
+            {
+                cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(state.IsOnPause(),2);
+            };
+
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
             await _gameFactory.CreateHud();
-            //  await SetCameraTarget(heroGameObject);
         }
 
         public void Enter(string sceneName)

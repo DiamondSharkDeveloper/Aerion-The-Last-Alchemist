@@ -17,5 +17,6 @@ namespace CodeBase.Infrastructure.Factory
         public const string TreePrefab03="TreesPrefab03";
         public const string TreePrefab04="TreesPrefab04";
         public const string TreePrefab06="TreesPrefab06";
+        public const string StrategyCamera="Strategy Camera";
     }
 }

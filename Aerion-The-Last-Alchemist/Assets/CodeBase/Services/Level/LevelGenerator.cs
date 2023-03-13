@@ -51,7 +51,7 @@ namespace CodeBase.Services.Level
             GenerateCreatureTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
-            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.swampSize, staticData.mapSize);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize);

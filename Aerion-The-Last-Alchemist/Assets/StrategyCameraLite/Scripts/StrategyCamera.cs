@@ -237,4 +237,13 @@ public class StrategyCamera : MonoBehaviour
         RightMouseButton = 1,
         MiddleMouseButton = 2
     }
+
+    public IEnumerator ChangeCameraActiveStatus(bool activeStatus,int seconds)
+    {
+        if (seconds>0)
+        {
+            yield return new WaitForSeconds(seconds);
+        }
+        cam.gameObject.SetActive(activeStatus);
+    }
 }

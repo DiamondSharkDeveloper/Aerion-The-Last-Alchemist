@@ -27,18 +27,16 @@ namespace CodeBase.Services.Input
         private bool CanRaycast()
         {
             return (UnityEngine.Input.GetMouseButtonDown(0) && (UnityEngine.Input.GetAxis("Mouse Y") == 0) &&
-                    UnityEngine.Input.GetAxis("Mouse Y") ==0 &&
+                    UnityEngine.Input.GetAxis("Mouse X") == 0 &&
                     !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject());
         }
 
         void Update()
         {
-            if (!CanRaycast())
-                return;
-            RaycastHit hit;
-            Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
             if (CanRaycast())
             {
+                RaycastHit hit;
+                Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
                 if (Physics.Raycast(rayOrigin, out hit))
                 {
                     WorldTile worldTile;

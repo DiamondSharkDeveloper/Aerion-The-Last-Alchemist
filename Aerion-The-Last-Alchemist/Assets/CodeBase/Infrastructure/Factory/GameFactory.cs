@@ -161,6 +161,11 @@ namespace CodeBase.Infrastructure.Factory
             hud.GetComponent<HUD>().Construct(_windowService);
             return hud;
         }
+        public async Task<GameObject> CreateCameraController()
+        {
+            GameObject cameraController = await InstantiateRegisteredAsync(AssetAddress.StrategyCamera);
+            return cameraController;
+        }
 
         public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
         {
@@ -201,6 +206,8 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.MapPath);
 
             await _assets.Load<GameObject>(AssetAddress.HousePath);
+            await _assets.Load<GameObject>(AssetAddress.HUDPath);
+            await _assets.Load<GameObject>(AssetAddress.StrategyCamera);
             await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);
             await _assets.Load<GameObject>(AssetAddress.CreaturePath);

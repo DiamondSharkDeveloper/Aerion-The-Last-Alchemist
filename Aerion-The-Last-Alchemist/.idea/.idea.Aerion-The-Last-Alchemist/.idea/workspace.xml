@@ -70,10 +70,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38084">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="38084" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -97,7 +97,8 @@
       <workItem from="1677271857850" duration="14013000" />
       <workItem from="1677805908564" duration="4699000" />
       <workItem from="1677972754697" duration="21290000" />
-      <workItem from="1678159115489" duration="48103000" />
+      <workItem from="1678159115489" duration="49241000" />
+      <workItem from="1678662870928" duration="6372000" />
     </task>
     <servers />
   </component>
@@ -166,45 +167,6 @@
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>84</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="84" containingFunctionPresentation="method 'CreateMap'">
-            <startOffsets>
-              <option value="3701" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3741" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>91</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="91" containingFunctionPresentation="method 'CreateTree'">
-            <startOffsets>
-              <option value="3867" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3972" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>92</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="92" containingFunctionPresentation="method 'CreateTree'">
-            <startOffsets>
-              <option value="3988" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4110" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs</url>
           <line>28</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Services\Input\InputService.cs" initialLine="28" containingFunctionPresentation="method 'CanRaycast'">
@@ -212,7 +174,7 @@
               <option value="630" />
             </startOffsets>
             <endOffsets>
-              <option value="892" />
+              <option value="775" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="48" />
