@@ -15,6 +15,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/21/56a916f0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/4d/01517219/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/57/bf08eeb4/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/a9/f6c51a43/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/10/a84072fa/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/60/ecd43e28/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/96/cb4fd6d4/LoopType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,7 +99,7 @@
       <workItem from="1677805908564" duration="4699000" />
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
-      <workItem from="1678662870928" duration="6372000" />
+      <workItem from="1678662870928" duration="17200000" />
     </task>
     <servers />
   </component>
@@ -129,13 +130,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>149</line>
+          <line>148</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="133" containingFunctionPresentation="lambda expression inside method 'CreateLoot'">
             <startOffsets>
-              <option value="6455" />
+              <option value="6428" />
             </startOffsets>
             <endOffsets>
-              <option value="6474" />
+              <option value="6447" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />
@@ -174,7 +175,7 @@
               <option value="630" />
             </startOffsets>
             <endOffsets>
-              <option value="775" />
+              <option value="886" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="48" />

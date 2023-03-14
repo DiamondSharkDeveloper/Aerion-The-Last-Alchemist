@@ -90,9 +90,8 @@ namespace CodeBase.Infrastructure.Factory
         private async Task CreateTree(MyTile mapCoordinate)
         {
             GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
-                InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
+            InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
                 mapCoordinate.Tile.gameObject.transform);
-          
         }
 
         private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
@@ -135,7 +134,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateHouse(MyTile parent, Action action)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
-            parent.OnStandAction = new Action(action);
+            parent.OnStandAction = action;
             GameObject house =
                 InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
             house.transform.localRotation = Quaternion.Euler(-90, 0, 0);
@@ -161,6 +160,7 @@ namespace CodeBase.Infrastructure.Factory
             hud.GetComponent<HUD>().Construct(_windowService);
             return hud;
         }
+
         public async Task<GameObject> CreateCameraController()
         {
             GameObject cameraController = await InstantiateRegisteredAsync(AssetAddress.StrategyCamera);

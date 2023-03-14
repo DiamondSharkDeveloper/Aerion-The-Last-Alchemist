@@ -9,20 +9,23 @@ namespace CodeBase.Data
     public abstract class SerializableDictionary<TKey, TValue> : ISerializationCallbackReceiver
     {
         public Dictionary<TKey, TValue> Dictionary = new Dictionary<TKey, TValue>();
-
-        [SerializeField] private TKey[] _keys;
-        [SerializeField] private TValue[] _values;
+        [SerializeField]
+        private List<TKey> _keys;
+     
+        [SerializeField]
+        private List<TValue> _values;
 
         public void OnBeforeSerialize()
         {
-            _keys = Dictionary.Keys.ToArray();
-            _values = Dictionary.Values.ToArray();
+            _keys = Dictionary.Keys.ToList();
+            _values = Dictionary.Values.ToList();
         }
 
         public void OnAfterDeserialize()
         {
-            for (int i = 0; i < _keys.Length; i++)
+            for (int i = 0; i < _keys.Count; i++)
                 Dictionary.Add(_keys[i], _values[i]);
         }
+        
     }
 }

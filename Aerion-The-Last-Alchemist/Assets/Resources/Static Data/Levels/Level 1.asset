@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   levelKey: forest
-  seaInterval: 3
-  mapSize: 40
+  seaInterval: 4
+  mapSize: 60
   waterSize: 60
   swampSize: 160
   rocksSize: 80

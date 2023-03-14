@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 408527e1f80c3c74096b937469dd0b21, type: 2}
   - {fileID: 11400000, guid: 40b3ee6e2b591cf40bf5216a4fe5ed15, type: 2}
   - {fileID: 11400000, guid: 803bc504dae570f498c1c60996c66578, type: 2}
+  ingredientsCount: 060000000400000002000000
   potionType: 3
   potionLevel: 1
   description: 

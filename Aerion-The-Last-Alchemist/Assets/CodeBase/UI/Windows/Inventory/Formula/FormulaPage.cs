@@ -15,10 +15,11 @@ namespace CodeBase.UI.Windows.Inventory.Formula
             potionNameText.text = staticData.potionType + " Potion" + " Level " + staticData.potionLevel;
             descriptionText.text = staticData.description;
             potion.SetItemSprite(staticData.sprite);
-            for (var i = 0; i < staticData.ingredients.Count; i++)
+            for (int i = 0; i < staticData.ingredients.Count; i++)
             {
                 CellItem item = Instantiate(potion, ingredientsHolder.transform, false);
                 item.SetItemSprite(staticData.ingredients[i].lootIcon);
+           //     item.SetItemCount(staticData.ingredientsCount[i]);
             }
         }
       

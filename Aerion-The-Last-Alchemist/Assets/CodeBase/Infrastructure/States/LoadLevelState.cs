@@ -42,6 +42,11 @@ namespace CodeBase.Infrastructure.States
         {
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
+            GameObject cameraController = await _gameFactory.CreateCameraController();
+            _stateMachine.OnStateChange += state =>
+            {
+                cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(state.IsOnPause(),3);
+            };
             await _gameFactory.CreateMap(mapCoordinates);
             GameObject lab = await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
                 () => { _stateMachine.Enter<LabState>(); });
@@ -53,11 +58,7 @@ namespace CodeBase.Infrastructure.States
                 hero.Construct(_inputService);
             }
 
-            GameObject cameraController = await _gameFactory.CreateCameraController();
-            _stateMachine.OnStateChange += state =>
-            {
-                cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(state.IsOnPause(),2);
-            };
+            
 
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
