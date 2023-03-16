@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Value: 100
   redOutGreenIn:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -15
   redOutBlueIn:
     m_OverrideState: 1
     m_Value: -15
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   greenOutGreenIn:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 100
   greenOutBlueIn:
     m_OverrideState: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     m_Value: 1
   contrast:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 15
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
