@@ -104,7 +104,7 @@ namespace CodeBase.Services.Level
             {
                 int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
                 int[] neighbours = GetNeighbours(randTileNumber, mapSize);
-                for (int i = 0; i < _randomService.Next(0, neighbours.Length); i++)
+                for (int i = 0; i <  neighbours.Length; i++)
                 {
                     if (amount > 0)
                     {
