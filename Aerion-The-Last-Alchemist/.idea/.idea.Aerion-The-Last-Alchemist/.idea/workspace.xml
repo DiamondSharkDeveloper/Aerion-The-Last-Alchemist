@@ -24,6 +24,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dca21659871f1e6579d6f1ee64361ada6b6e82f39fe304c6e221447deef666/System.Xml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/HeroMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Lab/LaboratoryWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Map/WorldTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/Book.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,7 +101,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="644000" />
+      <workItem from="1678989343605" duration="10397000" />
     </task>
     <servers />
   </component>
