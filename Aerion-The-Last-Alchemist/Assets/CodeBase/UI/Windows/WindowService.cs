@@ -1,6 +1,8 @@
+using System;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.States;
+using CodeBase.StaticData;
+
 
 namespace CodeBase.UI.Windows
 {
@@ -25,10 +27,13 @@ namespace CodeBase.UI.Windows
                 case WindowId.Potions:
                     _uiFactory.CreatePotions();
                     break;
-                case WindowId.Formula:
-                    _uiFactory.CreateFormula();
-                    break;
+               
             }
+        }
+
+        public void OpenFormulaBook(Action<FormulaStaticData> action)
+        {
+            _uiFactory.CreateFormula(action);
         }
     }
 }

@@ -897,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButton: {fileID: 1357698615}
+  craftZone: {fileID: 1103467559}
 --- !u!1 &1103467555
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +909,7 @@ GameObject:
   - component: {fileID: 1103467556}
   - component: {fileID: 1103467558}
   - component: {fileID: 1103467557}
+  - component: {fileID: 1103467559}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -977,6 +979,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103467555}
   m_CullTransparentMesh: 1
+--- !u!114 &1103467559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103467555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81530508fdfc28d44ac5496af2a66dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kettleAnimator: {fileID: 1356730646}
+  bubblesParticleSystem: {fileID: 0}
+  fire: {fileID: 403202550}
+  _ingredientHandler: {fileID: 443685486}
+  _openWindowButton: {fileID: 0}
 --- !u!1 &1160906741
 GameObject:
   m_ObjectHideFlags: 0

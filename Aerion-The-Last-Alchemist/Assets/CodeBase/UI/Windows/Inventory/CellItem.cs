@@ -7,9 +7,13 @@ namespace CodeBase.UI.Windows.Inventory
     public class CellItem:MonoBehaviour
     {
         [SerializeField] private Image _itemImage;
+        [SerializeField] private Image _itemBackImage;
         [SerializeField] private TextMeshProUGUI _itemCountText;
 
-        public void SetItemSprite(Sprite sprite)
+        public void SetItemBackSprite(Sprite sprite)
+        {
+            _itemBackImage.sprite = sprite;
+        } public void SetItemSprite(Sprite sprite)
         {
             _itemImage.sprite = sprite;
         }

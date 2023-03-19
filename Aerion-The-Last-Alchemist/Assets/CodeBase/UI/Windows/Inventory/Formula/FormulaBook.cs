@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using CodeBase.Data;
+using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,17 +12,18 @@ namespace CodeBase.UI.Windows.Inventory.Formula
     {
         [SerializeField] private FormulaPage pagePrefab;
         [SerializeField] private FormulasPage formulaspagePrefab;
-        [SerializeField] private Sprite pageSprite;
+        [SerializeField] private Sprite _rightPageSprite;
+        [SerializeField] private Sprite _leftPageSprite;
         private readonly List<MyPage> _pages = new List<MyPage>();
 
-        public void Initialize(List<FormulaStaticData> formulas)
+        public void Initialize(List<FormulaStaticData> formulas,IPersistentProgressService persistentProgressService,Action<FormulaStaticData> action)
         {
             bookPages = new List<Sprite>();
             AddPageBackGround(formulas.Count + 1);
             _pages.Add(CreateFormulasPage(formulas, RightNext.gameObject.transform));
             for (int i = 0; i < formulas.Count; i++)
             {
-                _pages.Add(CreateFormulaPage(formulas[i], CalculateParent(i + 1), false));
+                _pages.Add(CreateFormulaPage(formulas[i], CalculateParent(i + 1), false,persistentProgressService.Progress.gameData.lootData,action));
 
                 int count = i;
                 _pages[count + 1].Hide();
@@ -89,10 +92,10 @@ namespace CodeBase.UI.Windows.Inventory.Formula
             }
         }
 
-        FormulaPage CreateFormulaPage(FormulaStaticData formulaStaticData, Transform parent, bool isEmpty)
+        FormulaPage CreateFormulaPage(FormulaStaticData formulaStaticData, Transform parent, bool isEmpty,LootData lootData,Action<FormulaStaticData> action)
         {
             FormulaPage page = Instantiate(pagePrefab, parent, false);
-            page.SetPage(formulaStaticData);
+            page.SetPage(formulaStaticData,lootData,action);
             return page;
         }
 
@@ -107,7 +110,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
         {
             for (int i = 0; i < count; i++)
             {
-                bookPages.Add(pageSprite);
+                bookPages.Add((i % 2) != 0 ?_leftPageSprite:_rightPageSprite);
             }
         }
     }

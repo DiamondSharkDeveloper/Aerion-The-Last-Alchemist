@@ -1,5 +1,7 @@
+using System;
 using System.Threading.Tasks;
 using CodeBase.Services;
+using CodeBase.StaticData;
 
 namespace CodeBase.Infrastructure.Factory
 {
@@ -8,6 +10,6 @@ namespace CodeBase.Infrastructure.Factory
         void CreateInventory();
         Task CreateUIRoot();
         void CreatePotions();
-        void CreateFormula();
+        void CreateFormula( Action<FormulaStaticData>action);
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using CodeBase.UI.Windows.Inventory.Formula;
 using UnityEngine;
@@ -9,9 +11,9 @@ namespace CodeBase.UI.Windows.Inventory
     {
         [SerializeField] private FormulaBook formulaBook;
 
-        public void Initialize(List<FormulaStaticData> staticDatas)
+        public void Initialize(List<FormulaStaticData> staticData,IPersistentProgressService persistentProgressService,Action<FormulaStaticData> action)
         {
-            formulaBook.Initialize(staticDatas);
+            formulaBook.Initialize(staticData,persistentProgressService,action);
         }
     }
 }

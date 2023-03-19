@@ -154,10 +154,10 @@ namespace CodeBase.Infrastructure.Factory
         }
 
 
-        public async Task<GameObject> CreateHud()
+        public async Task<GameObject> CreateHud(Action<FormulaStaticData> action)
         {
             GameObject hud = await InstantiateRegisteredAsync(AssetAddress.HUDPath);
-            hud.GetComponent<HUD>().Construct(_windowService);
+            hud.GetComponent<HUD>().Construct(_windowService,action);
             return hud;
         }
 

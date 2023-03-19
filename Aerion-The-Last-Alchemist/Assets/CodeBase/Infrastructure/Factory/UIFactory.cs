@@ -1,13 +1,16 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
+using CodeBase.StaticData;
 using CodeBase.StaticData.Windows;
 using CodeBase.UI.Windows.Inventory;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace CodeBase.UI.Services.Factory
 {
@@ -65,7 +68,7 @@ namespace CodeBase.UI.Services.Factory
             }
         }
 
-        public void CreateFormula()
+        public void CreateFormula(Action<FormulaStaticData>action)
         {
             WindowConfig config = _staticData.ForWindow(WindowId.Formula);
             FormulaWindow window = Object.Instantiate(config.Template, _uiRoot) as FormulaWindow;
@@ -76,7 +79,7 @@ namespace CodeBase.UI.Services.Factory
                 {
                     _stateMachine.Enter<GameLoopState>();
                 });
-                window.Initialize(_staticData.ForFormulas());
+                window.Initialize(_staticData.ForFormulas(),_progressService,action);
             }
         }
     }

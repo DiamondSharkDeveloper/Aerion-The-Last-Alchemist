@@ -49,7 +49,7 @@ namespace CodeBase.Infrastructure.States
             };
             await _gameFactory.CreateMap(mapCoordinates);
             GameObject lab = await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
-                () => { _stateMachine.Enter<LabState>(); });
+                () => { _stateMachine.Enter<LabState,FormulaStaticData>(null); });
 
 
             GameObject heroGameObject = await _gameFactory.CreateHero(mapCoordinates[levelData.heroPosition]);
@@ -62,7 +62,10 @@ namespace CodeBase.Infrastructure.States
 
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
-            await _gameFactory.CreateHud();
+            await _gameFactory.CreateHud(data =>
+            {
+                _stateMachine.Enter<LabState,FormulaStaticData>(data);
+            } );
         }
 
         public void Enter(string sceneName)

@@ -101,7 +101,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="10397000" />
+      <workItem from="1678989343605" duration="21003000" />
     </task>
     <servers />
   </component>
@@ -158,13 +158,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaBook.cs</url>
-          <line>70</line>
+          <line>73</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaBook.cs" initialLine="60" containingFunctionPresentation="method 'ShowCurrentPages'">
             <startOffsets>
-              <option value="2042" />
+              <option value="2316" />
             </startOffsets>
             <endOffsets>
-              <option value="2069" />
+              <option value="2343" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="41" />

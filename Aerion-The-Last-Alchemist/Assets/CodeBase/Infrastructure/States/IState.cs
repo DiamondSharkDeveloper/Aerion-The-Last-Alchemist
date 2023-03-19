@@ -1,4 +1,6 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿using JetBrains.Annotations;
+
+namespace CodeBase.Infrastructure.States
 {
     public interface IState:IExitableState
     {
@@ -6,6 +8,6 @@
     }
     public interface IPayloadedState<TPayload> : IExitableState
     {
-        void Enter(TPayload payload);
+        void Enter([CanBeNull] TPayload payload);
     }
 }
