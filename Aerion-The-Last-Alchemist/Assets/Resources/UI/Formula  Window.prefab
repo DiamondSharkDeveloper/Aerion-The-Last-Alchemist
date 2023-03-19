@@ -1084,7 +1084,7 @@ MonoBehaviour:
   OnFlip:
     m_PersistentCalls:
       m_Calls: []
-  pagePrefab: {fileID: 5248791944657477369, guid: ad37b763bec95524caf38cdc3c37ef3d, type: 3}
+  pagePrefab: {fileID: 5082491904748167827, guid: 0d50bbd8d97beac4a88125c82979a7e4, type: 3}
   formulaspagePrefab: {fileID: 4489296009680559433, guid: c11a78ab288586e4cada46cadc2f959d, type: 3}
   _rightPageSprite: {fileID: 21300000, guid: b7f7bea2174f99c48a6fd0aa3e818f74, type: 3}
   _leftPageSprite: {fileID: 21300000, guid: c5ca63b5c5dc9944f85c217d85a88505, type: 3}

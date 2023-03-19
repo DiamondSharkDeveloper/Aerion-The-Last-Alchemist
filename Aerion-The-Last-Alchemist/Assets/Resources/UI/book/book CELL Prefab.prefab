@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemImage: {fileID: 8429162652049898346}
+  _itemBackImage: {fileID: 5479326559631103806}
   _itemCountText: {fileID: 0}
 --- !u!1 &5330724146321353832
 GameObject:

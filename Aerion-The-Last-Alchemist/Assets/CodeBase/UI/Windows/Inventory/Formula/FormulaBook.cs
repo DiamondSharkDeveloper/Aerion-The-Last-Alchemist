@@ -19,7 +19,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
         public void Initialize(List<FormulaStaticData> formulas,IPersistentProgressService persistentProgressService,Action<FormulaStaticData> action)
         {
             bookPages = new List<Sprite>();
-            AddPageBackGround(formulas.Count + 1);
+            AddPageBackGround(formulas.Count);
             _pages.Add(CreateFormulasPage(formulas, RightNext.gameObject.transform));
             for (int i = 0; i < formulas.Count; i++)
             {
@@ -57,7 +57,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
                     }
                     else
                     {
-                        if (!_pages[currentPage].isActiveAndEnabled)
+                        if (_pages != null && !(currentPage >= _pages?.Count) && !_pages[currentPage].isActiveAndEnabled)
                         {
                             ShowCurrentPages();
                         }

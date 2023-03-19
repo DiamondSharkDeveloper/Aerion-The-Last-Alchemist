@@ -11,6 +11,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
 {
     public class FormulaPage : MyPage
     {
+        [SerializeField] private CellItem ingredientPrefab;
         [SerializeField] private TextMeshProUGUI potionNameText;
         [SerializeField] private Button _brewButton;
         [SerializeField] private Sprite _brewButtonActiveSprite;
@@ -25,10 +26,10 @@ namespace CodeBase.UI.Windows.Inventory.Formula
             int avaliableIngedientsCount = 0;
             for (int i = 0; i < staticData.ingredients.Count; i++)
             {
-                CellItem item = Instantiate(potion, ingredientsHolder.transform, false);
+                CellItem item = Instantiate(ingredientPrefab, ingredientsHolder.transform, false);
                 item.SetItemSprite(staticData.ingredients[i].lootIcon);
                 item.SetItemBackSprite(backItemSprite);
-                if (lootData.lootPiecesInDataDictionary.Dictionary[staticData.ingredients[i].name].value > 0)
+                if (lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(staticData.ingredients[i].name)&&lootData.lootPiecesInDataDictionary.Dictionary[staticData.ingredients[i].name].value > 0)
                 {
                     avaliableIngedientsCount++;
                 }
