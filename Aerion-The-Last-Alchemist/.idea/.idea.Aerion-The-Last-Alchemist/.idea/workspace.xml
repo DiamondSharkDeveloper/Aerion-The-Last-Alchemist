@@ -102,7 +102,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="34868000" />
+      <workItem from="1678989343605" duration="38556000" />
     </task>
     <servers />
   </component>
@@ -119,60 +119,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaPage.cs" initialLine="39" containingFunctionPresentation="method 'SetPage'">
-            <startOffsets>
-              <option value="1690" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1724" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaPage.cs" initialLine="40" containingFunctionPresentation="method 'SetPage'">
-            <startOffsets>
-              <option value="1741" />
-              <option value="1781" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1816" />
-              <option value="1812" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaPage.cs" initialLine="37" containingFunctionPresentation="method 'SetPage'">
-            <startOffsets>
-              <option value="1582" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1643" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs</url>
-          <line>33</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\IngredientsWindow.cs" initialLine="32" containingFunctionPresentation="method 'AddAll'">
-            <startOffsets>
-              <option value="1251" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1317" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/PotionsWindow.cs</url>
           <line>30</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\PotionsWindow.cs" initialLine="29" containingFunctionPresentation="method 'AddAll'">
@@ -184,19 +130,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\IngredientsWindow.cs" initialLine="34" containingFunctionPresentation="method 'AddAll'">
-            <startOffsets>
-              <option value="1348" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1479" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

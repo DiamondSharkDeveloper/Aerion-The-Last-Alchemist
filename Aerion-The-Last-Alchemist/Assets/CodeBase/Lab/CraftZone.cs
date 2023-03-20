@@ -21,12 +21,14 @@ namespace CodeBase.Lab
         private IPersistentProgressService _persistentProgressService;
         private static readonly int Craft1 = Animator.StringToHash("Craft");
         private static readonly int FinishCraft = Animator.StringToHash("FinishCraft");
+        private static readonly int Idle = Animator.StringToHash("Idle");
 
         public void Init(IWindowService windowService, IPersistentProgressService persistentProgressService)
         {
             openWindowButton.Init(windowService, AddAllIngredients, false);
             potionHandler.gameObject.SetActive(false);
             bubblesParticleSystem.gameObject.SetActive(false);
+            fire.gameObject.SetActive(false);
         }
 
         [Obsolete("Obsolete")]
@@ -49,22 +51,28 @@ namespace CodeBase.Lab
         [Obsolete("Obsolete")]
         private void StartCraft(FormulaStaticData formulaStaticData)
         {
+            potionHandler.SetPotionImage(formulaStaticData.sprite);
             Color potionColor = GetPotionsColor(formulaStaticData.potionType);
             kettlePotionsSprite.color = potionColor;
             bubblesParticleSystem.startColor = potionColor;
-            bubblesParticleSystem.gameObject.SetActive(true);
-            fire.gameObject.SetActive(true);
+           
             ingredientHandler.Craft(() => { StartCoroutine(Craft()); });
         }
 
         private IEnumerator Craft()
         {
-            yield return new WaitForSecondsRealtime(4);
-            fire.gameObject.SetActive(false);
-            bubblesParticleSystem.gameObject.SetActive(false);
+           
+            fire.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(3);
+            bubblesParticleSystem.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(3);
             kettleAnimator.SetTrigger(Craft1);
-            yield return new WaitForSecondsRealtime(4);
+            yield return new WaitForSecondsRealtime(3);
             kettleAnimator.SetTrigger(FinishCraft);
+            bubblesParticleSystem.gameObject.SetActive(false);
+            fire.gameObject.SetActive(false);
+            yield return new WaitForSecondsRealtime(4);
+            kettleAnimator.SetTrigger(Idle);
         }
 
         public Color GetPotionsColor(PotionType potionType)

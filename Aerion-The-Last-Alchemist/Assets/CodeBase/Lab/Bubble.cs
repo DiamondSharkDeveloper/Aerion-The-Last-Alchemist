@@ -35,7 +35,7 @@ namespace CodeBase.Lab
 
         public void MoveTo(Vector3 at, Action onComplete)
         {
-            TweenerCore<Vector3, Vector3, VectorOptions> core = transform.DOMove(at, 3);
+            TweenerCore<Vector3, Vector3, VectorOptions> core = transform.DOMove(at, 0.2f);
             core.onComplete = () => onComplete?.Invoke();
         }
     }
