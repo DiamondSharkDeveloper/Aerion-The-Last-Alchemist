@@ -1,42 +1,21 @@
-﻿using System;
-using DG.Tweening;
-using DG.Tweening.Core;
-using DG.Tweening.Plugins.Options;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.Lab
 {
     public class Bubble : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _ingredientSpriteRenderer;
-        private Vector3 _startPosition;
-
-        private void Start()
-        {
-            _startPosition = transform.position;
-        }
+        [SerializeField] private SpriteRenderer ingredientSpriteRenderer;
 
         public void SetSprite(Sprite sprite)
         {
-            _ingredientSpriteRenderer.sprite = sprite;
-        }
-
-        public void ActivateBubble()
-        {
-            gameObject.SetActive(true);
-            transform.position = _startPosition;
+            ingredientSpriteRenderer.sprite = sprite;
         }
 
         public void DestroyBubble()
         {
-            _ingredientSpriteRenderer.sprite = null;
-            gameObject.SetActive(false);
+            ingredientSpriteRenderer.sprite = null;
+           
         }
-
-        public void MoveTo(Vector3 at, Action onComplete)
-        {
-            TweenerCore<Vector3, Vector3, VectorOptions> core = transform.DOMove(at, 0.2f);
-            core.onComplete = () => onComplete?.Invoke();
-        }
+        
     }
 }

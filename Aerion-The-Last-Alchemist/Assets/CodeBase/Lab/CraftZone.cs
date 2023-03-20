@@ -18,6 +18,7 @@ namespace CodeBase.Lab
         [SerializeField] private IngredientHandler ingredientHandler;
         [SerializeField] private OpenWindowButton openWindowButton;
         [SerializeField] private PotionHandler potionHandler;
+        [SerializeField] private Color waterColour;
         private IPersistentProgressService _persistentProgressService;
         private static readonly int Craft1 = Animator.StringToHash("Craft");
         private static readonly int FinishCraft = Animator.StringToHash("FinishCraft");
@@ -42,6 +43,7 @@ namespace CodeBase.Lab
 
         private void AddAllIngredients(FormulaStaticData formulaStaticData)
         {
+            ingredientHandler.RemoveBubbles();
             foreach (IngredientStaticData ingredientStaticData in formulaStaticData.ingredients)
             {
                 ingredientHandler.ActiveBubble(ingredientStaticData.lootIcon, ingredientStaticData.name);
@@ -52,27 +54,34 @@ namespace CodeBase.Lab
         private void StartCraft(FormulaStaticData formulaStaticData)
         {
             potionHandler.SetPotionImage(formulaStaticData.sprite);
-            Color potionColor = GetPotionsColor(formulaStaticData.potionType);
-            kettlePotionsSprite.color = potionColor;
-            bubblesParticleSystem.startColor = potionColor;
            
-            ingredientHandler.Craft(() => { StartCoroutine(Craft()); });
+
+          StartCoroutine(Craft(formulaStaticData));
         }
 
-        private IEnumerator Craft()
+        private IEnumerator Craft(FormulaStaticData formulaStaticData)
         {
+            Color potionColor = GetPotionsColor(formulaStaticData.potionType);
            
+            yield return new WaitForSecondsRealtime(2);
             fire.gameObject.SetActive(true);
-            yield return new WaitForSecondsRealtime(3);
-            bubblesParticleSystem.gameObject.SetActive(true);
-            yield return new WaitForSecondsRealtime(3);
+            yield return new WaitForSecondsRealtime(2);
             kettleAnimator.SetTrigger(Craft1);
-            yield return new WaitForSecondsRealtime(3);
+            yield return new WaitForSecondsRealtime(2);
+            StartCoroutine(SmoothColourChange(waterColour, potionColor));
+            bubblesParticleSystem.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(6);
             kettleAnimator.SetTrigger(FinishCraft);
-            bubblesParticleSystem.gameObject.SetActive(false);
+          
             fire.gameObject.SetActive(false);
-            yield return new WaitForSecondsRealtime(4);
+            yield return new WaitForSecondsRealtime(2);
+            bubblesParticleSystem.gameObject.SetActive(false);
+            yield return new WaitForSecondsRealtime(3);
+            
+            kettlePotionsSprite.color =  waterColour;;
+            ingredientHandler.RemoveBubbles();
             kettleAnimator.SetTrigger(Idle);
+            StopAllCoroutines();
         }
 
         public Color GetPotionsColor(PotionType potionType)
@@ -94,6 +103,17 @@ namespace CodeBase.Lab
             }
 
             return Color.white;
+        }
+
+        public IEnumerator SmoothColourChange(Color startColor,Color targetColour)
+        {
+         
+            for (float i = 0; i < 1; i+=Time.deltaTime/4)
+            {
+                kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
+                yield return null;
+            }
+        
         }
     }
 }
