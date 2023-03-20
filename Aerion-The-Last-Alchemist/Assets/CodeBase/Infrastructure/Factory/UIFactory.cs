@@ -68,16 +68,23 @@ namespace CodeBase.UI.Services.Factory
             }
         }
 
-        public void CreateFormula(Action<FormulaStaticData>action)
+        public void CreateFormula(Action<FormulaStaticData>action,bool isOnMap)
         {
             WindowConfig config = _staticData.ForWindow(WindowId.Formula);
             FormulaWindow window = Object.Instantiate(config.Template, _uiRoot) as FormulaWindow;
             if (window != null)
             {
-                _stateMachine.Enter<MenuState>();
+                if (isOnMap)
+                {
+                    _stateMachine.Enter<MenuState>();
+                }
+               
                 window.Construct(_progressService, () =>
                 {
-                    _stateMachine.Enter<GameLoopState>();
+                    if (isOnMap)
+                    {
+                        _stateMachine.Enter<GameLoopState>();
+                    }
                 });
                 window.Initialize(_staticData.ForFormulas(),_progressService,action);
             }

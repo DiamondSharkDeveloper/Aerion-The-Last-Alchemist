@@ -15,7 +15,7 @@ namespace CodeBase.UI.Elements
         {
             inventoryButton.Init(windowService);
             potionsButton.Init(windowService);
-            formulaButton.Init(windowService,openFormulaAction);
+            formulaButton.Init(windowService,openFormulaAction,true);
         }
     }
 }

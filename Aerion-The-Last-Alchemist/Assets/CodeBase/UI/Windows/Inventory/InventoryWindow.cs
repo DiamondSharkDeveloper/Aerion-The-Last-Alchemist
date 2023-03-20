@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CodeBase.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CodeBase.UI.Windows.Inventory
 {
@@ -8,6 +9,7 @@ namespace CodeBase.UI.Windows.Inventory
     {
         [SerializeField] protected GameObject content;
         [SerializeField] protected GameObject cellprefab;
+        [SerializeField] protected Button addAllButton;
         protected Dictionary<string, CellItem> _items = new Dictionary<string, CellItem>();
         
        protected void RefreshItem(Loot loot)

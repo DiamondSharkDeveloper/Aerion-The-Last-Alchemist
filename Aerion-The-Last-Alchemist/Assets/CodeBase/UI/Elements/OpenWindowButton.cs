@@ -19,15 +19,15 @@ namespace CodeBase.UI.Elements
             Button.onClick.AddListener(Open);
         }
         
-        public void Init(IWindowService windowService,Action<FormulaStaticData> action)
+        public void Init(IWindowService windowService,Action<FormulaStaticData> action,bool isOnMap)
         {
             _windowService = windowService;
-            Button.onClick.AddListener(() => Open(action));
+            Button.onClick.AddListener(() => OpenFormulaBook(action,isOnMap));
         }
         
         private void Open() =>
             _windowService.Open(WindowId);
-        public void Open(Action<FormulaStaticData> action) =>
-            _windowService.OpenFormulaBook(action);
+        public void OpenFormulaBook(Action<FormulaStaticData> action,bool isOnMap)=>
+            _windowService.OpenFormulaBook(action,isOnMap);
     }
 }

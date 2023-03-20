@@ -450,6 +450,7 @@ MonoBehaviour:
   potionNameText: {fileID: 4039561710525176078}
   _brewButton: {fileID: 4454108248004412368}
   _brewButtonActiveSprite: {fileID: 21300000, guid: 367a3f2ed282f4d4180ab55033633f14, type: 3}
+  _brewButtonImage: {fileID: 6906118455902262156}
   ingredientsHolder: {fileID: 2824378277279372230}
   backItemSprite: {fileID: 21300000, guid: 6a1d3cebcd92f9749b6459050a041c7c, type: 3}
 --- !u!1 &2667416462626722254

@@ -10,6 +10,6 @@ namespace CodeBase.Infrastructure.Factory
         void CreateInventory();
         Task CreateUIRoot();
         void CreatePotions();
-        void CreateFormula( Action<FormulaStaticData>action);
+        void CreateFormula(Action<FormulaStaticData> action, bool isOnMap);
     }
 }

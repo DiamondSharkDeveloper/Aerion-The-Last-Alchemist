@@ -31,9 +31,9 @@ namespace CodeBase.UI.Windows
             }
         }
 
-        public void OpenFormulaBook(Action<FormulaStaticData> action)
+        public void OpenFormulaBook(Action<FormulaStaticData> action,bool isOnMap)
         {
-            _uiFactory.CreateFormula(action);
+            _uiFactory.CreateFormula(action,isOnMap);
         }
     }
 }

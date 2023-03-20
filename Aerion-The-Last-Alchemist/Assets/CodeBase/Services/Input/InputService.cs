@@ -26,8 +26,7 @@ namespace CodeBase.Services.Input
 
         private bool CanRaycast()
         {
-            return (UnityEngine.Input.GetMouseButtonDown(0) && (UnityEngine.Input.GetAxis("Mouse Y") == 0) &&
-                    UnityEngine.Input.GetAxis("Mouse X") == 0 &&
+            return (UnityEngine.Input.GetMouseButtonDown(0) &&
                     !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject());
         }
 

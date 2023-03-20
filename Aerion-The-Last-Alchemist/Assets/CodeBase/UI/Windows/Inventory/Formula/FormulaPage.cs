@@ -3,9 +3,7 @@ using CodeBase.Data;
 using CodeBase.StaticData;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
-using Button = UnityEngine.UI.Button;
-
+using UnityEngine.UI;
 
 namespace CodeBase.UI.Windows.Inventory.Formula
 {

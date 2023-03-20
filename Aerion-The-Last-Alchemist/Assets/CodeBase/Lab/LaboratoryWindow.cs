@@ -4,7 +4,6 @@ using CodeBase.StaticData;
 using CodeBase.UI.Windows;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 namespace CodeBase.Lab
@@ -15,6 +14,7 @@ namespace CodeBase.Lab
         [SerializeField] private CraftZone craftZone;
         public event Action OnClose;
 
+        [Obsolete("Obsolete")]
         public void Init([CanBeNull] FormulaStaticData data,IPersistentProgressService progressService,IWindowService windowService)
         {
             if (data)
@@ -22,7 +22,7 @@ namespace CodeBase.Lab
              craftZone.Init(windowService,progressService,data);   
             }
             else
-            {
+            { 
                 craftZone.Init(windowService,progressService);   
             }
             

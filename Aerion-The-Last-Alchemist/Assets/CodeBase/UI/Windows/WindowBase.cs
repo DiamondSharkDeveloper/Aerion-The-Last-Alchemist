@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public abstract class WindowBase : MonoBehaviour
 {
     [SerializeField] private Button closeButton;
-    private Action _onClose;
+    protected Action _onClose;
     
     protected IPersistentProgressService ProgressService;
     protected PlayerProgress Progress => ProgressService.Progress;

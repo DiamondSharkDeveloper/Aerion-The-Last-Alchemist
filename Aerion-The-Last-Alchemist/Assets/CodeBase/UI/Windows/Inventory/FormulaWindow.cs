@@ -11,9 +11,16 @@ namespace CodeBase.UI.Windows.Inventory
     {
         [SerializeField] private FormulaBook formulaBook;
 
-        public void Initialize(List<FormulaStaticData> staticData,IPersistentProgressService persistentProgressService,Action<FormulaStaticData> action)
+        public void Initialize(List<FormulaStaticData> staticData, IPersistentProgressService persistentProgressService,
+            Action<FormulaStaticData> action)
         {
-            formulaBook.Initialize(staticData,persistentProgressService,action);
+            action += data =>
+            {
+                _onClose = null;
+                Destroy(gameObject);
+            };
+            formulaBook.Initialize(staticData, persistentProgressService, action);
+         
         }
     }
 }

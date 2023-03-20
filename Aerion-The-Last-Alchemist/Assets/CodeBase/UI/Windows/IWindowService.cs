@@ -8,6 +8,6 @@ namespace CodeBase.UI.Windows
     public interface IWindowService : IService
     {
         void Open(WindowId windowId);
-        void OpenFormulaBook(Action<FormulaStaticData> action);
+        void OpenFormulaBook(Action<FormulaStaticData> action, bool isOnMap);
     }
 }
