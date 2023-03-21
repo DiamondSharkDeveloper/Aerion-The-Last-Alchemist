@@ -170,14 +170,14 @@ MonoBehaviour:
   InvertHorizontal: 0
   HorizontalRotateSpeed: 2
   VerticalRotateSpeed: 3
-  MinVerticalAngle: 0
-  MaxVerticalAngle: 90
+  MinVerticalAngle: 3
+  MaxVerticalAngle: 80
   MoveMouseButton: 1
   MovementForwardAxis: Vertical
   MovementSidewaysAxis: Horizontal
   FastSpeedKey: 304
   AllowMouseDragging: 1
-  DraggingMouseButton: 0
+  DraggingMouseButton: 2
   InvertDragging: 1
   MovementSpeed: 10
   FastMovementMultiplier: 3
