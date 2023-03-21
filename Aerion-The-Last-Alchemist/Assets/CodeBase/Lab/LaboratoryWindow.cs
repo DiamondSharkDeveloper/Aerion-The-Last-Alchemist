@@ -17,7 +17,7 @@ namespace CodeBase.Lab
         [Obsolete("Obsolete")]
         public void Init([CanBeNull] FormulaStaticData data,IPersistentProgressService progressService,IWindowService windowService)
         {
-            if (data)
+            if (data!=null)
             {
              craftZone.Init(windowService,progressService,data);   
             }

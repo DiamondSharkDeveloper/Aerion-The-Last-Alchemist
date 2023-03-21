@@ -102,7 +102,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="47536000" />
+      <workItem from="1678989343605" duration="50509000" />
     </task>
     <servers />
   </component>
@@ -133,13 +133,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>71</line>
+          <line>75</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="72" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="2973" />
+              <option value="3046" />
             </startOffsets>
             <endOffsets>
-              <option value="3022" />
+              <option value="3095" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="74" />

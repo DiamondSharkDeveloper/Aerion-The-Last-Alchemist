@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 namespace CodeBase.Infrastructure.States
 {
-    public class LabState:IPayloadedState<FormulaStaticData>
+    public class LabState : IPayloadedState <FormulaStaticData>
     {
         private const string LabScene = "Lab";
         private LaboratoryWindow _laboratoryWindow;
@@ -17,7 +17,9 @@ namespace CodeBase.Infrastructure.States
         private readonly SceneLoader _sceneLoader;
         private readonly AllServices _services;
         private readonly LoadingCurtain _loadingCurtain;
-        public LabState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices allServices,LoadingCurtain loadingCurtain)
+
+        public LabState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices allServices,
+            LoadingCurtain loadingCurtain)
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
@@ -36,7 +38,8 @@ namespace CodeBase.Infrastructure.States
                 {
                     if (scene.GetRootGameObjects()[0].TryGetComponent(out _laboratoryWindow))
                     {
-                        _laboratoryWindow.Init(payload,_services.Single<IPersistentProgressService>(),_services.Single<IWindowService>());
+                        _laboratoryWindow.Init(payload, _services.Single<IPersistentProgressService>(),
+                            _services.Single<IWindowService>());
                         _laboratoryWindow.OnClose += () =>
                         {
                             _loadingCurtain.Show();
@@ -44,8 +47,8 @@ namespace CodeBase.Infrastructure.States
                         };
                     }
                 }
-            } );
-      
+            });
+
             _loadingCurtain.Hide();
         }
 

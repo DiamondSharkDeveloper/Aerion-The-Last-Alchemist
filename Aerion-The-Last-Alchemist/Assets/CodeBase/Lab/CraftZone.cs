@@ -26,10 +26,14 @@ namespace CodeBase.Lab
 
         public void Init(IWindowService windowService, IPersistentProgressService persistentProgressService)
         {
-            openWindowButton.Init(windowService, AddAllIngredients, false);
             potionHandler.gameObject.SetActive(false);
             bubblesParticleSystem.gameObject.SetActive(false);
             fire.gameObject.SetActive(false);
+            openWindowButton.Init(windowService, data =>
+            {
+                AddAllIngredients(data);
+                StartCraft(data);
+            }, false);
         }
 
         [Obsolete("Obsolete")]
@@ -54,15 +58,15 @@ namespace CodeBase.Lab
         private void StartCraft(FormulaStaticData formulaStaticData)
         {
             potionHandler.SetPotionImage(formulaStaticData.sprite);
-           
 
-          StartCoroutine(Craft(formulaStaticData));
+
+            StartCoroutine(Craft(formulaStaticData));
         }
 
         private IEnumerator Craft(FormulaStaticData formulaStaticData)
         {
             Color potionColor = GetPotionsColor(formulaStaticData.potionType);
-           
+
             yield return new WaitForSecondsRealtime(2);
             fire.gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(2);
@@ -72,13 +76,14 @@ namespace CodeBase.Lab
             bubblesParticleSystem.gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(6);
             kettleAnimator.SetTrigger(FinishCraft);
-          
+
             fire.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(2);
             bubblesParticleSystem.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(3);
-            
-            kettlePotionsSprite.color =  waterColour;;
+
+            kettlePotionsSprite.color = waterColour;
+            ;
             ingredientHandler.RemoveBubbles();
             kettleAnimator.SetTrigger(Idle);
             StopAllCoroutines();
@@ -105,15 +110,13 @@ namespace CodeBase.Lab
             return Color.white;
         }
 
-        public IEnumerator SmoothColourChange(Color startColor,Color targetColour)
+        public IEnumerator SmoothColourChange(Color startColor, Color targetColour)
         {
-         
-            for (float i = 0; i < 1; i+=Time.deltaTime/4)
+            for (float i = 0; i < 1; i += Time.deltaTime / 4)
             {
                 kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
                 yield return null;
             }
-        
         }
     }
 }
