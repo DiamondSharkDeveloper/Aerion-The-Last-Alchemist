@@ -24,10 +24,7 @@ namespace CodeBase.UI.Windows
                 case WindowId.Inventory:
                     _uiFactory.CreateInventory();
                     break;
-                case WindowId.Potions:
-                    _uiFactory.CreatePotions();
-                    break;
-               
+
             }
         }
 

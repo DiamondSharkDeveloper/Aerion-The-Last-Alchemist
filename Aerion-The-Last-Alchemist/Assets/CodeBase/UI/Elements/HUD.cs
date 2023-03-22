@@ -14,7 +14,7 @@ namespace CodeBase.UI.Elements
         public void Construct(IWindowService windowService,Action<FormulaStaticData> openFormulaAction)
         {
             inventoryButton.Init(windowService);
-            potionsButton.Init(windowService);
+            potionsButton.gameObject.SetActive(false);
             formulaButton.Init(windowService,openFormulaAction,true);
         }
     }

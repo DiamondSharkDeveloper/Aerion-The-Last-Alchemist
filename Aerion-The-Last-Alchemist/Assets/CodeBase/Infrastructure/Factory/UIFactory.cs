@@ -43,7 +43,7 @@ namespace CodeBase.UI.Services.Factory
                 {
                     _stateMachine.Enter<GameLoopState>();
                 });
-                window.Initialize(_staticData.ForIngredients());
+                window.Initialize(_staticData.ForIngredients(),_staticData.ForFormulas());
             }
         }
 
