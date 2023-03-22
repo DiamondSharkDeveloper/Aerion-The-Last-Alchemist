@@ -65,6 +65,7 @@ public class StrategyCamera : MonoBehaviour
     void Awake()
     {
         cam = GetComponentInChildren<Camera>();
+        cam.depthTextureMode = DepthTextureMode.DepthNormals;
     }
 
     private void OnEnable()
