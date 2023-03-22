@@ -38,7 +38,7 @@ namespace CodeBase.UI.Services.Factory
             IngredientsWindow window = Object.Instantiate(config.Template, _uiRoot) as IngredientsWindow;
             if (window != null)
             {
-                _stateMachine.Enter<MenuState>();
+              //  _stateMachine.Enter<MenuState>();
                 window.Construct(_progressService, () =>
                 {
                     _stateMachine.Enter<GameLoopState>();
@@ -59,7 +59,7 @@ namespace CodeBase.UI.Services.Factory
            PotionsWindow window = Object.Instantiate(config.Template, _uiRoot) as PotionsWindow;
             if (window != null)
             {
-                _stateMachine.Enter<MenuState>();
+              //  _stateMachine.Enter<MenuState>();
                 window.Construct(_progressService, () =>
                 {
                     _stateMachine.Enter<GameLoopState>();
@@ -74,10 +74,10 @@ namespace CodeBase.UI.Services.Factory
             FormulaWindow window = Object.Instantiate(config.Template, _uiRoot) as FormulaWindow;
             if (window != null)
             {
-                if (isOnMap)
-                {
-                    _stateMachine.Enter<MenuState>();
-                }
+                // if (isOnMap)
+                // {
+                //     _stateMachine.Enter<MenuState>();
+                // }
                
                 window.Construct(_progressService, () =>
                 {
