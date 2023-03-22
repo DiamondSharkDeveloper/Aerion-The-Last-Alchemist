@@ -43,9 +43,11 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
             GameObject cameraController = await _gameFactory.CreateCameraController();
+            GameObject hud =await _gameFactory.CreateHud(data => { _stateMachine.Enter<LabState, FormulaStaticData>(data); });
             _stateMachine.OnStateChange += state =>
             {
                 cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(!state.IsOnPause(), 3);
+                hud.SetActive(!state.IsOnPause());
             };
             await _gameFactory.CreateMap(mapCoordinates);
             GameObject lab = await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
@@ -61,7 +63,7 @@ namespace CodeBase.Infrastructure.States
 
             await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
                 () => { _stateMachine.Enter<CreatureState>(); });
-            await _gameFactory.CreateHud(data => { _stateMachine.Enter<LabState, FormulaStaticData>(data); });
+            
         }
 
         public void Enter(string sceneName)
