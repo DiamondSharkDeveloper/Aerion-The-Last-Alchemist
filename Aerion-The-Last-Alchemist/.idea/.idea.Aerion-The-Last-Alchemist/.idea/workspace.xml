@@ -103,7 +103,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="61609000" />
+      <workItem from="1678989343605" duration="67770000" />
     </task>
     <servers />
   </component>
@@ -147,13 +147,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs</url>
-          <line>47</line>
+          <line>48</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\States\LoadLevelState.cs" initialLine="49" containingFunctionPresentation="lambda expression inside method 'InitGameWorld'">
             <startOffsets>
-              <option value="1957" />
+              <option value="2084" />
             </startOffsets>
             <endOffsets>
-              <option value="2053" />
+              <option value="2180" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="75" />
