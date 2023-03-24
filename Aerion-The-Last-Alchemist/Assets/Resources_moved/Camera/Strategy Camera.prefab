@@ -197,10 +197,11 @@ MonoBehaviour:
   OrbitingMouseButton: 1
   InvertVertical: 1
   InvertHorizontal: 0
+  startRotation: {x: 0.14309014, y: 0.6924776, z: -0.14309014, w: 0.6924776}
   HorizontalRotateSpeed: 2
   VerticalRotateSpeed: 3
-  MinVerticalAngle: 3
-  MaxVerticalAngle: 80
+  MinVerticalAngle: 10
+  MaxVerticalAngle: 60
   MoveMouseButton: 1
   MovementForwardAxis: Vertical
   MovementSidewaysAxis: Horizontal
@@ -208,9 +209,10 @@ MonoBehaviour:
   AllowMouseDragging: 1
   DraggingMouseButton: 2
   InvertDragging: 1
+  startPosition: {x: 10, y: 0, z: 16.53}
   MovementSpeed: 10
   FastMovementMultiplier: 3
-  DraggingSpeed: 0.8
+  DraggingSpeed: 1.2
   ConstrainPosition: 1
   MinPosition: {x: -20, y: 0, z: -20}
   MaxPosition: {x: 50, y: 1, z: 50}
@@ -220,6 +222,7 @@ MonoBehaviour:
   ZoomInterpolationSpeed: 10
   MinZoomDistance: 3
   MaxZoomDistance: 25
+  startZoom: -20
   PreventClipping: 1
   ClippingDistance: 0
   ClippingMask:

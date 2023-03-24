@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class StrategyCamera : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class StrategyCamera : MonoBehaviour
     public MouseButton OrbitingMouseButton = MouseButton.MiddleMouseButton;
     public bool InvertVertical;
     public bool InvertHorizontal;
-
+    public Quaternion startRotation;
     [Header("Orbiting speeds")] public float HorizontalRotateSpeed;
     public float VerticalRotateSpeed = 1f;
 
@@ -26,6 +25,7 @@ public class StrategyCamera : MonoBehaviour
     public bool AllowMouseDragging = true;
     public MouseButton DraggingMouseButton = MouseButton.RightMouseButton;
     public bool InvertDragging = false;
+    public Vector3 startPosition;
 
     [Header("Movement speeds")] public float MovementSpeed = 2f;
     public float FastMovementMultiplier = 3f;
@@ -44,7 +44,7 @@ public class StrategyCamera : MonoBehaviour
 
     [Header("Zooming limits")] public float MinZoomDistance = 1;
     public float MaxZoomDistance = 10;
-
+    public float startZoom;
     public bool PreventClipping;
     public float ClippingDistance;
     public LayerMask ClippingMask;
@@ -57,22 +57,23 @@ public class StrategyCamera : MonoBehaviour
     private Camera cam;
 
     private Vector3 targetPosition;
+
     private Quaternion targetRotation;
     private float targetZoom;
+
     private float currentZoom;
 
     // Start is called before the first frame update
     void Awake()
     {
         cam = GetComponentInChildren<Camera>();
-        cam.depthTextureMode = DepthTextureMode.DepthNormals;
     }
 
     private void OnEnable()
     {
-        targetPosition = transform.position;
-        targetRotation = transform.rotation;
-        targetZoom = cam.transform.position.z;
+        targetPosition = startPosition;
+        targetRotation = startRotation;
+        targetZoom = startZoom;
     }
 
     private void OnDrawGizmosSelected()
@@ -89,7 +90,7 @@ public class StrategyCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject())
             return;
         MouseMovement();
 

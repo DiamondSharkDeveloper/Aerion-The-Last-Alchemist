@@ -204,12 +204,12 @@ GameObject:
   - component: {fileID: 747952365}
   - component: {fileID: 747952364}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &747952364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce7e4fb9c48bd3b44b04259b1abc11eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71e4d69e796f68e42acaa5a781be7912, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

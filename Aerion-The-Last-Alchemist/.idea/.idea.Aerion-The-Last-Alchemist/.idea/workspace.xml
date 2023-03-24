@@ -103,7 +103,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="68364000" />
+      <workItem from="1678989343605" duration="69576000" />
     </task>
     <servers />
   </component>
@@ -160,13 +160,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Camera/StrategyCamera.cs</url>
-          <line>243</line>
+          <line>244</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Camera\StrategyCamera.cs" initialLine="243" containingFunctionPresentation="method 'ChangeCameraActiveStatus'">
             <startOffsets>
-              <option value="7216" />
+              <option value="7175" />
             </startOffsets>
             <endOffsets>
-              <option value="7243" />
+              <option value="7202" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="76" />

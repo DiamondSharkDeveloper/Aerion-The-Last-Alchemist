@@ -20,9 +20,11 @@ public class StrategyCameraEditor : Editor
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("OrbitingMouseButton"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("InvertHorizontal"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("InvertVertical"));
-
+		
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("HorizontalRotateSpeed"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("VerticalRotateSpeed"));
+			
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("startRotation"));
 
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MinVerticalAngle"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MaxVerticalAngle"));
@@ -35,6 +37,8 @@ public class StrategyCameraEditor : Editor
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MovementForwardAxis"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MovementSidewaysAxis"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("FastSpeedKey"));
+			
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("startPosition"));
 
 			var allowDragging = serializedObject.FindProperty("AllowMouseDragging");
 			EditorGUILayout.PropertyField(allowDragging);
@@ -78,6 +82,8 @@ public class StrategyCameraEditor : Editor
 
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MinZoomDistance"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("MaxZoomDistance"));
+			
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("startZoom"));
 
 			var preventClipping = serializedObject.FindProperty("PreventClipping");
 			EditorGUILayout.PropertyField(preventClipping);
