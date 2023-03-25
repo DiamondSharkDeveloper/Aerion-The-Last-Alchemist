@@ -1,9 +1,26 @@
+using CodeBase.Services.Randomizer;
+using CodeBase.StaticData;
 using UnityEngine;
 
 namespace CodeBase.Creature
 {
    public class CreatureStats
    {
+      private string creatureId;
+
+      public string CreatureId
+      {
+         get => creatureId;
+         set => creatureId = value;
+      }
+
+      public CreatureTypeId TypeId
+      {
+         get => typeId;
+         set => typeId = value;
+      }
+
+     private CreatureTypeId typeId;
       [Range(0,100)]
       private float _balanceAllStats;
 
@@ -16,20 +33,21 @@ namespace CodeBase.Creature
       public float BlueStat => blueStat;
 
       public float YellowStat => yellowStat;
-      public const float MaxStatValue=25;
+      public const int MaxStatValue=25;
       [Range(0,MaxStatValue)] private float greenStat;
       [Range(0,MaxStatValue)] private float redStat;
       [Range(0,MaxStatValue)] private float blueStat;
       [Range(0,MaxStatValue)] private float yellowStat;
       public Color BalanceColor;
 
-      public CreatureStats(float balanceAllStats, float greenStat, float redStat, float blueStat, float yellowStat)
+      public CreatureStats(int greenStat, int redStat, int blueStat, int yellowStat,string id,CreatureTypeId creatureTypeId)
       {
-         this._balanceAllStats = balanceAllStats;
          this.greenStat = greenStat;
          this.redStat = redStat;
          this.blueStat = blueStat;
          this.yellowStat = yellowStat;
+         typeId = creatureTypeId;
+         creatureId = id;
          CalculateBalance();
       }
 
@@ -38,5 +56,6 @@ namespace CodeBase.Creature
          _balanceAllStats = GreenStat + RedStat + BlueStat + YellowStat;
          BalanceColor=(Color.green*GreenStat/MaxStatValue+Color.red*RedStat/MaxStatValue+Color.blue*RedStat/MaxStatValue+Color.yellow*RedStat/MaxStatValue)/4;
       }
+      
    }
 }

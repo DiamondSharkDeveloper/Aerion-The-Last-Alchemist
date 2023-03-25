@@ -20,7 +20,9 @@ namespace CodeBase.StaticData
         public int ingredientsValue=10;
         public int heroPosition=220;
         public int housePosition=320;
-        public List<CreatureTypeId> creaturesTypeId=new List<CreatureTypeId>();
+        public List<CreatureTypeId> creaturesType=new List<CreatureTypeId>();
+        [HideInInspector]
+        public List<string> creaturesId=new List<string>();
         [HideInInspector]
         public List<int> creaturesPositions=new List<int>();
     }

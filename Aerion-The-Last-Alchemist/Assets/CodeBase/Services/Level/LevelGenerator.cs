@@ -22,15 +22,16 @@ namespace CodeBase.Services.Level
             _staticDataService = staticDataService;
             _randomService = randomService;
             GenerateMap(staticDataService.ForLevel("forest"));
-    }
+        }
 
 
         public List<MyTile> GetMap(LevelStaticData staticData)
         {
-            if (_mapCoordinates!=null&&_mapCoordinates.Count!=0)
+            if (_mapCoordinates != null && _mapCoordinates.Count != 0)
             {
                 return _mapCoordinates;
             }
+
             GenerateMap(staticData);
             return _mapCoordinates;
         }
@@ -52,7 +53,7 @@ namespace CodeBase.Services.Level
                 }
             }
 
-            foreach (CreatureTypeId creatureTypeId in staticData.creaturesTypeId)
+            foreach (CreatureTypeId creatureTypeId in staticData.creaturesType)
             {
                 GenerateCreatureTile(staticData);
             }
@@ -60,7 +61,7 @@ namespace CodeBase.Services.Level
             GenerateHouseTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
-            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize,TileObjectType.Trees);
             GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize);
@@ -82,6 +83,7 @@ namespace CodeBase.Services.Level
         private void GenerateHeroTile(LevelStaticData staticData)
         {
             _mapCoordinates[staticData.heroPosition].TileObjectType = TileObjectType.Hero;
+            
         }
 
         private void GenerateCreatureTile(LevelStaticData staticData)
@@ -109,7 +111,6 @@ namespace CodeBase.Services.Level
 
             _mapCoordinates[randTileNumber].TileObjectType = TileObjectType.Creature;
             staticData.creaturesPositions.Add(randTileNumber);
-            
         }
 
         private void GenerateHouseTile(LevelStaticData staticData)
@@ -126,7 +127,7 @@ namespace CodeBase.Services.Level
             _mapCoordinates.Add(new MyTile(new Vector3Int(column, row, 0), typeEnum, isEdge, tileObjectType));
         }
 
-        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize)
+        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize,TileObjectType objectType=TileObjectType.Unavailable)
         {
             do
             {
@@ -142,15 +143,9 @@ namespace CodeBase.Services.Level
                             if (_mapCoordinates.Count > neighbours[i] &&
                                 _mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
-                                if (_mapCoordinates[neighbours[i]].Type == TileTypeEnum.Grass)
-                                {
-                                    _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Trees;
-                                }
-                                else
-                                {
-                                    _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Unavailable;
-                                    _mapCoordinates[neighbours[i]].Type = type;
-                                }
+                                _mapCoordinates[neighbours[i]].TileObjectType = objectType;
+                                _mapCoordinates[neighbours[i]].Type = type;
+
 
                                 amount--;
                             }

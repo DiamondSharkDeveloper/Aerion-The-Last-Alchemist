@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CodeBase.Creature;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Map;
@@ -43,7 +44,10 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
             GameObject cameraController = await _gameFactory.CreateCameraController();
-            GameObject hud =await _gameFactory.CreateHud(data => { _stateMachine.Enter<LabState, FormulaStaticData>(data); });
+            GameObject hud = await _gameFactory.CreateHud(data =>
+            {
+                _stateMachine.Enter<LabState, FormulaStaticData>(data);
+            });
             _stateMachine.OnStateChange += state =>
             {
                 cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(!state.IsOnPause(), 3);
@@ -59,18 +63,18 @@ namespace CodeBase.Infrastructure.States
             {
                 hero.Construct(_inputService);
             }
-            for (var i = 0; i < levelData.creaturesTypeId.Count; i++)
+
+            for (var i = 0; i < levelData.creaturesType.Count; i++)
             {
-                CreatureTypeId typeId = levelData.creaturesTypeId[i];
-                await _gameFactory.CreateCreature(typeId,mapCoordinates[levelData.creaturesPositions[i]],
-                    () => { _stateMachine.Enter<CreatureState,CreatureTypeId>(typeId); });
+                string id = levelData.creaturesId[i];
+                await _gameFactory.CreateCreature(levelData.creaturesType[i],
+                    mapCoordinates[levelData.creaturesPositions[i]],
+                    () =>
+                    {
+                        _stateMachine.Enter<CreatureState, CreatureStats>(_progressService.Progress.gameData
+                            .CreatureDada.ForCreature(id));
+                    });
             }
-            foreach (CreatureTypeId creatureTypeId in levelData.creaturesTypeId)
-            {
-              
-            }
-          
-            
         }
 
         public void Enter(string sceneName)

@@ -169,14 +169,14 @@ namespace CodeBase.Infrastructure.Factory
 
         public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
         {
-            GameObject creatureGameObject = await CreateCreature(typeId, parent.Tile.gameObject.transform);
+            GameObject creatureGameObject = await CreateCreature(typeId,parent.Tile.gameObject.transform, parent.StartWorldPosition);
             Creature.CreatureOnMap creatureOnMap = creatureGameObject.AddComponent<Creature.CreatureOnMap>();
             creatureOnMap.Construct(_hero);
             parent.OnStandAction = action;
             return creatureGameObject;
         }
 
-        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent)
+        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent,Vector3 position)
         {
             string path = AssetAddress.CreatureLisovicPath;
             switch (typeId)
@@ -190,7 +190,7 @@ namespace CodeBase.Infrastructure.Factory
                     
             }
             GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creatureGameObject = InstantiateRegistered(prefab, parent.transform.position,
+            GameObject creatureGameObject = InstantiateRegistered(prefab, position,
                 parent.transform);
             return creatureGameObject;
         }

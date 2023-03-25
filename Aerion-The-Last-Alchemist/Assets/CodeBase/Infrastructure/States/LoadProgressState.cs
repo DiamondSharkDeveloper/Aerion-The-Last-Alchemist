@@ -1,6 +1,10 @@
+using System.Collections.Generic;
 using CodeBase.Data;
 using CodeBase.Services.PersistentProgress;
+using CodeBase.Services.Randomizer;
 using CodeBase.Services.SaveLoad;
+using CodeBase.Services.StaticData;
+using CodeBase.StaticData;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -9,15 +13,21 @@ namespace CodeBase.Infrastructure.States
         private readonly GameStateMachine _gameStateMachine;
         private readonly IPersistentProgressService _progressService;
         private readonly ISaveLoadService _saveLoadProgress;
+        private readonly IStaticDataService _staticDataService;
+        private readonly IRandomService _randomService;
+        private const string FirstLevel = "forest";
         private const string MainScene = "Main";
 
 
-        public LoadProgressState(GameStateMachine gameStateMachine, IPersistentProgressService progressService,
-            ISaveLoadService saveLoadProgress)
+        public LoadProgressState(GameStateMachine gameStateMachine, IStaticDataService staticDataService,
+            IPersistentProgressService progressService,
+            ISaveLoadService saveLoadProgress,IRandomService randomService)
         {
             _gameStateMachine = gameStateMachine;
             _progressService = progressService;
             _saveLoadProgress = saveLoadProgress;
+            _staticDataService = staticDataService;
+            _randomService = randomService;
         }
 
         public void Enter()
@@ -44,7 +54,16 @@ namespace CodeBase.Infrastructure.States
 
         private PlayerProgress NewProgress()
         {
-            var progress = new PlayerProgress(MainScene);
+            PlayerProgress progress = new PlayerProgress(FirstLevel);
+            List<CreatureTypeId> types = _staticDataService.ForLevel(FirstLevel).creaturesType;
+            List<string> list = new List<string>();
+            for (int i = 0; i <   types.Count; i++)
+            {
+                string id = types[i].ToString() + i + FirstLevel;
+                list.Add(id);
+            }
+            _staticDataService.ForLevel(FirstLevel).creaturesId=list;
+            progress.gameData.CreatureDada.GenerateData(list,_randomService,types);
             return progress;
         }
     }

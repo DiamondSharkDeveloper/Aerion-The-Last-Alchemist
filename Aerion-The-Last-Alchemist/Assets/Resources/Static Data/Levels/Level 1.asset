@@ -22,5 +22,8 @@ MonoBehaviour:
   ingredientsValue: 30
   heroPosition: 220
   housePosition: 311
-  creaturesTypeId: 0000000001000000
-  creaturesPositions: eb010000f6040000660500003e030000
+  creaturesType: 0000000001000000
+  creaturesId:
+  - Lisovic0forest
+  - Vodianic1forest
+  creaturesPositions: eb010000f6040000660500003e030000760400007d010000

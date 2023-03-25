@@ -23,11 +23,11 @@ namespace CodeBase.Creature
            UpdateBar(blueBarImage,creatureStats.BlueStat/CreatureStats.MaxStatValue);
            UpdateBar(yellowBarImage,creatureStats.YellowStat/CreatureStats.MaxStatValue);
           
-            if (balanceBarColor.color != creatureStats.BalanceColor)
-            {
-                StartCoroutine(SmoothColourChange(balanceBarColor.color, creatureStats.BalanceColor));
+            // if (balanceBarColor.color != creatureStats.BalanceColor)
+            // {
+              //  StartCoroutine(SmoothColourChange(balanceBarColor.GetColor("Foam Line Color"), creatureStats.BalanceColor));
                 StartCoroutine(SmoothBalanceBarFillAmountChange(creatureStats.BalanceAllStats1/100));
-            }
+           // }
         }
 
         private void UpdateBar(Image image,float amount)
@@ -42,7 +42,7 @@ namespace CodeBase.Creature
         {
             for (float i = 0; i < 1; i += Time.deltaTime / 4)
             {
-                balanceBarColor.color = Color.Lerp(startColor, targetColour, i);
+                balanceBarColor.SetColor(("Foam Line Color"),Color.Lerp(startColor, targetColour, i));
                 yield return null;
             }
         }
