@@ -18,6 +18,7 @@ namespace CodeBase.Infrastructure.Factory
         Task<GameObject> CreateHouse(MyTile parent,Action action);
         Task<GameObject> CreateHud(Action<FormulaStaticData> action);
         Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent,Action action);
+        Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent);
         Task<LootPiece> CreateLoot();
         Task<GameObject> CreateCameraController();
         void Cleanup();

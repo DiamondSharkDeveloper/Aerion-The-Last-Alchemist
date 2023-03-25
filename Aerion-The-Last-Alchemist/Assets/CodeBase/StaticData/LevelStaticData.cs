@@ -20,7 +20,8 @@ namespace CodeBase.StaticData
         public int ingredientsValue=10;
         public int heroPosition=220;
         public int housePosition=320;
-        public int creaturePosition=624;
-        public CreatureTypeId creatureTypeId = CreatureTypeId.Frog;
+        public List<CreatureTypeId> creaturesTypeId=new List<CreatureTypeId>();
+        [HideInInspector]
+        public List<int> creaturesPositions=new List<int>();
     }
 }

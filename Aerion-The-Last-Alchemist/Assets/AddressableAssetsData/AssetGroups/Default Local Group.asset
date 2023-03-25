@@ -50,7 +50,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2ac3c392f29fa5d41ab7817ef632762c
-    m_Address: Creature
+    m_Address: Creature Lisovic
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f5738bfb06b8b664f8165c74ec50881a
@@ -95,6 +95,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4342c07a9c16e0f44b8ff5234168ce76
     m_Address: Strategy Camera
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 004947f7b1efd094bab8d482ea88deb4
+    m_Address: Creature Vodianic
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

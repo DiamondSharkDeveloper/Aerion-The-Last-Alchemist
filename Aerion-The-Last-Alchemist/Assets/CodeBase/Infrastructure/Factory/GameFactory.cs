@@ -169,20 +169,29 @@ namespace CodeBase.Infrastructure.Factory
 
         public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
         {
-            string path = AssetAddress.CreaturePath;
-            // switch (typeId)
-            // {
-            //     case CreatureTypeId.Frog:
-            //         
-            //         break;
-            //         
-            // }
-            GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creatureGameObject = InstantiateRegistered(prefab, parent.Tile.gameObject.transform.position,
-                parent.Tile.gameObject.transform);
-            Creature.Creature creature = creatureGameObject.AddComponent<Creature.Creature>();
-            creature.Construct(_hero);
+            GameObject creatureGameObject = await CreateCreature(typeId, parent.Tile.gameObject.transform);
+            Creature.CreatureOnMap creatureOnMap = creatureGameObject.AddComponent<Creature.CreatureOnMap>();
+            creatureOnMap.Construct(_hero);
             parent.OnStandAction = action;
+            return creatureGameObject;
+        }
+
+        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent)
+        {
+            string path = AssetAddress.CreatureLisovicPath;
+            switch (typeId)
+            {
+                case CreatureTypeId.Lisovic:
+                    path = AssetAddress.CreatureLisovicPath; 
+                    break;
+                case CreatureTypeId.Vodianic:
+                    path = AssetAddress.CreatureVodianicPath; 
+                    break;
+                    
+            }
+            GameObject prefab = await _assets.Load<GameObject>(path);
+            GameObject creatureGameObject = InstantiateRegistered(prefab, parent.transform.position,
+                parent.transform);
             return creatureGameObject;
         }
 
@@ -210,7 +219,8 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.StrategyCamera);
             await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);
-            await _assets.Load<GameObject>(AssetAddress.CreaturePath);
+            await _assets.Load<GameObject>(AssetAddress.CreatureLisovicPath);
+            await _assets.Load<GameObject>(AssetAddress.CreatureVodianicPath);
             await _assets.Load<GameObject>(AssetAddress.GrassGexPath);
             await _assets.Load<GameObject>(AssetAddress.RockGexPath);
             await _assets.Load<GameObject>(AssetAddress.SwampGexPath);

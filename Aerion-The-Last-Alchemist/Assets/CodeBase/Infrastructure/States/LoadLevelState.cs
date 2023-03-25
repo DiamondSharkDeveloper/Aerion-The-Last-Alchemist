@@ -59,10 +59,17 @@ namespace CodeBase.Infrastructure.States
             {
                 hero.Construct(_inputService);
             }
-
-
-            await _gameFactory.CreateCreature(levelData.creatureTypeId, mapCoordinates[levelData.creaturePosition],
-                () => { _stateMachine.Enter<CreatureState>(); });
+            for (var i = 0; i < levelData.creaturesTypeId.Count; i++)
+            {
+                CreatureTypeId typeId = levelData.creaturesTypeId[i];
+                await _gameFactory.CreateCreature(typeId,mapCoordinates[levelData.creaturesPositions[i]],
+                    () => { _stateMachine.Enter<CreatureState,CreatureTypeId>(typeId); });
+            }
+            foreach (CreatureTypeId creatureTypeId in levelData.creaturesTypeId)
+            {
+              
+            }
+          
             
         }
 

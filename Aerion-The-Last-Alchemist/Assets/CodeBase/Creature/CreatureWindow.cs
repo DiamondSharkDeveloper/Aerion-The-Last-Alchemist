@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection.Emit;
+using CodeBase.StaticData;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +11,10 @@ namespace CodeBase.Creature
         [SerializeField] private Button closeButton;
         public event Action OnClose;
 
+        public void Construct(CreatureTypeId creatureTypeId)
+        {
+            
+        }
        
         void Start()
         {

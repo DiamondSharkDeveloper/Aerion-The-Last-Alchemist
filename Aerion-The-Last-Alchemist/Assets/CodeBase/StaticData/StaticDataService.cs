@@ -20,7 +20,6 @@ namespace CodeBase.StaticData
 
         public void Load()
         {
-            
             _windowConfigs = Resources
                 .Load<WindowStaticData>(StaticDataWindowPath)
                 .configs

@@ -21,11 +21,16 @@ namespace CodeBase.Services.Level
         {
             _staticDataService = staticDataService;
             _randomService = randomService;
-        }
+            GenerateMap(staticDataService.ForLevel("forest"));
+    }
 
 
         public List<MyTile> GetMap(LevelStaticData staticData)
         {
+            if (_mapCoordinates!=null&&_mapCoordinates.Count!=0)
+            {
+                return _mapCoordinates;
+            }
             GenerateMap(staticData);
             return _mapCoordinates;
         }
@@ -47,8 +52,12 @@ namespace CodeBase.Services.Level
                 }
             }
 
+            foreach (CreatureTypeId creatureTypeId in staticData.creaturesTypeId)
+            {
+                GenerateCreatureTile(staticData);
+            }
+
             GenerateHouseTile(staticData);
-            GenerateCreatureTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
             GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize);
@@ -77,11 +86,30 @@ namespace CodeBase.Services.Level
 
         private void GenerateCreatureTile(LevelStaticData staticData)
         {
-            _mapCoordinates[staticData.creaturePosition].TileObjectType = TileObjectType.Creature;
-            foreach (int neighbour in GetNeighbours(staticData.housePosition, staticData.mapSize))
+            int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
+            if (_mapCoordinates[randTileNumber].TileObjectType != TileObjectType.None)
+            {
+                GenerateCreatureTile(staticData);
+                return;
+            }
+
+            int[] neighbours = GetNeighbours(randTileNumber, staticData.mapSize);
+            foreach (int neighbour in neighbours)
+            {
+                if (_mapCoordinates[neighbour].TileObjectType != TileObjectType.None)
+                {
+                    return;
+                }
+            }
+
+            foreach (int neighbour in neighbours)
             {
                 _mapCoordinates[neighbour].TileObjectType = TileObjectType.Unavailable;
             }
+
+            _mapCoordinates[randTileNumber].TileObjectType = TileObjectType.Creature;
+            staticData.creaturesPositions.Add(randTileNumber);
+            
         }
 
         private void GenerateHouseTile(LevelStaticData staticData)
@@ -104,15 +132,17 @@ namespace CodeBase.Services.Level
             {
                 int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
                 int[] neighbours = GetNeighbours(randTileNumber, mapSize);
-                for (int i = 0; i <  neighbours.Length; i++)
+                for (int i = 0; i < neighbours.Length; i++)
                 {
                     if (amount > 0)
                     {
-                        if (_mapCoordinates.Count >= neighbours[i]&&_mapCoordinates.Count >= neighbours[i] - 1 && neighbours[i] >= 0)
+                        if (_mapCoordinates.Count >= neighbours[i] && _mapCoordinates.Count >= neighbours[i] - 1 &&
+                            neighbours[i] >= 0)
                         {
-                            if (_mapCoordinates.Count>neighbours[i]&&_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
+                            if (_mapCoordinates.Count > neighbours[i] &&
+                                _mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
-                                if (type==TileTypeEnum.Grass)
+                                if (_mapCoordinates[neighbours[i]].Type == TileTypeEnum.Grass)
                                 {
                                     _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Trees;
                                 }
@@ -121,7 +151,7 @@ namespace CodeBase.Services.Level
                                     _mapCoordinates[neighbours[i]].TileObjectType = TileObjectType.Unavailable;
                                     _mapCoordinates[neighbours[i]].Type = type;
                                 }
-                               
+
                                 amount--;
                             }
                         }

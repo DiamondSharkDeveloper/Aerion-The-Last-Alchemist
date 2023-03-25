@@ -22,5 +22,5 @@ MonoBehaviour:
   ingredientsValue: 30
   heroPosition: 220
   housePosition: 311
-  creaturePosition: 624
-  creatureTypeId: 0
+  creaturesTypeId: 0000000001000000
+  creaturesPositions: eb010000f6040000660500003e030000

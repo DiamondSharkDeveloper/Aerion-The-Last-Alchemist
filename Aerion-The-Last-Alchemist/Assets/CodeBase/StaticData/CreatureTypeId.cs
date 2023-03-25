@@ -2,6 +2,7 @@
 {
     public enum CreatureTypeId
     {
-       Frog 
+       Lisovic,
+       Vodianic
     }
 }

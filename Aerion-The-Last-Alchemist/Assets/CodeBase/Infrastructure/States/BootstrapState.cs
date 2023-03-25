@@ -66,7 +66,7 @@ namespace CodeBase.Infrastructure.States
             _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(
                 _services.Single<IPersistentProgressService>(),
                 _services.Single<IGameFactory>()));
-            _services.RegisterSingle<ILevelGenerator>(new LevelGenerator(_services.Single<StaticDataService>(),_services.Single<IRandomService>()));
+            _services.RegisterSingle<ILevelGenerator>(new LevelGenerator(_services.Single<IStaticDataService>(),_services.Single<IRandomService>()));
         }
 
         private void RegisterInputService()
