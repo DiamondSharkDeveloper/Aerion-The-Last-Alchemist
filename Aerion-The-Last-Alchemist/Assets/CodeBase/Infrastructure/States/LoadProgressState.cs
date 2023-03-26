@@ -56,14 +56,8 @@ namespace CodeBase.Infrastructure.States
         {
             PlayerProgress progress = new PlayerProgress(FirstLevel);
             List<CreatureTypeId> types = _staticDataService.ForLevel(FirstLevel).creaturesType;
-            List<string> list = new List<string>();
-            for (int i = 0; i <   types.Count; i++)
-            {
-                string id = types[i].ToString() + i + FirstLevel;
-                list.Add(id);
-            }
-            _staticDataService.ForLevel(FirstLevel).creaturesId=list;
-            progress.gameData.CreatureDada.GenerateData(list,_randomService,types);
+            
+            progress.gameData.CreatureDada.GenerateData(  _staticDataService.ForLevel(FirstLevel).creaturesId,_randomService,types);
             return progress;
         }
     }

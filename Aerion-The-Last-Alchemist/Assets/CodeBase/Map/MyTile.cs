@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 namespace CodeBase.Map
 {
 
-    public class MyTile 
+    public class MyTile :EventArgs
     {
         public Vector3 StartWorldPosition;
         public Vector3Int CellPosition;

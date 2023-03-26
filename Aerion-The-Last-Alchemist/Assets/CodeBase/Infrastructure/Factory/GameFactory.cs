@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using CodeBase.Creature;
 using CodeBase.Data;
 using CodeBase.Enemy;
 using CodeBase.Enums;
@@ -70,9 +71,10 @@ namespace CodeBase.Infrastructure.Factory
         public List<ISavedProgressReader> ProgressReaders { get; }
         public List<ISavedProgress> ProgressWriters { get; }
 
-        public async Task CreateMap(List<MyTile> mapCoordinates)
+        public async Task CreateMap(List<MyTile> mapCoordinates, LevelStaticData staticData, Action<EventArgs> move)
         {
             await CreateTileMap();
+            List<MyTile> creatureTile = new List<MyTile>();
             for (var i = 0; i < mapCoordinates.Count; i++)
             {
                 int count = i;
@@ -82,7 +84,9 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
-                mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]);
+                WorldTile worldTile = mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>();
+                worldTile.Construct(mapCoordinates[count]);
+                worldTile.TileEvent += (sender, args) => { move?.Invoke(args); };
                 switch (mapCoordinates[count].TileObjectType)
                 {
                     case TileObjectType.Trees:
@@ -94,7 +98,19 @@ namespace CodeBase.Infrastructure.Factory
                     case TileObjectType.Rock:
                         await CreateRock(mapCoordinates[count]);
                         break;
+                    case TileObjectType.Creature:
+                        creatureTile.Add(mapCoordinates[count]);
+                        break;
                 }
+            }
+
+            for (var i1 = 0; i1 < creatureTile.Count; i1++)
+            {
+                await CreateCreature(staticData.creaturesType[i1], creatureTile[i1], () =>
+                {
+                    _stateMachine.Enter<CreatureState, CreatureStats>(_persistentProgressService.Progress.gameData
+                        .CreatureDada.ForCreature(staticData.creaturesId[i1]));
+                });
             }
         }
 
@@ -103,7 +119,7 @@ namespace CodeBase.Infrastructure.Factory
             GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
             GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
                 mapCoordinate.Tile.gameObject.transform);
-            RandomSize(gameObject,9,15);
+            RandomSize(gameObject, 9, 15);
         }
 
         private async Task CreateRock(MyTile mapCoordinate)
@@ -113,10 +129,10 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinate.Tile.gameObject.transform);
             gameObject.transform.localPosition = new Vector3(0, 0.2f, 0);
             RandomRotation(gameObject);
-            RandomSize(gameObject,6,14);
+            RandomSize(gameObject, 6, 14);
         }
 
-        private void RandomSize(GameObject gameObject,int min,int max)
+        private void RandomSize(GameObject gameObject, int min, int max)
         {
             float size = _randomService.Next(min, max
             ) * 0.1f;

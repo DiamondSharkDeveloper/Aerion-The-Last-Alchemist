@@ -13,7 +13,7 @@ namespace CodeBase.Infrastructure.Factory
     {
         List<ISavedProgressReader> ProgressReaders { get; }
         List<ISavedProgress> ProgressWriters { get; }
-        Task CreateMap(List<MyTile>mapCoordinates);
+        Task CreateMap(List<MyTile> mapCoordinates, LevelStaticData staticData, Action<EventArgs> move);
         Task<GameObject> CreateHero(MyTile parent);
         Task<GameObject> CreateHouse(MyTile parent,Action action);
         Task<GameObject> CreateHud(Action<FormulaStaticData> action);

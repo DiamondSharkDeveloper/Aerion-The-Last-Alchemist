@@ -1,4 +1,6 @@
-﻿using CodeBase.Services.Input;
+﻿using System;
+using CodeBase.Map;
+using CodeBase.Services.Input;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -7,13 +9,16 @@ namespace CodeBase.Hero
     {
         private HeroMove _heroMove;
         [SerializeField] private HeroAnimator heroAnimator;
-
-        public void Construct(IInputService inputService)
+        public void Construct()
         {
             _heroMove = gameObject.AddComponent<HeroMove>();
-            _heroMove.Construct(inputService);
+            _heroMove.Construct();
             _heroMove._isMove += heroAnimator.PlayMoveAnimation;
             _heroMove.OnInteractiveObject += () => { heroAnimator.PlayGrab();};
+        }
+        public void Move(EventArgs  eventArgs)
+        {
+            _heroMove.Move(eventArgs as MyTile);
         }
     }
 }

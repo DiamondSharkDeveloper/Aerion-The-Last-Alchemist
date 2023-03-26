@@ -115,7 +115,6 @@ namespace CodeBase.Services.Level
             }
 
             _mapCoordinates[randTileNumber].TileObjectType = TileObjectType.Creature;
-            staticData.creaturesPositions.Add(randTileNumber);
         }
 
         private void GenerateHouseTile(LevelStaticData staticData)

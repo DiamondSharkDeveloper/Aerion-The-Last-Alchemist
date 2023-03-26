@@ -78,10 +78,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15024">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28744">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="15024" />
+      <option name="pid" value="28744" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -107,7 +107,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="105455000" />
+      <workItem from="1678989343605" duration="114377000" />
     </task>
     <servers />
   </component>
@@ -177,13 +177,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs</url>
-          <line>157</line>
+          <line>156</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Services\Level\LevelGenerator.cs" initialLine="156" containingFunctionPresentation="method 'GenerateObstaclesByType'">
             <startOffsets>
-              <option value="6066" />
+              <option value="6003" />
             </startOffsets>
             <endOffsets>
-              <option value="6096" />
+              <option value="6033" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="106" />

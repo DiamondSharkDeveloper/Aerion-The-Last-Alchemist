@@ -21,9 +21,6 @@ namespace CodeBase.StaticData
         public int heroPosition=220;
         public int housePosition=320;
         public List<CreatureTypeId> creaturesType=new List<CreatureTypeId>();
-        [HideInInspector]
         public List<string> creaturesId=new List<string>();
-        [HideInInspector]
-        public List<int> creaturesPositions=new List<int>();
     }
 }

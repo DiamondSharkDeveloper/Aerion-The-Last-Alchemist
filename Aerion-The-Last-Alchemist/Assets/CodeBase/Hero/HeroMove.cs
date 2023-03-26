@@ -19,15 +19,14 @@ namespace CodeBase.Hero
         private LookAtTarget _lookAtTarget;
         public event Action<bool> _isMove;
         public event Action OnInteractiveObject;
+      
 
-        public void Construct(IInputService inputService)
+        public void Construct()
         {
-            _inputService = inputService;
-            _inputService.OnTileClick += tile => { Move(tile.MyTile); };
             _lookAtTarget = transform.AddComponent<LookAtTarget>();
         }
 
-        private void Move(MyTile tile)
+        public void Move(MyTile tile)
         {
             if (tile.IsAvailable && _currentTile != tile)
             {
@@ -39,7 +38,7 @@ namespace CodeBase.Hero
                     moveSpeed);
                 _core.onComplete += () =>
                 {
-                 transform.localPosition= Vector3.zero;
+                    transform.localPosition= Vector3.zero;
                     _isMove?.Invoke(false);
                     if (tile.OnStandAction != null)
                     {

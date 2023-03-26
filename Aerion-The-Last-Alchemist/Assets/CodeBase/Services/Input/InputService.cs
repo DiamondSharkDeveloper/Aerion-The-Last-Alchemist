@@ -22,7 +22,7 @@ namespace CodeBase.Services.Input
         }
 
 
-        public event Action<WorldTile> OnTileClick;
+      
 
         private bool CanRaycast()
         {
@@ -38,11 +38,11 @@ namespace CodeBase.Services.Input
                 Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
                 if (Physics.Raycast(rayOrigin, out hit))
                 {
-                    WorldTile worldTile;
-                    if (hit.transform.TryGetComponent(out worldTile) ||
-                        hit.transform.parent.transform.TryGetComponent(out worldTile))
+                    WorldObject worldObject;
+                    if (hit.transform.TryGetComponent(out worldObject) ||
+                        hit.transform.parent.transform.TryGetComponent(out worldObject))
                     {
-                        OnTileClick?.Invoke(worldTile);
+                        worldObject.OnTileEvent();
                     }
                 }
             }

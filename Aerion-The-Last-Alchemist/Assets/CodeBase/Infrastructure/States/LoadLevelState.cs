@@ -44,6 +44,7 @@ namespace CodeBase.Infrastructure.States
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
             GameObject cameraController = await _gameFactory.CreateCameraController();
+            
             GameObject hud = await _gameFactory.CreateHud(data =>
             {
                 _stateMachine.Enter<LabState, FormulaStaticData>(data);
@@ -53,30 +54,24 @@ namespace CodeBase.Infrastructure.States
                 cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(!state.IsOnPause(), 3);
                 hud.SetActive(!state.IsOnPause());
             };
-            await _gameFactory.CreateMap(mapCoordinates);
-            GameObject lab = await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
+
+            Hero.Hero hero = null;
+            await _gameFactory.CreateMap(mapCoordinates,levelData, args =>
+            {
+                hero.Move(args);
+            } );
+             await _gameFactory.CreateHouse(mapCoordinates[levelData.housePosition],
                 () => { _stateMachine.Enter<LabState, FormulaStaticData>(null); });
 
-
             GameObject heroGameObject = await _gameFactory.CreateHero(mapCoordinates[levelData.heroPosition]);
-            if (heroGameObject.TryGetComponent(out Hero.Hero hero))
+            if (heroGameObject.TryGetComponent(out hero))
             {
-                hero.Construct(_inputService);
+                hero.Construct();
             }
-
-            for (var i = 0; i < levelData.creaturesType.Count; i++)
-            {
-                string id = levelData.creaturesId[i];
-                await _gameFactory.CreateCreature(levelData.creaturesType[i],
-                    mapCoordinates[levelData.creaturesPositions[i]],
-                    () =>
-                    {
-                        _stateMachine.Enter<CreatureState, CreatureStats>(_progressService.Progress.gameData
-                            .CreatureDada.ForCreature(id));
-                    });
-            }
+           
         }
 
+      
         public void Enter(string sceneName)
         {
             _loadingCurtain.Show();
