@@ -928,7 +928,7 @@ MonoBehaviour:
   m_FillMethod: 2
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 2
+  m_FillOrigin: 3
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1238585121
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 2
-  m_FillAmount: 0.734
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -1835,7 +1835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44.716003, y: -44.391014}
+  m_AnchoredPosition: {x: -44.716003, y: -44.391006}
   m_SizeDelta: {x: -153.67, y: -153.503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815045392
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 2
-  m_FillAmount: 0.606
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -2066,7 +2066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.100006, y: -44.391014}
+  m_AnchoredPosition: {x: 45.100006, y: -44.391006}
   m_SizeDelta: {x: -153.67, y: -153.503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897138008
@@ -2096,7 +2096,7 @@ MonoBehaviour:
   m_FillMethod: 2
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 2
+  m_FillOrigin: 3
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1897138009

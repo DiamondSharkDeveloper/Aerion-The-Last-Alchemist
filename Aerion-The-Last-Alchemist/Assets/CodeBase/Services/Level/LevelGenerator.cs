@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using CodeBase.Data;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.Factory;
@@ -13,13 +15,11 @@ namespace CodeBase.Services.Level
 {
     public class LevelGenerator : ILevelGenerator
     {
-        private IStaticDataService _staticDataService;
         private IRandomService _randomService;
         private readonly List<MyTile> _mapCoordinates = new List<MyTile>();
 
         public LevelGenerator(IStaticDataService staticDataService, IRandomService randomService)
         {
-            _staticDataService = staticDataService;
             _randomService = randomService;
             GenerateMap(staticDataService.ForLevel("forest"));
         }
@@ -48,7 +48,7 @@ namespace CodeBase.Services.Level
                     }
                     else
                     {
-                        GenerateTileByType(column, row, TileTypeEnum.Water, true, TileObjectType.Unavailable);
+                        GenerateTileByType(column, row, TileTypeEnum.Grass, true, TileObjectType.Unavailable);
                     }
                 }
             }
@@ -61,10 +61,10 @@ namespace CodeBase.Services.Level
             GenerateHouseTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
-            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize,TileObjectType.Trees);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize, TileObjectType.Trees);
             GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize);
             GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize);
-            GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize);
+            GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize,TileObjectType.Rock);
         }
 
         private void GenerateIngredientTile(int amount)
@@ -82,8 +82,12 @@ namespace CodeBase.Services.Level
 
         private void GenerateHeroTile(LevelStaticData staticData)
         {
+            foreach (int neighbour in GetNeighbours(staticData.heroPosition, staticData.mapSize))
+            {
+                _mapCoordinates[neighbour].TileObjectType = TileObjectType.Unavailable;
+            }
+
             _mapCoordinates[staticData.heroPosition].TileObjectType = TileObjectType.Hero;
-            
         }
 
         private void GenerateCreatureTile(LevelStaticData staticData)
@@ -95,11 +99,12 @@ namespace CodeBase.Services.Level
                 return;
             }
 
-            int[] neighbours = GetNeighbours(randTileNumber, staticData.mapSize);
+            List<int> neighbours = GetNeighbours(randTileNumber, staticData.mapSize);
             foreach (int neighbour in neighbours)
             {
                 if (_mapCoordinates[neighbour].TileObjectType != TileObjectType.None)
                 {
+                    GenerateCreatureTile(staticData);
                     return;
                 }
             }
@@ -115,7 +120,6 @@ namespace CodeBase.Services.Level
 
         private void GenerateHouseTile(LevelStaticData staticData)
         {
-            _mapCoordinates[staticData.housePosition].TileObjectType = TileObjectType.House;
             foreach (int neighbour in GetNeighbours(staticData.housePosition, staticData.mapSize))
             {
                 _mapCoordinates[neighbour].TileObjectType = TileObjectType.House;
@@ -127,28 +131,32 @@ namespace CodeBase.Services.Level
             _mapCoordinates.Add(new MyTile(new Vector3Int(column, row, 0), typeEnum, isEdge, tileObjectType));
         }
 
-        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize,TileObjectType objectType=TileObjectType.Unavailable)
+        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize,
+            TileObjectType objectType = TileObjectType.Unavailable)
         {
             do
             {
                 int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
-                int[] neighbours = GetNeighbours(randTileNumber, mapSize);
-                for (int i = 0; i < neighbours.Length; i++)
+                List<int> neighbours = GetNeighbours(randTileNumber, mapSize);
+                for (int i = 0; i < neighbours.Count; i++)
                 {
                     if (amount > 0)
                     {
-                        if (_mapCoordinates.Count >= neighbours[i] && _mapCoordinates.Count >= neighbours[i] - 1 &&
-                            neighbours[i] >= 0)
+                        try
                         {
-                            if (_mapCoordinates.Count > neighbours[i] &&
-                                _mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
+                            if (_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
                             {
                                 _mapCoordinates[neighbours[i]].TileObjectType = objectType;
                                 _mapCoordinates[neighbours[i]].Type = type;
 
-
                                 amount--;
                             }
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.LogError(e);
+                            Debug.LogError(neighbours[i]);
+                            throw;
                         }
                     }
                     else
@@ -163,10 +171,27 @@ namespace CodeBase.Services.Level
             (column >= seaInterval && column < mapSize - seaInterval) && (row >= seaInterval &&
                                                                           row < mapSize - seaInterval);
 
-        private int[] GetNeighbours(int value, int mapSize) =>
-            new[]
+        private List<int> GetNeighbours(int value, int mapSize)
+        {
+            List<int> neighbours = new List<int>
             {
-                value, value + 1, value - 1, value + mapSize, value - mapSize, value + mapSize + 1, value + mapSize - 1
+                value, value + 1,
+                value - 1,
+                value + mapSize,
+                value - mapSize,
+                value + mapSize + 1,
+                value + mapSize - 1
             };
+            List<int> result = new List<int>();
+            foreach (int neighbour in neighbours)
+            {
+                if (neighbour < _mapCoordinates.Count && neighbour >= 0)
+                {
+                    result.Add(neighbour);
+                }
+            }
+
+            return result;
+        }
     }
 }

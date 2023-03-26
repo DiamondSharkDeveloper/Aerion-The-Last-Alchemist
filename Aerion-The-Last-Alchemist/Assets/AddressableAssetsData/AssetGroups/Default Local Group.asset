@@ -101,6 +101,22 @@ MonoBehaviour:
     m_Address: Creature Vodianic
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1d740e9ee74e0eb47b6b68464df5822d
+    m_Address: Rock_01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f5dc782cfe448c449aa66f7e4ea86e08
+    m_Address: Rock_02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 94a27f5c579fad04b8f0e9b467d94c4a
+    m_Address: Rock_03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 095b52ce982807049b5b6a0c690d76b0
+    m_Address: Rock_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:

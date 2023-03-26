@@ -8,6 +8,7 @@ namespace CodeBase.Data
         Hero,
         House,
         Creature,
-        Trees
+        Trees,
+        Rock
     }
 }

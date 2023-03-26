@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using CodeBase.Data;
 using CodeBase.Enemy;
@@ -34,6 +35,7 @@ namespace CodeBase.Infrastructure.Factory
         private List<MyTile> _mapCoordinates;
         private List<string> _ingredients = new List<string>();
         private List<string> _treesPath = new List<string>();
+        private List<string> _rockPath = new List<string>();
 
         public GameFactory(
             IAssetProvider assets,
@@ -53,11 +55,16 @@ namespace CodeBase.Infrastructure.Factory
                 _ingredients.Add(ingredientStaticData.name);
             }
 
-            _treesPath.Add(AssetAddress.TreePrefab01);
-            _treesPath.Add(AssetAddress.TreePrefab02);
-            _treesPath.Add(AssetAddress.TreePrefab03);
-            _treesPath.Add(AssetAddress.TreePrefab04);
-            _treesPath.Add(AssetAddress.TreePrefab06);
+            _treesPath.Add(AssetAddress.TreePath01);
+            _treesPath.Add(AssetAddress.TreePath02);
+            _treesPath.Add(AssetAddress.TreePath03);
+            _treesPath.Add(AssetAddress.TreePath04);
+            _treesPath.Add(AssetAddress.TreePath06);
+
+            _rockPath.Add(AssetAddress.RockPath01);
+            _rockPath.Add(AssetAddress.RockPath02);
+            _rockPath.Add(AssetAddress.RockPath03);
+            _rockPath.Add(AssetAddress.RockPath04);
         }
 
         public List<ISavedProgressReader> ProgressReaders { get; }
@@ -76,13 +83,17 @@ namespace CodeBase.Infrastructure.Factory
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
                 mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>().Construct(mapCoordinates[count]);
-                if (mapCoordinates[count].TileObjectType == TileObjectType.Ingredient)
+                switch (mapCoordinates[count].TileObjectType)
                 {
-                    await CreateLoot(mapCoordinates[count]);
-                }
-                else if (mapCoordinates[count].TileObjectType == TileObjectType.Trees)
-                {
-                    await CreateTree(mapCoordinates[count]);
+                    case TileObjectType.Trees:
+                        await CreateTree(mapCoordinates[count]);
+                        break;
+                    case TileObjectType.Ingredient:
+                        await CreateLoot(mapCoordinates[count]);
+                        break;
+                    case TileObjectType.Rock:
+                        await CreateRock(mapCoordinates[count]);
+                        break;
                 }
             }
         }
@@ -90,8 +101,33 @@ namespace CodeBase.Infrastructure.Factory
         private async Task CreateTree(MyTile mapCoordinate)
         {
             GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
-            InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
+            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
                 mapCoordinate.Tile.gameObject.transform);
+            RandomSize(gameObject,9,15);
+        }
+
+        private async Task CreateRock(MyTile mapCoordinate)
+        {
+            GameObject prefab = await _assets.Load<GameObject>(_rockPath[_randomService.Next(0, _rockPath.Count)]);
+            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
+                mapCoordinate.Tile.gameObject.transform);
+            gameObject.transform.localPosition = new Vector3(0, 0.2f, 0);
+            RandomRotation(gameObject);
+            RandomSize(gameObject,6,14);
+        }
+
+        private void RandomSize(GameObject gameObject,int min,int max)
+        {
+            float size = _randomService.Next(min, max
+            ) * 0.1f;
+            gameObject.transform.localScale *= size;
+        }
+
+        private void RandomRotation(GameObject gameObject)
+        {
+            Quaternion transformLocalRotation = gameObject.transform.localRotation;
+            transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 181), 0);
+            gameObject.transform.localRotation = transformLocalRotation;
         }
 
         private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
@@ -157,38 +193,39 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateHud(Action<FormulaStaticData> action)
         {
             GameObject hud = await InstantiateRegisteredAsync(AssetAddress.HUDPath);
-            hud.GetComponent<HUD>().Construct(_windowService,action);
+            hud.GetComponent<HUD>().Construct(_windowService, action);
             return hud;
         }
 
         public async Task<GameObject> CreateCameraController()
         {
-            GameObject cameraController = await InstantiateRegisteredAsync(AssetAddress.StrategyCamera);
+            GameObject cameraController = await InstantiateRegisteredAsync(AssetAddress.StrategyCameraPath);
             return cameraController;
         }
 
         public async Task<GameObject> CreateCreature(CreatureTypeId typeId, MyTile parent, Action action)
         {
-            GameObject creatureGameObject = await CreateCreature(typeId,parent.Tile.gameObject.transform, parent.StartWorldPosition);
+            GameObject creatureGameObject =
+                await CreateCreature(typeId, parent.Tile.gameObject.transform, parent.StartWorldPosition);
             Creature.CreatureOnMap creatureOnMap = creatureGameObject.AddComponent<Creature.CreatureOnMap>();
             creatureOnMap.Construct(_hero);
             parent.OnStandAction = action;
             return creatureGameObject;
         }
 
-        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent,Vector3 position)
+        public async Task<GameObject> CreateCreature(CreatureTypeId typeId, Transform parent, Vector3 position)
         {
             string path = AssetAddress.CreatureLisovicPath;
             switch (typeId)
             {
                 case CreatureTypeId.Lisovic:
-                    path = AssetAddress.CreatureLisovicPath; 
+                    path = AssetAddress.CreatureLisovicPath;
                     break;
                 case CreatureTypeId.Vodianic:
-                    path = AssetAddress.CreatureVodianicPath; 
+                    path = AssetAddress.CreatureVodianicPath;
                     break;
-                    
             }
+
             GameObject prefab = await _assets.Load<GameObject>(path);
             GameObject creatureGameObject = InstantiateRegistered(prefab, position,
                 parent.transform);
@@ -216,7 +253,7 @@ namespace CodeBase.Infrastructure.Factory
 
             await _assets.Load<GameObject>(AssetAddress.HousePath);
             await _assets.Load<GameObject>(AssetAddress.HUDPath);
-            await _assets.Load<GameObject>(AssetAddress.StrategyCamera);
+            await _assets.Load<GameObject>(AssetAddress.StrategyCameraPath);
             await _assets.Load<GameObject>(AssetAddress.LootPath);
             await _assets.Load<GameObject>(AssetAddress.HeroPath);
             await _assets.Load<GameObject>(AssetAddress.CreatureLisovicPath);
@@ -226,11 +263,16 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.SwampGexPath);
             await _assets.Load<GameObject>(AssetAddress.WaterGexPath);
 
-            await _assets.Load<GameObject>(AssetAddress.TreePrefab01);
-            await _assets.Load<GameObject>(AssetAddress.TreePrefab02);
-            await _assets.Load<GameObject>(AssetAddress.TreePrefab03);
-            await _assets.Load<GameObject>(AssetAddress.TreePrefab04);
-            await _assets.Load<GameObject>(AssetAddress.TreePrefab06);
+            await _assets.Load<GameObject>(AssetAddress.TreePath01);
+            await _assets.Load<GameObject>(AssetAddress.TreePath02);
+            await _assets.Load<GameObject>(AssetAddress.TreePath03);
+            await _assets.Load<GameObject>(AssetAddress.TreePath04);
+            await _assets.Load<GameObject>(AssetAddress.TreePath06);
+
+            await _assets.Load<GameObject>(AssetAddress.RockPath01);
+            await _assets.Load<GameObject>(AssetAddress.RockPath02);
+            await _assets.Load<GameObject>(AssetAddress.RockPath03);
+            await _assets.Load<GameObject>(AssetAddress.RockPath04);
         }
 
         private GameObject InstantiateRegistered(GameObject prefab, Vector3 at)
