@@ -9,6 +9,7 @@ namespace CodeBase.Data
         House,
         Creature,
         Trees,
-        Rock
+        Rock,
+        Edge
     }
 }

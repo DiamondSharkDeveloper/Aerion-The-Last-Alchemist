@@ -29,10 +29,6 @@ MonoBehaviour:
     m_Address: SwampGexPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bdf5f290451de3044a28e2e5ae320bb9
-    m_Address: WaterGexPrefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 07c99847bc4c607449df80dac668b208
     m_Address: GrassGexPrefab
     m_ReadOnly: 0
@@ -115,6 +111,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 095b52ce982807049b5b6a0c690d76b0
     m_Address: Rock_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 580e72c1f4143324095d103eb52ccbcf
+    m_Address: Waterfall
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

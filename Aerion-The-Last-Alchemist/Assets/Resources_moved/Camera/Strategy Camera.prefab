@@ -200,7 +200,7 @@ MonoBehaviour:
   startRotation: {x: 0.14309014, y: 0.6924776, z: -0.14309014, w: 0.6924776}
   HorizontalRotateSpeed: 2
   VerticalRotateSpeed: 3
-  MinVerticalAngle: 10
+  MinVerticalAngle: 20
   MaxVerticalAngle: 60
   MoveMouseButton: 1
   MovementForwardAxis: Vertical
@@ -214,8 +214,8 @@ MonoBehaviour:
   FastMovementMultiplier: 3
   DraggingSpeed: 1.2
   ConstrainPosition: 1
-  MinPosition: {x: -20, y: 0, z: -20}
-  MaxPosition: {x: 50, y: 1, z: 50}
+  MinPosition: {x: 3, y: 0, z: 3}
+  MaxPosition: {x: 40, y: 1, z: 30}
   InputAxisZoom: Mouse ScrollWheel
   InvertZooming: 0
   ZoomSensitivity: 8

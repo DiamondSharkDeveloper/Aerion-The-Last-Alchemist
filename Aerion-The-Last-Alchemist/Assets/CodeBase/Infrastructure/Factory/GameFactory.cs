@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using CodeBase.Creature;
 using CodeBase.Data;
@@ -84,6 +83,10 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
+                if (mapCoordinates[count].IsEdge)
+                {
+                    mapCoordinates[count].Tile.gameObject.GetComponentsInChildren<MeshRenderer>()[1].enabled=true;
+                }
                 WorldTile worldTile = mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>();
                 worldTile.Construct(mapCoordinates[count]);
                 worldTile.TileEvent += (sender, args) => { move?.Invoke(args); };
@@ -106,10 +109,11 @@ namespace CodeBase.Infrastructure.Factory
 
             for (var i1 = 0; i1 < creatureTile.Count; i1++)
             {
-                await CreateCreature(staticData.creaturesType[i1], creatureTile[i1], () =>
+                int count = i1;
+                await CreateCreature(staticData.creaturesType[count], creatureTile[count], () =>
                 {
                     _stateMachine.Enter<CreatureState, CreatureStats>(_persistentProgressService.Progress.gameData
-                        .CreatureDada.ForCreature(staticData.creaturesId[i1]));
+                        .CreatureDada.ForCreature(staticData.creaturesId[count]));
                 });
             }
         }
@@ -161,7 +165,7 @@ namespace CodeBase.Infrastructure.Factory
                     path = AssetAddress.WaterGexPath;
                     break;
                 case TileTypeEnum.Rock:
-                    path = AssetAddress.RockGexPath;
+                    path = AssetAddress.GrassGexPath;
                     break;
             }
 
@@ -223,7 +227,7 @@ namespace CodeBase.Infrastructure.Factory
         {
             GameObject creatureGameObject =
                 await CreateCreature(typeId, parent.Tile.gameObject.transform, parent.StartWorldPosition);
-            Creature.CreatureOnMap creatureOnMap = creatureGameObject.AddComponent<Creature.CreatureOnMap>();
+            CreatureOnMap creatureOnMap = creatureGameObject.AddComponent<CreatureOnMap>();
             creatureOnMap.Construct(_hero);
             parent.OnStandAction = action;
             return creatureGameObject;

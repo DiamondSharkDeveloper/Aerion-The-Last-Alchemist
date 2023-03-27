@@ -48,7 +48,7 @@ namespace CodeBase.Services.Level
                     }
                     else
                     {
-                        GenerateTileByType(column, row, TileTypeEnum.Grass, true, TileObjectType.Unavailable);
+                        GenerateTileByType(column, row, TileTypeEnum.Grass, true, TileObjectType.Edge);
                     }
                 }
             }
@@ -61,10 +61,10 @@ namespace CodeBase.Services.Level
             GenerateHouseTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
-            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize, TileObjectType.Trees);
-            GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize);
-            GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize);
-            GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize,TileObjectType.Rock);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize,true, TileObjectType.Trees);
+            GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize,false);
+            GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize,true);
+            GenerateObstaclesByType(TileTypeEnum.Rock, staticData.rocksSize, staticData.mapSize,true, TileObjectType.Rock);
         }
 
         private void GenerateIngredientTile(int amount)
@@ -130,7 +130,7 @@ namespace CodeBase.Services.Level
             _mapCoordinates.Add(new MyTile(new Vector3Int(column, row, 0), typeEnum, isEdge, tileObjectType));
         }
 
-        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize,
+        private void GenerateObstaclesByType(TileTypeEnum type, int amount, int mapSize, bool OnEdge,
             TileObjectType objectType = TileObjectType.Unavailable)
         {
             do
@@ -141,21 +141,12 @@ namespace CodeBase.Services.Level
                 {
                     if (amount > 0)
                     {
-                        try
+                        if (_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None||OnEdge&&_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.Edge)
                         {
-                            if (_mapCoordinates[neighbours[i]].TileObjectType == TileObjectType.None)
-                            {
-                                _mapCoordinates[neighbours[i]].TileObjectType = objectType;
-                                _mapCoordinates[neighbours[i]].Type = type;
+                            _mapCoordinates[neighbours[i]].TileObjectType = objectType;
+                            _mapCoordinates[neighbours[i]].Type = type;
 
-                                amount--;
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.LogError(e);
-                            Debug.LogError(neighbours[i]);
-                            throw;
+                            amount--;
                         }
                     }
                     else

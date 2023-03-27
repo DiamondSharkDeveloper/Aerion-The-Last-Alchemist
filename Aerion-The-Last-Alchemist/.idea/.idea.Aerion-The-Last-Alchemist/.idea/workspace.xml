@@ -32,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Lab/LaboratoryWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Map/WorldTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/Book.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Models/WaterFall/PlanarReflection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/Utils/PropertySheetFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Windows/Page.cs" root0="SKIP_HIGHLIGHTING" />
@@ -107,7 +108,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="114377000" />
+      <workItem from="1678989343605" duration="123081000" />
     </task>
     <servers />
   </component>
@@ -176,17 +177,43 @@
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs</url>
-          <line>156</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Services\Level\LevelGenerator.cs" initialLine="156" containingFunctionPresentation="method 'GenerateObstaclesByType'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\States\CreatureState.cs" initialLine="31" containingFunctionPresentation="method 'Enter'">
             <startOffsets>
-              <option value="6003" />
+              <option value="1191" />
             </startOffsets>
             <endOffsets>
-              <option value="6033" />
+              <option value="1214" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="106" />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs</url>
+          <line>32</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\States\CreatureState.cs" initialLine="32" containingFunctionPresentation="method 'Enter'">
+            <startOffsets>
+              <option value="1227" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1872" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
+          <line>87</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="87" containingFunctionPresentation="method 'CreateMap'">
+            <startOffsets>
+              <option value="3763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3857" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="131" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
