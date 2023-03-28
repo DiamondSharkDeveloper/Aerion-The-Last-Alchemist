@@ -109,7 +109,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ParallaxScale: 1
-    - _Reflectivity: 0.73
+    - _Reflectivity: 1
     - _ReverseFlow: 1
     - _RimPower: 6.8
     - _SmoothnessTextureChannel: 0

@@ -108,7 +108,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="123081000" />
+      <workItem from="1678989343605" duration="128449000" />
     </task>
     <servers />
   </component>
@@ -149,71 +149,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
-          <line>23</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="23" containingFunctionPresentation="method 'Construct'">
-            <startOffsets>
-              <option value="1017" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1065" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
-          <line>25</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="24" containingFunctionPresentation="method 'Construct'">
-            <startOffsets>
-              <option value="1142" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1143" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\States\CreatureState.cs" initialLine="31" containingFunctionPresentation="method 'Enter'">
-            <startOffsets>
-              <option value="1191" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1214" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs</url>
-          <line>32</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\States\CreatureState.cs" initialLine="32" containingFunctionPresentation="method 'Enter'">
-            <startOffsets>
-              <option value="1227" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1872" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
-          <line>87</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="87" containingFunctionPresentation="method 'CreateMap'">
-            <startOffsets>
-              <option value="3763" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3857" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="131" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

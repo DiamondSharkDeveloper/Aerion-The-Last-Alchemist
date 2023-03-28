@@ -15,7 +15,7 @@ MonoBehaviour:
   levelKey: forest
   seaInterval: 2
   mapSize: 40
-  waterSize: 70
+  waterSize: 160
   swampSize: 100
   rocksSize: 80
   treesSize: 400
@@ -26,4 +26,3 @@ MonoBehaviour:
   creaturesId:
   - Lisovic0forest
   - Vodianic1forest
-  creaturesPositions: eb010000f6040000660500003e030000760400007d010000c5030000f9010000be0300000406000007060000bf000000e3020000bf020000ce040000b2020000

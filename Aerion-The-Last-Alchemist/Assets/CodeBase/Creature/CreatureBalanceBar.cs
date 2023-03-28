@@ -23,11 +23,9 @@ namespace CodeBase.Creature
            UpdateBar(blueBarImage,creatureStats.BlueStat/CreatureStats.MaxStatValue);
            UpdateBar(yellowBarImage,creatureStats.YellowStat/CreatureStats.MaxStatValue);
           
-            // if (balanceBarColor.color != creatureStats.BalanceColor)
-            // {
-              //  StartCoroutine(SmoothColourChange(balanceBarColor.GetColor("Foam Line Color"), creatureStats.BalanceColor));
+               StartCoroutine(SmoothColourChange(balanceBarColor.GetColor("_Tint"), creatureStats.BalanceColor));
                 StartCoroutine(SmoothBalanceBarFillAmountChange(creatureStats.BalanceAllStats1/100));
-           // }
+            
         }
 
         private void UpdateBar(Image image,float amount)
@@ -42,7 +40,10 @@ namespace CodeBase.Creature
         {
             for (float i = 0; i < 1; i += Time.deltaTime / 4)
             {
-                balanceBarColor.SetColor(("Foam Line Color"),Color.Lerp(startColor, targetColour, i));
+                balanceBarColor.SetColor("_TopColor",Color.Lerp(startColor, targetColour, i));
+                balanceBarColor.SetColor("_Tint",Color.Lerp(startColor, targetColour, i));
+                balanceBarColor.SetColor("_FoamColor",Color.Lerp(startColor, targetColour, i));
+                balanceBarColor.SetColor("_RimColor",Color.Lerp(startColor, targetColour, i));
                 yield return null;
             }
         }

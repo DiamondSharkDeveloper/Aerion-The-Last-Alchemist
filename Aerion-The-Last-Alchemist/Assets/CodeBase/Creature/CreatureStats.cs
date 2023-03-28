@@ -55,6 +55,7 @@ namespace CodeBase.Creature
       {
          _balanceAllStats = GreenStat + RedStat + BlueStat + YellowStat;
          BalanceColor=(Color.green*GreenStat/MaxStatValue+Color.red*RedStat/MaxStatValue+Color.blue*RedStat/MaxStatValue+Color.yellow*RedStat/MaxStatValue)/4;
+         BalanceColor = new Color(BalanceColor.a,BalanceColor.b,BalanceColor.g,1);
       }
       
    }

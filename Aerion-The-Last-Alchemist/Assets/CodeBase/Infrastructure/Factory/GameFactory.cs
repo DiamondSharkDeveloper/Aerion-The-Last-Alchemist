@@ -85,8 +85,27 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
                 if (mapCoordinates[count].IsEdge)
                 {
-                    mapCoordinates[count].Tile.gameObject.GetComponentsInChildren<MeshRenderer>()[1].enabled=true;
+                    MeshRenderer renderer =
+                        mapCoordinates[count].Tile.gameObject.GetComponentsInChildren<MeshRenderer>()[1];
+                    renderer.enabled = true;
+                    float size = _randomService.Next(200, 500);
+
+                    if (mapCoordinates[count].Type == TileTypeEnum.Water)
+                    {
+                        renderer.transform.localScale = new Vector3(1,
+                            size, 1);
+                        renderer.transform.localPosition = new Vector3(renderer.transform.localPosition.x,
+                            -size/10, renderer.transform.localPosition.z);
+                    }
+                    else
+                    {
+                        renderer.transform.localScale = new Vector3(renderer.transform.localScale.x,
+                            renderer.transform.localScale.y, size);
+                        renderer.transform.localPosition = new Vector3(renderer.transform.localPosition.x,
+                            -0.0045f * size, renderer.transform.localPosition.z);
+                    }
                 }
+
                 WorldTile worldTile = mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>();
                 worldTile.Construct(mapCoordinates[count]);
                 worldTile.TileEvent += (sender, args) => { move?.Invoke(args); };
@@ -136,11 +155,12 @@ namespace CodeBase.Infrastructure.Factory
             RandomSize(gameObject, 6, 14);
         }
 
-        private void RandomSize(GameObject gameObject, int min, int max)
+        private float RandomSize(GameObject gameObject, int min, int max)
         {
             float size = _randomService.Next(min, max
             ) * 0.1f;
             gameObject.transform.localScale *= size;
+            return size;
         }
 
         private void RandomRotation(GameObject gameObject)
