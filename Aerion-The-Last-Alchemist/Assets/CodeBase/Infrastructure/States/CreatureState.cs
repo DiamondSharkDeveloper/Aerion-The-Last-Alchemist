@@ -1,7 +1,9 @@
 ﻿using CodeBase.Creature;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
+using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
 using UnityEngine.SceneManagement;
 
@@ -16,14 +18,18 @@ namespace CodeBase.Infrastructure.States
         private readonly LoadingCurtain _loadingCurtain;
         private readonly IPersistentProgressService _progressService;
         private IGameFactory _gameFactory;
+        private readonly IStaticDataService _staticdata;
+        private readonly IInputService _inputService;
 
-        public CreatureState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,IPersistentProgressService progressService,IGameFactory gameFactory)
+        public CreatureState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,IPersistentProgressService progressService,IGameFactory gameFactory,IStaticDataService staticData,IInputService inputService)
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
             _loadingCurtain = loadingCurtain;
             _progressService = progressService;
             _gameFactory = gameFactory;
+            _staticdata = staticData;
+            _inputService = inputService;
         }
         
 
@@ -37,7 +43,7 @@ namespace CodeBase.Infrastructure.States
                 {
                     if (scene.GetRootGameObjects()[0].TryGetComponent(out _creatureWindow))
                     {
-                        _creatureWindow.Construct(payload,_gameFactory,_progressService);
+                        _creatureWindow.Construct(payload,_gameFactory,_progressService,_staticdata,_inputService);
                         _creatureWindow.OnClose += () =>
                         {
                             _loadingCurtain.Show();

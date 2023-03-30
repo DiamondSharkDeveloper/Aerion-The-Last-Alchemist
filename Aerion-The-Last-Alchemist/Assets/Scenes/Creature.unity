@@ -486,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6daa4453a454d807cf48d945a10e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 1705095023}
   closeButton: {fileID: 1420536123}
   creatureBalanceBar: {fileID: 1554167745}
   creatureHolder: {fileID: 1785147040}
@@ -1835,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44.716003, y: -44.391006}
+  m_AnchoredPosition: {x: -44.716003, y: -44.391014}
   m_SizeDelta: {x: -153.67, y: -153.503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815045392
@@ -2066,7 +2067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.100006, y: -44.391006}
+  m_AnchoredPosition: {x: 45.100006, y: -44.391014}
   m_SizeDelta: {x: -153.67, y: -153.503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897138008

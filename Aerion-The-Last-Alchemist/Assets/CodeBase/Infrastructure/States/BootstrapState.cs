@@ -2,6 +2,7 @@ using System;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Services;
+using CodeBase.Services.Cursor;
 using CodeBase.Services.Input;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
@@ -45,6 +46,7 @@ namespace CodeBase.Infrastructure.States
         private void RegisterServices()
         {
             _services.RegisterSingle<IGameStateMachine>(_stateMachine);
+            RegisterCursorService();
             RegisterInputService();
             RegisterStaticDataService();
             RegisterAssetProvider();
@@ -54,7 +56,7 @@ namespace CodeBase.Infrastructure.States
             _services.RegisterSingle<IUIFactory>(new UIFactory(
                 _services.Single<IAssetProvider>(),
                 _services.Single<IStaticDataService>(),
-                _services.Single<IPersistentProgressService>(),_stateMachine));
+                _services.Single<IPersistentProgressService>(),_stateMachine,_services.Single<IImageService>(),_services.Single<IInputService>()));
             _services.RegisterSingle<IWindowService>(new WindowService(_services.Single<IUIFactory>()));
             _services.RegisterSingle<IGameFactory>(new GameFactory(
                 _services.Single<IAssetProvider>(),
@@ -67,12 +69,17 @@ namespace CodeBase.Infrastructure.States
                 _services.Single<IPersistentProgressService>(),
                 _services.Single<IGameFactory>()));
             _services.RegisterSingle<ILevelGenerator>(new LevelGenerator(_services.Single<IStaticDataService>(),_services.Single<IRandomService>()));
+         
         }
 
         private void RegisterInputService()
         {
-            _services.RegisterSingle<IInputService>( Object.Instantiate(new GameObject()).AddComponent<InputService>());
-            _services.Single<IInputService>().Construct(_stateMachine);
+            _services.RegisterSingle<IInputService>( Object.Instantiate(new GameObject("InputService")).AddComponent<InputService>());
+            _services.Single<IInputService>().Construct(_stateMachine,_services.Single<IPersistentProgressService>());
+        }
+        private void RegisterCursorService()
+        {
+            _services.RegisterSingle<IImageService>( Object.Instantiate(new GameObject("CursorService")).AddComponent<ImageService>());
         }
 
         private void RegisterStaticDataService()

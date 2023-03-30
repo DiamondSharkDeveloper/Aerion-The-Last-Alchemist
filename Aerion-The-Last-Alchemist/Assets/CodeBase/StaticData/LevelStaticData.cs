@@ -22,5 +22,6 @@ namespace CodeBase.StaticData
         public int housePosition=320;
         public List<CreatureTypeId> creaturesType=new List<CreatureTypeId>();
         public List<string> creaturesId=new List<string>();
+        public Texture2D cursor;
     }
 }

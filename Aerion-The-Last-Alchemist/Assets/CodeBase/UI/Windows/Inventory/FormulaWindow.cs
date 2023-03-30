@@ -14,6 +14,7 @@ namespace CodeBase.UI.Windows.Inventory
         public void Initialize(List<FormulaStaticData> staticData, IPersistentProgressService persistentProgressService,
             Action<FormulaStaticData> action)
         {
+            
             action += data =>
             {
                 _onClose = null;

@@ -1,6 +1,7 @@
 using System;
 using CodeBase.Infrastructure.States;
 using CodeBase.Map;
+using CodeBase.Services.PersistentProgress;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,40 +11,49 @@ namespace CodeBase.Services.Input
     {
         private IGameStateMachine _stateMachine;
         private bool _canRayCast;
+        public event Action OnMouseButtonDown;
+        private Camera _camera;
+
 
         private void Awake()
         {
             DontDestroyOnLoad(this);
         }
 
-        public void Construct(IGameStateMachine stateMachine)
+        public void Construct(IGameStateMachine stateMachine, IPersistentProgressService persistentProgressService)
         {
             _stateMachine = stateMachine;
         }
 
-
-      
-
-        private bool CanRaycast()
+        public void SetCamera(Camera camera)
         {
-            return (UnityEngine.Input.GetMouseButtonDown(0) &&
-                    !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject());
+            _camera = camera;
         }
 
         void Update()
         {
-            if (CanRaycast())
+            if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                RaycastHit hit;
-                Ray rayOrigin = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
-                if (Physics.Raycast(rayOrigin, out hit))
+              
+                if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()||OnMouseButtonDown != null)
                 {
-                    WorldObject worldObject;
-                    if (hit.transform.TryGetComponent(out worldObject) ||
-                        hit.transform.parent.transform.TryGetComponent(out worldObject))
+                    RaycastHit hit;
+                    Ray rayOrigin = _camera.ScreenPointToRay(UnityEngine.Input.mousePosition);
+                    if (Physics.Raycast(rayOrigin, out hit))
                     {
-                        worldObject.OnTileEvent();
+                        WorldObject worldObject;
+                        if (hit.transform.TryGetComponent(out worldObject) ||
+                            hit.transform.parent.transform.TryGetComponent(out worldObject))
+                        {
+                            
+                            worldObject.OnTileEvent();
+                        }
                     }
+                }
+                if (OnMouseButtonDown != null)
+                {
+                    OnMouseButtonDown?.Invoke();
+                    OnMouseButtonDown = null;
                 }
             }
         }

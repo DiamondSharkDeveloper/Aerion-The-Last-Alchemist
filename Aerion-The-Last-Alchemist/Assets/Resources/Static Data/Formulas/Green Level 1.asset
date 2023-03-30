@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af831b908744e81a660b8165d68805c, type: 3}
   m_Name: Green Level 1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 20b10e73c314d584484725bc16667e6c, type: 3}
+  sprite: {fileID: 21300000, guid: cd697df760604ef42a6dabd4407c3fd1, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 408527e1f80c3c74096b937469dd0b21, type: 2}
   - {fileID: 11400000, guid: 40b3ee6e2b591cf40bf5216a4fe5ed15, type: 2}
   - {fileID: 11400000, guid: 803bc504dae570f498c1c60996c66578, type: 2}
-  ingredientsCount: 060000000400000002000000
+  name: Green Level 1
+  efect: 10
   potionType: 3
   potionLevel: 1
   description: 

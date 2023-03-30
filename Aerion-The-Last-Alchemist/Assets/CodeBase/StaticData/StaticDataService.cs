@@ -48,5 +48,6 @@ namespace CodeBase.StaticData
 
         public List<IngredientStaticData> ForIngredients() => _ingredients;
         public List<FormulaStaticData> ForFormulas() => _formulas;
+        
     }
 }

@@ -26,3 +26,4 @@ MonoBehaviour:
   creaturesId:
   - Lisovic0forest
   - Vodianic1forest
+  cursor: {fileID: 2800000, guid: 87d28997275f30943a4bf1cdc156bb73, type: 3}

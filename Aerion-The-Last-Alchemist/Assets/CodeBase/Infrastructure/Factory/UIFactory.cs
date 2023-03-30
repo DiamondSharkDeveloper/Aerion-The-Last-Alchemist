@@ -4,6 +4,8 @@ using CodeBase.Enums;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.Cursor;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
@@ -22,14 +24,18 @@ namespace CodeBase.UI.Services.Factory
         private IGameStateMachine _stateMachine;
         private Transform _uiRoot;
         private readonly IPersistentProgressService _progressService;
+        private readonly IImageService _imageService;
+        private readonly IInputService _inputService;
 
         public UIFactory(IAssetProvider assets, IStaticDataService staticData,
-            IPersistentProgressService progressService,IGameStateMachine stateMachine)
+            IPersistentProgressService progressService,IGameStateMachine stateMachine,IImageService imageService,IInputService inputService)
         {
             _assets = assets;
             _staticData = staticData;
             _progressService = progressService;
             _stateMachine = stateMachine;
+            _inputService = inputService;
+            _imageService = imageService;
         }
 
         public void CreateInventory()
@@ -41,9 +47,19 @@ namespace CodeBase.UI.Services.Factory
               //  _stateMachine.Enter<MenuState>();
                 window.Construct(_progressService, () =>
                 {
-                    _stateMachine.Enter<GameLoopState>();
+                    // _stateMachine.Enter<GameLoopState>();
                 });
-                window.Initialize(_staticData.ForIngredients(),_staticData.ForFormulas());
+                window.Initialize(_staticData.ForIngredients(),_staticData.ForFormulas(), (sprite, name) =>
+                {
+                    _imageService.SetOverCursorImage(sprite);
+                    window.Close();
+                    Action<bool> isUsed;
+                    _inputService.OnMouseButtonDown += () =>
+                    {
+                        _imageService.SetClearOverCursorImage();
+                    };
+                    _progressService.Progress.gameData.lootData.Hold(name);
+                });
             }
         }
 
@@ -62,7 +78,7 @@ namespace CodeBase.UI.Services.Factory
               //  _stateMachine.Enter<MenuState>();
                 window.Construct(_progressService, () =>
                 {
-                    _stateMachine.Enter<GameLoopState>();
+                    // _stateMachine.Enter<GameLoopState>();
                 });
                 window.Initialize(_staticData.ForFormulas());
             }
@@ -81,10 +97,10 @@ namespace CodeBase.UI.Services.Factory
                
                 window.Construct(_progressService, () =>
                 {
-                    if (isOnMap)
-                    {
-                        _stateMachine.Enter<GameLoopState>();
-                    }
+                    // if (isOnMap)
+                    // {
+                    //     _stateMachine.Enter<GameLoopState>();
+                    // }
                 });
                 window.Initialize(_staticData.ForFormulas(),_progressService,action);
             }

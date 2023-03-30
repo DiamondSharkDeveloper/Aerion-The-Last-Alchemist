@@ -2,6 +2,7 @@ using System;
 using CodeBase.Lab;
 using CodeBase.Logic;
 using CodeBase.Services;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using CodeBase.UI.Windows;
@@ -17,6 +18,7 @@ namespace CodeBase.Infrastructure.States
         private readonly SceneLoader _sceneLoader;
         private readonly AllServices _services;
         private readonly LoadingCurtain _loadingCurtain;
+        private readonly IInputService _inputService;
 
         public LabState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices allServices,
             LoadingCurtain loadingCurtain)
@@ -25,6 +27,7 @@ namespace CodeBase.Infrastructure.States
             _sceneLoader = sceneLoader;
             _services = allServices;
             _loadingCurtain = loadingCurtain;
+           
         }
 
 
@@ -39,7 +42,7 @@ namespace CodeBase.Infrastructure.States
                     if (scene.GetRootGameObjects()[0].TryGetComponent(out _laboratoryWindow))
                     {
                         _laboratoryWindow.Init(payload, _services.Single<IPersistentProgressService>(),
-                            _services.Single<IWindowService>());
+                            _services.Single<IWindowService>(),_services.Single<IInputService>());
                         _laboratoryWindow.OnClose += () =>
                         {
                             _loadingCurtain.Show();

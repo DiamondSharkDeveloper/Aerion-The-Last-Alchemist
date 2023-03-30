@@ -1,4 +1,5 @@
 using System;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using CodeBase.UI.Windows;
@@ -12,11 +13,14 @@ namespace CodeBase.Lab
     {
         [SerializeField] private Button closeButton;
         [SerializeField] private CraftZone craftZone;
+        [SerializeField] private Camera _camera;
         public event Action OnClose;
 
         [Obsolete("Obsolete")]
-        public void Init([CanBeNull] FormulaStaticData data,IPersistentProgressService progressService,IWindowService windowService)
+        public void Init([CanBeNull] FormulaStaticData data, IPersistentProgressService progressService,
+            IWindowService windowService, IInputService inputService)
         {
+            inputService.SetCamera(_camera);
             if (data!=null)
             {
              craftZone.Init(windowService,progressService,data);   

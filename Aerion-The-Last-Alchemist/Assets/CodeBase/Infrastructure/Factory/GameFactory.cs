@@ -108,7 +108,10 @@ namespace CodeBase.Infrastructure.Factory
 
                 WorldTile worldTile = mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>();
                 worldTile.Construct(mapCoordinates[count]);
-                worldTile.TileEvent += (sender, args) => { move?.Invoke(args); };
+                worldTile.Event += (sender, args) =>
+                {
+                    move?.Invoke(args);
+                };
                 switch (mapCoordinates[count].TileObjectType)
                 {
                     case TileObjectType.Trees:
@@ -222,9 +225,13 @@ namespace CodeBase.Infrastructure.Factory
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
             GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
             LootPiece lootPiece = loot.GetComponent<LootPiece>();
-            at.OnStandAction = () => { lootPiece.Pickup(); };
+            at.OnStandAction = () =>
+            {
+                lootPiece.Pickup();
+                at.OnStandAction = null;
+            };
             lootPiece.Construct(_persistentProgressService.Progress.gameData);
-            lootPiece.Initialize(new Loot(_ingredients[_randomService.Next(0, _ingredients.Count - 1)],
+            lootPiece.Initialize(new Loot(_ingredients[_randomService.Next(0, _ingredients.Count)],
                 _randomService.Next(1, 5)));
             return loot;
         }

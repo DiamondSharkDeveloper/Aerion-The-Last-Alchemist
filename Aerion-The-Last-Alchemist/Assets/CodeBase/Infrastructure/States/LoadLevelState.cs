@@ -5,11 +5,13 @@ using CodeBase.Creature;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Map;
+using CodeBase.Services.Cursor;
 using CodeBase.Services.Input;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
+using CodeBase.UI.Elements;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -24,10 +26,10 @@ namespace CodeBase.Infrastructure.States
         private readonly IStaticDataService _staticData;
         private readonly ILevelGenerator _levelGenerator;
         private readonly IInputService _inputService;
-
+        private readonly IImageService _imageService;
         public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,
             IGameFactory gameFactory, IPersistentProgressService progressService, IStaticDataService staticDataService,
-            ILevelGenerator levelGenerator, IInputService inputService)
+            ILevelGenerator levelGenerator, IInputService inputService,IImageService imageService)
         {
             _stateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
@@ -37,22 +39,38 @@ namespace CodeBase.Infrastructure.States
             _staticData = staticDataService;
             _levelGenerator = levelGenerator;
             _inputService = inputService;
+            _imageService = imageService;
         }
 
         private async Task InitGameWorld()
         {
             LevelStaticData levelData = LevelStaticData();
             List<MyTile> mapCoordinates = _levelGenerator.GetMap(levelData);
+            _imageService.SetDefaultCursor(levelData.cursor);
+            
             GameObject cameraController = await _gameFactory.CreateCameraController();
             
-            GameObject hud = await _gameFactory.CreateHud(data =>
+            GameObject hudGameObject = await _gameFactory.CreateHud(data =>
             {
                 _stateMachine.Enter<LabState, FormulaStaticData>(data);
             });
+            HUD hud = hudGameObject.GetComponent<HUD>();
+            StrategyCamera strategyCamera = cameraController.GetComponent<StrategyCamera>();
+            _imageService.Init(hud);
+            _inputService.SetCamera(strategyCamera.cam);
             _stateMachine.OnStateChange += state =>
             {
-                cameraController.GetComponent<StrategyCamera>().ChangeCameraActiveStatus(!state.IsOnPause(), 3);
-                hud.SetActive(!state.IsOnPause());
+              strategyCamera.ChangeCameraActiveStatus(!state.IsOnPause(), 3);
+                
+                if (state.IsOnPause())
+                {
+                    hud.Hide();
+                }
+                else
+                {
+                    _inputService.SetCamera(strategyCamera.cam);
+                    hud.Show();
+                }
             };
 
             Hero.Hero hero = null;

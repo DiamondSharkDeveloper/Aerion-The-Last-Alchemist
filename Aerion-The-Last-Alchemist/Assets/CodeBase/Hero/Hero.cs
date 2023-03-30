@@ -14,7 +14,7 @@ namespace CodeBase.Hero
             _heroMove = gameObject.AddComponent<HeroMove>();
             _heroMove.Construct();
             _heroMove._isMove += heroAnimator.PlayMoveAnimation;
-            _heroMove.OnInteractiveObject += () => { heroAnimator.PlayGrab();};
+            _heroMove.OnInteractiveObject +=action => { heroAnimator.PlayGrab(action);};
         }
         public void Move(EventArgs  eventArgs)
         {

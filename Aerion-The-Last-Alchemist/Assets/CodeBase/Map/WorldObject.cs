@@ -5,7 +5,7 @@ namespace CodeBase.Map
 {
     public class WorldObject:MonoBehaviour
     {
-        public event EventHandler<EventArgs> TileEvent;
+        public event EventHandler<EventArgs> Event;
         private EventArgs _eventArgs;
         public void Construct(EventArgs eventArgs)
         {
@@ -14,7 +14,7 @@ namespace CodeBase.Map
 
         public void OnTileEvent()
         {
-            TileEvent?.Invoke(this, _eventArgs);
+            Event?.Invoke(this, _eventArgs);
         }
     }
 }

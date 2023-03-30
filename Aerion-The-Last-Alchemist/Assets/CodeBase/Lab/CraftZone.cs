@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using CodeBase.Data;
 using CodeBase.Enums;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using CodeBase.UI.Elements;
 using CodeBase.UI.Windows;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CodeBase.Lab
 {
@@ -19,6 +22,7 @@ namespace CodeBase.Lab
         [SerializeField] private OpenWindowButton openWindowButton;
         [SerializeField] private PotionHandler potionHandler;
         [SerializeField] private Color waterColour;
+        [SerializeField] private List<SpriteRenderer> lights = new List<SpriteRenderer>();
         private IPersistentProgressService _persistentProgressService;
         private static readonly int Craft1 = Animator.StringToHash("Craft");
         private static readonly int FinishCraft = Animator.StringToHash("FinishCraft");
@@ -26,9 +30,12 @@ namespace CodeBase.Lab
 
         public void Init(IWindowService windowService, IPersistentProgressService persistentProgressService)
         {
+            _persistentProgressService = persistentProgressService;
             potionHandler.gameObject.SetActive(false);
             bubblesParticleSystem.gameObject.SetActive(false);
             fire.gameObject.SetActive(false);
+            SetLightColor(Color.clear);
+            kettlePotionsSprite.gameObject.SetActive(false);
             openWindowButton.Init(windowService, data =>
             {
                 AddAllIngredients(data);
@@ -58,8 +65,7 @@ namespace CodeBase.Lab
         private void StartCraft(FormulaStaticData formulaStaticData)
         {
             potionHandler.SetPotionImage(formulaStaticData.sprite);
-
-
+            kettlePotionsSprite.color = waterColour;
             StartCoroutine(Craft(formulaStaticData));
         }
 
@@ -71,22 +77,24 @@ namespace CodeBase.Lab
             fire.gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(2);
             kettleAnimator.SetTrigger(Craft1);
-            yield return new WaitForSecondsRealtime(2);
+            yield return new WaitForSecondsRealtime(1);
+            kettlePotionsSprite.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(1);
             StartCoroutine(SmoothColourChange(waterColour, potionColor));
             bubblesParticleSystem.gameObject.SetActive(true);
-            yield return new WaitForSecondsRealtime(6);
+            yield return new WaitForSecondsRealtime(4);
             kettleAnimator.SetTrigger(FinishCraft);
-
             fire.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(2);
             bubblesParticleSystem.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(3);
-
-            kettlePotionsSprite.color = waterColour;
-            ;
+            StartCoroutine(SmoothColourChange(potionColor, Color.clear));
             ingredientHandler.RemoveBubbles();
+            kettlePotionsSprite.gameObject.SetActive(false);
             kettleAnimator.SetTrigger(Idle);
-            StopAllCoroutines();
+            _persistentProgressService.Progress.gameData.lootData.Collect(new Loot(formulaStaticData.name,1));
+
+        StopAllCoroutines();
         }
 
         public Color GetPotionsColor(PotionType potionType)
@@ -94,7 +102,7 @@ namespace CodeBase.Lab
             switch (potionType)
             {
                 case PotionType.Blue:
-                    return Color.blue;
+                    return Color.cyan;
                     break;
                 case PotionType.Green:
                     return Color.green;
@@ -112,10 +120,21 @@ namespace CodeBase.Lab
 
         public IEnumerator SmoothColourChange(Color startColor, Color targetColour)
         {
+            Color color;
             for (float i = 0; i < 1; i += Time.deltaTime / 4)
             {
-                kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
+                
+              color=kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
+                SetLightColor(Color.Lerp(new Color(startColor.r,startColor.g,startColor.b, 0.001f),new Color(color.r,color.g,color.b,0.3f), i));
                 yield return null;
+            }
+        }
+
+        public void SetLightColor(Color color)
+        {
+            for (int j = 0; j < lights.Count; j++)
+            {
+                lights[j].color = color;
             }
         }
     }

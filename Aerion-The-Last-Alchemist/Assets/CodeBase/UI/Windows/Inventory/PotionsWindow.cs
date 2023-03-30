@@ -14,7 +14,7 @@ namespace CodeBase.UI.Windows.Inventory
             {
                 _items[staticData[i].name] = Instantiate(cellprefab).GetComponent<CellItem>();
                 _items[staticData[i].name].transform.SetParent(content.transform,false);
-                _items[staticData[i].name].SetItemSprite(staticData[i].sprite);
+                _items[staticData[i].name].SetItem(staticData[i].sprite,staticData[i].name);
                 if (Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(staticData[i].name))
                 {
                     RefreshItem(Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary[staticData[i]?.name]);

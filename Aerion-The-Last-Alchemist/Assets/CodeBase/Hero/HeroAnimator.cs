@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using CodeBase.Logic;
 using UnityEngine;
 
 namespace CodeBase.Hero
 {
-    public class HeroAnimator: MonoBehaviour,IAnimationStateReader
+    public class HeroAnimator : MonoBehaviour, IAnimationStateReader
     {
         [SerializeField] public Animator _animator;
         private static readonly int MoveHash = Animator.StringToHash("Walk");
@@ -14,6 +15,7 @@ namespace CodeBase.Hero
         public AnimatorState State { get; private set; }
         public event Action<AnimatorState> StateEntered;
         public event Action<AnimatorState> StateExited;
+
         public void EnteredState(int stateHash)
         {
             State = StateFor(stateHash);
@@ -22,12 +24,24 @@ namespace CodeBase.Hero
 
         public void PlayMoveAnimation(bool isMove)
         {
-            _animator.SetBool(MoveHash,isMove);
+            _animator.SetBool(MoveHash, isMove);
         }
-        public void PlayGrab()
+
+        public void PlayGrab(Action onComplete)
         {
             _animator.SetTrigger(GrabHash);
+            StartCoroutine("OnCompleteAttackAnimation",onComplete);
         }
+
+
+        IEnumerator OnCompleteAttackAnimation(Action onComplete)
+        {
+            while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+                yield return null;
+
+            onComplete.Invoke();
+        }
+
         public void ExitedState(int stateHash)
         {
             StateExited?.Invoke(StateFor(stateHash));
@@ -48,8 +62,10 @@ namespace CodeBase.Hero
             {
                 state = AnimatorState.Unknown;
             }
+
             return state;
         }
+
         public void ResetToIdle()
         {
             _animator.Play(_idleStateHash, -1);

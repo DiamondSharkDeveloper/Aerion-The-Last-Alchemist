@@ -54,7 +54,7 @@ public class StrategyCamera : MonoBehaviour
     private Vector3 movementForward;
     private Vector3 movementRight;
 
-    private Camera cam;
+    public Camera cam;
 
     private Vector3 targetPosition;
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CodeBase.Data;
 using CodeBase.StaticData;
 using UnityEngine;
@@ -34,11 +35,11 @@ namespace CodeBase.UI.Windows.Inventory
         }
 
         public void Initialize(List<IngredientStaticData> ingredientStaticData,
-            List<FormulaStaticData> formulaStaticData)
+            List<FormulaStaticData> formulaStaticData,Action<Sprite,string> onHold)
         {
             _isPotionTab = false;
-            CreateIngredients(ingredientStaticData);
-            CreatePotions(formulaStaticData);
+            CreateIngredients(ingredientStaticData,onHold);
+            CreatePotions(formulaStaticData,onHold);
             HideCells(_formulaKeys);
             potionsButton.onClick.AddListener(() =>
             {
@@ -82,14 +83,15 @@ namespace CodeBase.UI.Windows.Inventory
             addAllPotionsButton.onClick.AddListener(AddAllIngredients);
         }
 
-        private void CreatePotions(List<FormulaStaticData> staticData)
+        private void CreatePotions(List<FormulaStaticData> staticData, Action<Sprite, string> onHold)
         {
             for (int i = 0; i < staticData.Count; i++)
             {
                 _formulaKeys.Add(staticData[i].name);
                 _items[staticData[i].name] = Instantiate(cellprefab).GetComponent<CellItem>();
                 _items[staticData[i].name].transform.SetParent(content.transform, false);
-                _items[staticData[i].name].SetItemSprite(staticData[i].sprite);
+                _items[staticData[i].name].SetItem(staticData[i].sprite,staticData[i].name);
+                _items[staticData[i].name].OnClick += onHold;
                 if (Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(staticData[i].name))
                 {
                     RefreshItem(Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary[staticData[i].name]);
@@ -109,14 +111,16 @@ namespace CodeBase.UI.Windows.Inventory
             }
         }
 
-        private void CreateIngredients(List<IngredientStaticData> ingredientStaticData)
+        private void CreateIngredients(List<IngredientStaticData> ingredientStaticData, Action<Sprite, string> onHold)
         {
             for (int i = 0; i < ingredientStaticData.Count; i++)
             {
                 _ingredientsKeys.Add(ingredientStaticData[i].name);
                 _items[ingredientStaticData[i].name] = Instantiate(cellprefab).GetComponent<CellItem>();
                 _items[ingredientStaticData[i].name].transform.SetParent(content.transform, false);
-                _items[ingredientStaticData[i].name].SetItemSprite(ingredientStaticData[i].lootIcon);
+                _items[ingredientStaticData[i].name].SetItem(ingredientStaticData[i].lootIcon,ingredientStaticData[i].name);
+                _items[ingredientStaticData[i].name].OnClick += onHold;
+
                 if (Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(ingredientStaticData[i]
                         .name))
                 {

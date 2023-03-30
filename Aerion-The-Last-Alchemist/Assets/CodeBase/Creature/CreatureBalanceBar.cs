@@ -23,8 +23,9 @@ namespace CodeBase.Creature
            UpdateBar(blueBarImage,creatureStats.BlueStat/CreatureStats.MaxStatValue);
            UpdateBar(yellowBarImage,creatureStats.YellowStat/CreatureStats.MaxStatValue);
           
-               StartCoroutine(SmoothColourChange(balanceBarColor.GetColor("_Tint"), creatureStats.BalanceColor));
-                StartCoroutine(SmoothBalanceBarFillAmountChange(creatureStats.BalanceAllStats1/100));
+           StartCoroutine(SmoothColourChange(balanceBarColor.GetColor("_Tint"), creatureStats.BalanceColor));
+           StartCoroutine(SmoothBalanceBarFillAmountChange(creatureStats.BalanceAllStats1/100));
+           balanceBar.gameObject.transform.parent.Rotate(0,balanceBar.gameObject.transform.parent.localEulerAngles.y+10,0);
             
         }
 
@@ -75,6 +76,7 @@ namespace CodeBase.Creature
                 }
                 yield return null;
             }
+            
         }
 
         private void OnDestroy()

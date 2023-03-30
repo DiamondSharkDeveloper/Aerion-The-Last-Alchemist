@@ -17,7 +17,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/57/bf08eeb4/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/a9/f6c51a43/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/10/a84072fa/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/33/ba7eccbd/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/42/6ac99512/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/72/6c2e066e/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/60/ecd43e28/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/96/cb4fd6d4/LoopType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/870dcb826aa94138bd46a28dbdcf63809800/3d/b5b8590d/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,7 +110,7 @@
       <workItem from="1677972754697" duration="21290000" />
       <workItem from="1678159115489" duration="49241000" />
       <workItem from="1678662870928" duration="17200000" />
-      <workItem from="1678989343605" duration="128449000" />
+      <workItem from="1678989343605" duration="168223000" />
     </task>
     <servers />
   </component>
@@ -129,26 +131,104 @@
           <line>30</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\PotionsWindow.cs" initialLine="29" containingFunctionPresentation="method 'AddAll'">
             <startOffsets>
-              <option value="1237" />
+              <option value="1250" />
             </startOffsets>
             <endOffsets>
-              <option value="1297" />
+              <option value="1310" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>75</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="72" containingFunctionPresentation="method 'Craft'">
+          <line>127</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="121" containingFunctionPresentation="method 'SmoothColourChange'">
             <startOffsets>
-              <option value="3046" />
+              <option value="5254" />
             </startOffsets>
             <endOffsets>
-              <option value="3095" />
+              <option value="5382" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="74" />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="47" containingFunctionPresentation="lambda expression inside method 'Construct'">
+            <startOffsets>
+              <option value="2316" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2323" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs</url>
+          <line>112</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Infrastructure\Factory\GameFactory.cs" initialLine="112" containingFunctionPresentation="lambda expression inside method 'CreateMap'">
+            <startOffsets>
+              <option value="5112" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5131" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="35" containingFunctionPresentation="lambda expression inside method 'Construct'">
+            <startOffsets>
+              <option value="1654" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1698" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="39" containingFunctionPresentation="lambda expression inside method 'Construct'">
+            <startOffsets>
+              <option value="1711" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1776" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureStats.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureStats.cs" initialLine="64" containingFunctionPresentation="method 'Hill'">
+            <startOffsets>
+              <option value="2134" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2153" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureStats.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureStats.cs" initialLine="67" containingFunctionPresentation="method 'Hill'">
+            <startOffsets>
+              <option value="2226" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2285" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="150" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

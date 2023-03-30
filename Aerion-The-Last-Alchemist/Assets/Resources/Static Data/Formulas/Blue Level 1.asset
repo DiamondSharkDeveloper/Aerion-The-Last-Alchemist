@@ -17,7 +17,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e78923e9e18a5c4fb00d9523b41d8ee, type: 2}
   - {fileID: 11400000, guid: 891f76744172d274d9d284556c7e4bf1, type: 2}
   - {fileID: 11400000, guid: 408527e1f80c3c74096b937469dd0b21, type: 2}
-  ingredientsCount: 070000000200000004000000
+  name: Blue Level 1
+  efect: 10
   potionType: 1
   potionLevel: 1
   description: 

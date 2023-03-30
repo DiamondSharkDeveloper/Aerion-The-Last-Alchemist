@@ -17,8 +17,9 @@ namespace CodeBase.Hero
         [SerializeField] private float moveSpeed = 1.8f;
         private TweenerCore<Vector3, Vector3, VectorOptions> _core;
         private LookAtTarget _lookAtTarget;
+        private bool canMove=true;
         public event Action<bool> _isMove;
-        public event Action OnInteractiveObject;
+        public event Action<Action> OnInteractiveObject;
       
 
         public void Construct()
@@ -28,7 +29,7 @@ namespace CodeBase.Hero
 
         public void Move(MyTile tile)
         {
-            if (tile.IsAvailable && _currentTile != tile)
+            if (tile.IsAvailable && _currentTile != tile&&canMove)
             {
                 _core?.Kill();
                 transform.SetParent(tile.Tile.gameObject.transform);
@@ -55,7 +56,11 @@ namespace CodeBase.Hero
 
         private void TileOnOnStandAction()
         {
-            OnInteractiveObject?.Invoke();
+            canMove = false;
+            OnInteractiveObject?.Invoke(() =>
+            {
+                canMove = true;
+            });
         }
     }
 }

@@ -41,6 +41,7 @@ namespace CodeBase.Enemy
         {
             Destroy(gameObject, DelayBeforeDestroying);
             UpdateWorldData();
+            OnAction = null;
         }
 
         private void UpdateWorldData()

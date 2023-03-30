@@ -9,8 +9,8 @@ namespace CodeBase.StaticData
     {
         public Sprite sprite;
         public List<IngredientStaticData> ingredients=new List<IngredientStaticData>();
-        public List<int> ingredientsCount=new List<int>();
-        
+        public new string name;
+        public int efect;
         public PotionType potionType;
         [Range(1,4)]
         public int potionLevel;

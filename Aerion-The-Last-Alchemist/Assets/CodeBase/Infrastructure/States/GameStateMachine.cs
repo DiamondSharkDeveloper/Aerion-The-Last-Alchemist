@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Services;
+using CodeBase.Services.Cursor;
 using CodeBase.Services.Input;
 using CodeBase.Services.Level;
 using CodeBase.Services.PersistentProgress;
@@ -26,12 +27,12 @@ namespace CodeBase.Infrastructure.States
                 [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain,
                     allServices.Single<IGameFactory>(),
                     allServices.Single<IPersistentProgressService>(), allServices.Single<IStaticDataService>(),
-                    allServices.Single<ILevelGenerator>(), allServices.Single<IInputService>()),
+                    allServices.Single<ILevelGenerator>(), allServices.Single<IInputService>(),allServices.Single<IImageService>()),
                 [typeof(LoadProgressState)] = new LoadProgressState(this,allServices.Single<IStaticDataService>(),
                     allServices.Single<IPersistentProgressService>(), allServices.Single<ISaveLoadService>(),allServices.Single<IRandomService>()),
                 [typeof(GameLoopState)] = new GameLoopState(this),
                 [typeof(LabState)] = new LabState(this, sceneLoader, allServices, loadingCurtain),
-                [typeof(CreatureState)] = new CreatureState(this, sceneLoader, loadingCurtain,allServices.Single<IPersistentProgressService>(),allServices.Single<IGameFactory>()), 
+                [typeof(CreatureState)] = new CreatureState(this, sceneLoader, loadingCurtain,allServices.Single<IPersistentProgressService>(),allServices.Single<IGameFactory>(),allServices.Single<IStaticDataService>(),allServices.Single<IInputService>()), 
                 [typeof(MenuState)] = new MenuState()
             };
         }
