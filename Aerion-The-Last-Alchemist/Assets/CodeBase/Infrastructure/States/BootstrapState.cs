@@ -32,7 +32,7 @@ namespace CodeBase.Infrastructure.States
         }
 
         public void Enter() =>
-            _sceneLoader.Load(Initial, onLoaded:EnterLoadLevel );
+            _sceneLoader.Load(Initial, onLoaded:EnterMainMenu );
 
         public void Exit()
         {
@@ -94,7 +94,7 @@ namespace CodeBase.Infrastructure.States
             _services.RegisterSingle<IAssetProvider>(assetProvider);
             assetProvider.Initialize();
         }
-        private void EnterLoadLevel() =>
-            _stateMachine.Enter<LoadProgressState>();
+        private void EnterMainMenu() =>
+            _stateMachine.Enter<MenuState,bool>(false);
     }
 }

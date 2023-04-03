@@ -90,12 +90,12 @@ namespace CodeBase.Infrastructure.States
         }
 
       
-        public void Enter(string sceneName)
+        public void Enter(string isGameRun)
         {
             _loadingCurtain.Show();
             _gameFactory.Cleanup();
             _gameFactory.WarmUp();
-            _sceneLoader.Load(sceneName, OnLoaded);
+            _sceneLoader.Load(isGameRun, OnLoaded);
         }
 
         public void Exit() =>

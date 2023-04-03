@@ -8,6 +8,6 @@ namespace CodeBase.Infrastructure.States
     }
     public interface IPayloadedState<TPayload> : IExitableState
     {
-        void Enter([CanBeNull] TPayload payload);
+        void Enter([CanBeNull] TPayload isGameRun);
     }
 }

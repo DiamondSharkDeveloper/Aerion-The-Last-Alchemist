@@ -88,7 +88,7 @@ namespace CodeBase.Lab
             yield return new WaitForSecondsRealtime(2);
             bubblesParticleSystem.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(3);
-            StartCoroutine(SmoothColourChange(potionColor, Color.clear));
+            SetLightColor(Color.clear);
             ingredientHandler.RemoveBubbles();
             kettlePotionsSprite.gameObject.SetActive(false);
             kettleAnimator.SetTrigger(Idle);
@@ -124,7 +124,7 @@ namespace CodeBase.Lab
             for (float i = 0; i < 1; i += Time.deltaTime / 4)
             {
                 
-              color=kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
+                color=kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
                 SetLightColor(Color.Lerp(new Color(startColor.r,startColor.g,startColor.b, 0.001f),new Color(color.r,color.g,color.b,0.3f), i));
                 yield return null;
             }

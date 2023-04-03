@@ -33,7 +33,7 @@ namespace CodeBase.Infrastructure.States
         }
         
 
-        public void Enter(CreatureStats payload)
+        public void Enter(CreatureStats isGameRun)
         {
             _loadingCurtain.Show();
             _sceneLoader.LoadAdditive(CreatureScene, scene1 =>
@@ -43,7 +43,7 @@ namespace CodeBase.Infrastructure.States
                 {
                     if (scene.GetRootGameObjects()[0].TryGetComponent(out _creatureWindow))
                     {
-                        _creatureWindow.Construct(payload,_gameFactory,_progressService,_staticdata,_inputService);
+                        _creatureWindow.Construct(isGameRun,_gameFactory,_progressService,_staticdata,_inputService);
                         _creatureWindow.OnClose += () =>
                         {
                             _loadingCurtain.Show();

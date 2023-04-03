@@ -27,10 +27,10 @@ namespace CodeBase.Services.Level
 
         public List<MyTile> GetMap(LevelStaticData staticData)
         {
-            if (_mapCoordinates != null && _mapCoordinates.Count != 0)
-            {
-                return _mapCoordinates;
-            }
+            // if (_mapCoordinates != null && _mapCoordinates.Count != 0)
+            // {
+            //     return _mapCoordinates;
+            // }
 
             GenerateMap(staticData);
             return _mapCoordinates;
@@ -38,6 +38,10 @@ namespace CodeBase.Services.Level
 
         private void GenerateMap(LevelStaticData staticData)
         {
+            if (_mapCoordinates?.Count != 0)
+            {
+                _mapCoordinates.Clear();
+            }
             for (int column = 0; column < staticData.mapSize; column++)
             {
                 for (int row = 0; row < staticData.mapSize; row++)

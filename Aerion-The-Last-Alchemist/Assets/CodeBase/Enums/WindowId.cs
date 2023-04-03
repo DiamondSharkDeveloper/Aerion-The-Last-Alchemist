@@ -5,6 +5,7 @@ namespace CodeBase.Enums
         None = 0,
         Inventory = 1,
         Potions=2,
-        Formula=3
+        Formula=3,
+        MainMenu=4
     }
 }

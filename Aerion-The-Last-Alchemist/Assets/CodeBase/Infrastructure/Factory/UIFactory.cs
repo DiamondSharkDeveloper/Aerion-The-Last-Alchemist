@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Enums;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.States;
+using CodeBase.Menu;
 using CodeBase.Services.Cursor;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
@@ -104,6 +106,21 @@ namespace CodeBase.UI.Services.Factory
                 });
                 window.Initialize(_staticData.ForFormulas(),_progressService,action);
             }
+        }
+
+        public   MainMenuWindow  CreateMainMenu(List<MenuButtons>menuButtonsList,bool isGameRun)
+        {
+            WindowConfig config = _staticData.ForWindow(WindowId.MainMenu);
+            MainMenuWindow window = Object.Instantiate(config.Template, _uiRoot) as MainMenuWindow;
+            if (window != null)
+            {
+                window.Construct(_progressService, () =>
+                {
+                });
+                window.Init(menuButtonsList,isGameRun);
+            }
+
+            return window;
         }
     }
 }

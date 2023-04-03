@@ -1,6 +1,7 @@
 using System;
 using CodeBase.Infrastructure.States;
 using CodeBase.Map;
+using CodeBase.Menu;
 using CodeBase.Services.PersistentProgress;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -55,6 +56,10 @@ namespace CodeBase.Services.Input
                     OnMouseButtonDown?.Invoke();
                     OnMouseButtonDown = null;
                 }
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+            {
+                _stateMachine.Enter<MenuState,bool>(true);
             }
         }
     }

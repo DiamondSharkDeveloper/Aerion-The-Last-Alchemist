@@ -30,15 +30,13 @@ namespace CodeBase.Hero
         public void PlayGrab(Action onComplete)
         {
             _animator.SetTrigger(GrabHash);
-            StartCoroutine("OnCompleteAttackAnimation",onComplete);
+            StartCoroutine("OnCompleteAttackAnimation", onComplete);
         }
 
 
         IEnumerator OnCompleteAttackAnimation(Action onComplete)
         {
-            while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-                yield return null;
-
+            yield return new WaitForSecondsRealtime(3.8f);
             onComplete.Invoke();
         }
 

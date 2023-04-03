@@ -31,7 +31,7 @@ namespace CodeBase.Infrastructure.States
         }
 
 
-        public void Enter(FormulaStaticData payload)
+        public void Enter(FormulaStaticData isGameRun)
         {
             _loadingCurtain.Show();
             _sceneLoader.LoadAdditive(LabScene, scene1 =>
@@ -41,7 +41,7 @@ namespace CodeBase.Infrastructure.States
                 {
                     if (scene.GetRootGameObjects()[0].TryGetComponent(out _laboratoryWindow))
                     {
-                        _laboratoryWindow.Init(payload, _services.Single<IPersistentProgressService>(),
+                        _laboratoryWindow.Init(isGameRun, _services.Single<IPersistentProgressService>(),
                             _services.Single<IWindowService>(),_services.Single<IInputService>());
                         _laboratoryWindow.OnClose += () =>
                         {

@@ -32,7 +32,7 @@ public abstract class WindowBase : MonoBehaviour
         Cleanup();
 
     protected virtual void OnAwake() => 
-        closeButton.onClick.AddListener(Close);
+        closeButton?.onClick.AddListener(Close);
 
     protected virtual void Initialize(){}
     protected virtual void SubscribeUpdates(){}

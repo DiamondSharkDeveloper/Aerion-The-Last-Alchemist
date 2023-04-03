@@ -242,6 +242,10 @@ public class StrategyCamera : MonoBehaviour
 
     public void ChangeCameraActiveStatus(bool activeStatus, int seconds)
     {
-        cam.enabled = activeStatus;
+        if (cam!=null)
+        {
+            cam.enabled = activeStatus;
+        }
+       
     }
 }

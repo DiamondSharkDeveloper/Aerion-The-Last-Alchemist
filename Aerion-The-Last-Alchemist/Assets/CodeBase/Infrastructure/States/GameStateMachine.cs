@@ -17,6 +17,12 @@ namespace CodeBase.Infrastructure.States
     {
         private Dictionary<Type, IExitableState> _states;
         private IExitableState _activeState;
+        private IExitableState _lastState;
+        public void ChangeStateToPrevious()
+        {
+           
+        }
+
         public event Action<IExitableState> OnStateChange;
 
         public GameStateMachine(SceneLoader sceneLoader, LoadingCurtain loadingCurtain, AllServices allServices)
@@ -33,7 +39,7 @@ namespace CodeBase.Infrastructure.States
                 [typeof(GameLoopState)] = new GameLoopState(this),
                 [typeof(LabState)] = new LabState(this, sceneLoader, allServices, loadingCurtain),
                 [typeof(CreatureState)] = new CreatureState(this, sceneLoader, loadingCurtain,allServices.Single<IPersistentProgressService>(),allServices.Single<IGameFactory>(),allServices.Single<IStaticDataService>(),allServices.Single<IInputService>()), 
-                [typeof(MenuState)] = new MenuState()
+                [typeof(MenuState)] = new MenuState(this,allServices.Single<IUIFactory>(),loadingCurtain, sceneLoader)
             };
         }
 
@@ -56,6 +62,7 @@ namespace CodeBase.Infrastructure.States
             _activeState?.Exit();
 
             TState state = GetState<TState>();
+            _lastState = _activeState;
             _activeState = state;
 
             return state;
