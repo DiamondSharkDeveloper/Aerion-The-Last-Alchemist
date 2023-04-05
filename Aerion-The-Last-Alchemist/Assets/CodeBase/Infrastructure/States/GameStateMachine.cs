@@ -23,6 +23,11 @@ namespace CodeBase.Infrastructure.States
            
         }
 
+        public TState GetCurrentState<TState>() where TState : class, IExitableState
+        {
+            return (TState)_activeState;
+        }
+
         public event Action<IExitableState> OnStateChange;
 
         public GameStateMachine(SceneLoader sceneLoader, LoadingCurtain loadingCurtain, AllServices allServices)

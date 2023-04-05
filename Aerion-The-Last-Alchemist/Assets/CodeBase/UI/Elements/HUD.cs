@@ -24,13 +24,18 @@ namespace CodeBase.UI.Elements
 
         public void Hide()
         {
-         inventoryButton.gameObject.SetActive(false);   
-         formulaButton.gameObject.SetActive(false);   
+         inventoryButton.Button.enabled=false;   
+         inventoryButton.Button.image.enabled=false;  
+         formulaButton.Button.enabled=false;   
+         formulaButton.Button.image.enabled=false;   
+
         }
         public void Show()
         {
-            inventoryButton.gameObject.SetActive(true);   
-            formulaButton.gameObject.SetActive(true);   
+            inventoryButton.Button.enabled=true;   
+            inventoryButton.Button.image.enabled=true;
+            formulaButton.Button.enabled=true; 
+            formulaButton.Button.image.enabled=true;
         }
         private void Update()
         {

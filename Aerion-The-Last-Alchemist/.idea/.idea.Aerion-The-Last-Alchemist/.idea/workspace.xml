@@ -2,67 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49f6c8da-8501-430d-8f55-59d73b139ce2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Menu/MenuButtons.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Menu/MenuButtons.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Camera/StrategyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Camera/StrategyCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Enums/WindowId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Enums/WindowId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IUIFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/UIFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/CreatureState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IGameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IGameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LabState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LabState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/MenuState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/MenuState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/HUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/PickUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hero/PickUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1_Albedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1_Albedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/House_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/House_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Hud/Curtain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Hud/Curtain.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/UI/Main-Screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/UI/Main-Screen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/UI/Main-Screen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/UI/Main-Screen.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/UI/WindowStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/UI/WindowStaticData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Inventory Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Inventory Window.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulaPrefab111.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulaPrefab111.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulasPagePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulasPagePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/book/Main-Screen_0000_Main-Screen-copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/book/Main-Screen_0000_Main-Screen-copy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Lisovic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Lisovic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/CELL Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/CELL Prefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB-lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,10 +98,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19932">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15704">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19932" />
+      <option name="pid" value="15704" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -177,6 +129,8 @@
       <workItem from="1678662870928" duration="17200000" />
       <workItem from="1678989343605" duration="168223000" />
       <workItem from="1680399540377" duration="18789000" />
+      <workItem from="1680663818351" duration="1706000" />
+      <workItem from="1680668096282" duration="2690000" />
     </task>
     <servers />
   </component>
@@ -231,39 +185,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
-          <line>50</line>
+          <line>48</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="47" containingFunctionPresentation="lambda expression inside method 'Construct'">
             <startOffsets>
-              <option value="2316" />
+              <option value="2275" />
             </startOffsets>
             <endOffsets>
-              <option value="2323" />
+              <option value="2282" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
-          <line>38</line>
+          <line>36</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="35" containingFunctionPresentation="lambda expression inside method 'Construct'">
             <startOffsets>
-              <option value="1654" />
+              <option value="1613" />
             </startOffsets>
             <endOffsets>
-              <option value="1698" />
+              <option value="1657" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Creature/CreatureWindow.cs</url>
-          <line>39</line>
+          <line>37</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Creature\CreatureWindow.cs" initialLine="39" containingFunctionPresentation="lambda expression inside method 'Construct'">
             <startOffsets>
-              <option value="1711" />
+              <option value="1670" />
             </startOffsets>
             <endOffsets>
-              <option value="1776" />
+              <option value="1735" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="148" />
@@ -293,6 +247,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Elements/HUD.cs</url>
+          <line>26</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Elements\HUD.cs" initialLine="26" containingFunctionPresentation="method 'Hide'">
+            <startOffsets>
+              <option value="862" />
+            </startOffsets>
+            <endOffsets>
+              <option value="899" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="168" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

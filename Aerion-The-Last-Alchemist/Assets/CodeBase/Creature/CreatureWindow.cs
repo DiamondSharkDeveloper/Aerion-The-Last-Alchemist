@@ -1,13 +1,11 @@
 ﻿using System;
 using CodeBase.Data;
-using CodeBase.Enums;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Map;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 

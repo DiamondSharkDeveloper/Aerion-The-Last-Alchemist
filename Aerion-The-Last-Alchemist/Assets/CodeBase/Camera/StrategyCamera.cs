@@ -71,6 +71,7 @@ public class StrategyCamera : MonoBehaviour
 
     private void OnEnable()
     {
+        cam = GetComponentInChildren<Camera>();
         targetPosition = startPosition;
         targetRotation = startRotation;
         targetZoom = startZoom;

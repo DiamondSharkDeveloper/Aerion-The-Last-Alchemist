@@ -59,7 +59,10 @@ namespace CodeBase.Services.Input
             }
             if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
             {
-                _stateMachine.Enter<MenuState,bool>(true);
+                if (!_stateMachine.GetCurrentState<IExitableState>().IsOnPause())
+                {
+                    _stateMachine.Enter<MenuState,bool>(true);
+                }
             }
         }
     }

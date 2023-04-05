@@ -27,6 +27,7 @@ namespace CodeBase.Infrastructure.States
         private readonly ILevelGenerator _levelGenerator;
         private readonly IInputService _inputService;
         private readonly IImageService _imageService;
+        private Camera _camera;
         public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,
             IGameFactory gameFactory, IPersistentProgressService progressService, IStaticDataService staticDataService,
             ILevelGenerator levelGenerator, IInputService inputService,IImageService imageService)
@@ -50,6 +51,7 @@ namespace CodeBase.Infrastructure.States
             
             GameObject cameraController = await _gameFactory.CreateCameraController();
             
+            
             GameObject hudGameObject = await _gameFactory.CreateHud(data =>
             {
                 _stateMachine.Enter<LabState, FormulaStaticData>(data);
@@ -57,7 +59,8 @@ namespace CodeBase.Infrastructure.States
             HUD hud = hudGameObject.GetComponent<HUD>();
             StrategyCamera strategyCamera = cameraController.GetComponent<StrategyCamera>();
             _imageService.Init(hud);
-            _inputService.SetCamera(strategyCamera.cam);
+            _camera = strategyCamera.cam;
+            _inputService.SetCamera(_camera);
             _stateMachine.OnStateChange += state =>
             {
               strategyCamera.ChangeCameraActiveStatus(!state.IsOnPause(), 3);
@@ -68,7 +71,7 @@ namespace CodeBase.Infrastructure.States
                 }
                 else
                 {
-                    _inputService.SetCamera(strategyCamera.cam);
+                    _inputService.SetCamera(_camera);
                     hud.Show();
                 }
             };

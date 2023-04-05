@@ -10,6 +10,7 @@ namespace CodeBase.Infrastructure.States
         void Enter<TState, TPayload>(TPayload payload) where TState : class, IPayloadedState<TPayload>;
         TState GetState<TState>() where TState : class, IExitableState;
         void ChangeStateToPrevious();
+        TState GetCurrentState<TState>() where TState : class, IExitableState;
         public event Action<IExitableState> OnStateChange;
     }
 }
