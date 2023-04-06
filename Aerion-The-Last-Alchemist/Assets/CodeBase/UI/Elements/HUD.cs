@@ -24,19 +24,34 @@ namespace CodeBase.UI.Elements
 
         public void Hide()
         {
-         inventoryButton.Button.enabled=false;   
-         inventoryButton.Button.image.enabled=false;  
-         formulaButton.Button.enabled=false;   
-         formulaButton.Button.image.enabled=false;   
+            if (inventoryButton)
+            {
+                inventoryButton.Button.enabled = false;
+                inventoryButton.Button.image.enabled = false;
+            }
 
+            if (formulaButton)
+            {
+                formulaButton.Button.enabled = false;
+                formulaButton.Button.image.enabled = false;
+            }
         }
+
         public void Show()
         {
-            inventoryButton.Button.enabled=true;   
-            inventoryButton.Button.image.enabled=true;
-            formulaButton.Button.enabled=true; 
-            formulaButton.Button.image.enabled=true;
+            if (inventoryButton)
+            {
+                inventoryButton.Button.enabled = true;
+                inventoryButton.Button.image.enabled = true;
+            }
+
+            if (formulaButton)
+            {
+                formulaButton.Button.enabled = true;
+                formulaButton.Button.image.enabled = true;
+            }
         }
+
         private void Update()
         {
             if (_isHoldItem)
@@ -49,14 +64,14 @@ namespace CodeBase.UI.Elements
         public void SetOverCursorImage(Sprite sprite)
         {
             _overImageSprite.sprite = sprite;
-            _overImageSprite.color=Color.white;
+            _overImageSprite.color = Color.white;
             _isHoldItem = true;
         }
 
         public void SetClearOverCursorImage()
         {
             _overImageSprite.color = Color.clear;
-            
+
             _isHoldItem = false;
         }
     }

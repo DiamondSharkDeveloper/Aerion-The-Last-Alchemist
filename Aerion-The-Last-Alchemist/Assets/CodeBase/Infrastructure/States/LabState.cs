@@ -39,15 +39,19 @@ namespace CodeBase.Infrastructure.States
                 Scene scene = scene1;
                 if (scene.IsValid())
                 {
-                    if (scene.GetRootGameObjects()[0].TryGetComponent(out _laboratoryWindow))
+                    foreach (var rootGameObject in scene.GetRootGameObjects())
                     {
-                        _laboratoryWindow.Init(isGameRun, _services.Single<IPersistentProgressService>(),
-                            _services.Single<IWindowService>(),_services.Single<IInputService>());
-                        _laboratoryWindow.OnClose += () =>
+                        if (rootGameObject.TryGetComponent(out _laboratoryWindow))
                         {
-                            _loadingCurtain.Show();
-                            _stateMachine.Enter<GameLoopState>();
-                        };
+                            _laboratoryWindow.Init(isGameRun, _services.Single<IPersistentProgressService>(),
+                                _services.Single<IWindowService>(),_services.Single<IInputService>());
+                            _laboratoryWindow.OnClose += () =>
+                            {
+                                _loadingCurtain.Show();
+                                _stateMachine.Enter<GameLoopState>();
+                            };
+                            return;
+                        }
                     }
                 }
             });
