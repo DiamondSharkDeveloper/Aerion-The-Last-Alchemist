@@ -20,6 +20,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
         public void SetPage(FormulaStaticData staticData, LootData lootData, Action<FormulaStaticData> brewAction)
         {
             potionNameText.text = staticData.potionType + " Potion" + " Level " + staticData.potionLevel;
+            items.Add(potion);
             potion.SetItem(staticData.sprite,staticData.potionType.ToString());
             int avaliableIngedientsCount = 0;
             for (int i = 0; i < staticData.ingredients.Count; i++)
@@ -31,6 +32,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
                 {
                     avaliableIngedientsCount++;
                 }
+                items.Add(item);
             }
 
             if (avaliableIngedientsCount == staticData.ingredients.Count)

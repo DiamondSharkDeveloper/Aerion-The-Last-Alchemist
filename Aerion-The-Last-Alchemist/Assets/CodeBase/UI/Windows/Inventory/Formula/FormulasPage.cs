@@ -15,6 +15,7 @@ namespace CodeBase.UI.Windows.Inventory.Formula
             {
                 CellItem item = Instantiate(potion, potionsHolder.transform, false);
                 item.SetItem(formulaStaticDats[i].sprite,formulaStaticDats[i].name);
+                items.Add(item);
             }
         }
     }

@@ -23,12 +23,13 @@ public class Book : MonoBehaviour
     public Sprite background;
     public List<Sprite> bookPages;
     public bool interactable = true;
+    public bool canShowNewPage = false;
 
     public bool enableShadowEffect = true;
 
     //represent the index of the sprite shown in the right page
     public int currentPage = 0;
-    public int previousPage = 0;
+    
 
     public int TotalPageCount
     {
@@ -84,7 +85,7 @@ public class Book : MonoBehaviour
     public event Action OnPageDraging;
 
     //current flip mode
-    FlipMode mode;
+   protected FlipMode mode;
 
     void Start()
     {
@@ -423,7 +424,7 @@ public class Book : MonoBehaviour
         UpdateSprites();
         Shadow.gameObject.SetActive(false);
         ShadowLTR.gameObject.SetActive(false);
-
+        canShowNewPage = true;
         OnFlip?.Invoke();
     }
 
@@ -441,6 +442,7 @@ public class Book : MonoBehaviour
                     Left.gameObject.SetActive(false);
                     Right.gameObject.SetActive(false);
                     pageDragging = false;
+                    canShowNewPage = true;
                 }
             ));
         }
@@ -457,6 +459,7 @@ public class Book : MonoBehaviour
                     Left.gameObject.SetActive(false);
                     Right.gameObject.SetActive(false);
                     pageDragging = false;
+                    canShowNewPage = true;
                 }
             ));
         }
