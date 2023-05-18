@@ -102,16 +102,16 @@ namespace CodeBase.Lab
             switch (potionType)
             {
                 case PotionType.Blue:
-                    return Color.cyan;
+                    return new Color(0.57f,0.36f,0.96f,1);
                     break;
                 case PotionType.Green:
-                    return Color.green;
+                    return new Color(0.12f,0.71f,0.05f,1);
                     break;
                 case PotionType.Red:
-                    return Color.red;
+                    return new Color(0.785f,0.055f,0.475f,1);
                     break;
                 case PotionType.Yellow:
-                    return Color.yellow;
+                    return new Color(0.91f,0.8f,0f,1);
                     break;
             }
 
@@ -125,7 +125,7 @@ namespace CodeBase.Lab
             {
                 
                 color=kettlePotionsSprite.color = bubblesParticleSystem.startColor = Color.Lerp(startColor, targetColour, i);
-                SetLightColor(Color.Lerp(new Color(startColor.r,startColor.g,startColor.b, 0.001f),new Color(color.r,color.g,color.b,0.3f), i));
+                SetLightColor(Color.Lerp(new Color(startColor.r,startColor.g,startColor.b, 0.1f),new Color(color.r,color.g,color.b,1f), i));
                 yield return null;
             }
         }

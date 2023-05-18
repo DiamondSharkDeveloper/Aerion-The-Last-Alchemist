@@ -214,8 +214,8 @@ MonoBehaviour:
   FastMovementMultiplier: 3
   DraggingSpeed: 1.2
   ConstrainPosition: 1
-  MinPosition: {x: 3, y: 0, z: 3}
-  MaxPosition: {x: 40, y: 1, z: 30}
+  MinPosition: {x: -10, y: 0, z: -10}
+  MaxPosition: {x: 160, y: 1, z: 150}
   InputAxisZoom: Mouse ScrollWheel
   InvertZooming: 0
   ZoomSensitivity: 8

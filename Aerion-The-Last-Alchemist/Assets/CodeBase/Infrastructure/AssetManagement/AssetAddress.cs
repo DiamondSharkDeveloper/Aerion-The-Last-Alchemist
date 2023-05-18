@@ -5,6 +5,7 @@ namespace CodeBase.Infrastructure.Factory
         public const string HeroPath = "Hero";
         public const string CreatureLisovicPath = "Creature Lisovic";
         public const string CreatureVodianicPath = "Creature Vodianic";
+        public const string CreatureDarkPath = "Creature dark";
         public const string HousePath = "HousePrefab";
         public const string LootPath = "LootPrefab";
         public const string MapPath = "Map";

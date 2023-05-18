@@ -3,6 +3,7 @@
     public enum CreatureTypeId
     {
        Lisovic,
-       Vodianic
+       Vodianic,
+       Dark
     }
 }

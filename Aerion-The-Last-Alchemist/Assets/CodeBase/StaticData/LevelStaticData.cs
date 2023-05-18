@@ -23,5 +23,6 @@ namespace CodeBase.StaticData
         public List<CreatureTypeId> creaturesType=new List<CreatureTypeId>();
         public List<string> creaturesId=new List<string>();
         public Texture2D cursor;
+        public float scale=2;
     }
 }
