@@ -4,6 +4,7 @@ using CodeBase.Logic;
 using CodeBase.Services;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
+using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
 using CodeBase.UI.Windows;
 using UnityEngine.SceneManagement;
@@ -44,7 +45,7 @@ namespace CodeBase.Infrastructure.States
                         if (rootGameObject.TryGetComponent(out _laboratoryWindow))
                         {
                             _laboratoryWindow.Init(isGameRun, _services.Single<IPersistentProgressService>(),
-                                _services.Single<IWindowService>(),_services.Single<IInputService>());
+                                _services.Single<IWindowService>(),_services.Single<IInputService>(),_services.Single<IStaticDataService>());
                             _laboratoryWindow.OnClose += () =>
                             {
                                 _loadingCurtain.Show();

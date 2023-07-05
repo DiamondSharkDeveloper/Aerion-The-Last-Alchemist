@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5936090025643385137}
   - component: {fileID: 3843490087384293742}
   - component: {fileID: 7117117106896846876}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: WaterGexPrefab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +191,10 @@ PrefabInstance:
     - target: {fileID: 3507394018310986877, guid: 580e72c1f4143324095d103eb52ccbcf, type: 3}
       propertyPath: m_Name
       value: f
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507394018310986877, guid: 580e72c1f4143324095d103eb52ccbcf, type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6985097548209129124, guid: 580e72c1f4143324095d103eb52ccbcf, type: 3}
       propertyPath: m_Enabled

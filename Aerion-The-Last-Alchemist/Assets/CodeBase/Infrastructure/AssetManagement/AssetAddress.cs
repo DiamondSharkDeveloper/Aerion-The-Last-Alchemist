@@ -18,7 +18,7 @@ namespace CodeBase.Infrastructure.Factory
         public const string TreePath02="TreesPrefab02";
         public const string TreePath03="TreesPrefab03";
         public const string TreePath04="TreesPrefab04";
-        public const string TreePath06="TreesPrefab06";
+   
         public const string StrategyCameraPath="Strategy Camera";
         
         public const string RockPath01="Rock_01";

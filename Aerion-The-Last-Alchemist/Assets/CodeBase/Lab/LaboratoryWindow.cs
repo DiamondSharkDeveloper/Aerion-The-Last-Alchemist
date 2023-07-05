@@ -1,6 +1,7 @@
 using System;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
+using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
 using CodeBase.UI.Windows;
 using JetBrains.Annotations;
@@ -18,16 +19,16 @@ namespace CodeBase.Lab
 
         [Obsolete("Obsolete")]
         public void Init([CanBeNull] FormulaStaticData data, IPersistentProgressService progressService,
-            IWindowService windowService, IInputService inputService)
+            IWindowService windowService, IInputService inputService,IStaticDataService staticDataService)
         {
             inputService.SetCamera(_camera);
             if (data!=null)
             {
-             craftZone.Init(windowService,progressService,data);   
+             craftZone.Init(windowService,progressService,data,staticDataService);   
             }
             else
             { 
-                craftZone.Init(windowService,progressService);   
+                craftZone.Init(windowService,progressService,staticDataService);   
             }
             
         }

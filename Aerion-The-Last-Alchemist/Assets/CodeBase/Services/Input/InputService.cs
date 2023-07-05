@@ -14,7 +14,7 @@ namespace CodeBase.Services.Input
         private bool _canRayCast;
         public event Action OnMouseButtonDown;
         private Camera _camera;
-
+      
 
         private void Awake()
         {

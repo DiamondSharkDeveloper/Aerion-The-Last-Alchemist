@@ -1,28 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeBase.Lab;
+using CodeBase.Map;
 using UnityEngine;
 
-public class IngredientHandler : MonoBehaviour
+namespace CodeBase.Lab
 {
-   
-    [SerializeField]  private  List<Bubble> _bubbles = new List<Bubble>();
-    private readonly List<string> _ingredientsNames = new List<string>();
-
-    public void ActiveBubble(Sprite sprite, string name)
+    public class IngredientHandler : MonoBehaviour
     {
-        _ingredientsNames.Add(name);
-        _bubbles[_ingredientsNames.Count - 1].SetSprite(sprite);
-    }
-    
+        [SerializeField] private List<Bubble> bubbles = new List<Bubble>();
+        private readonly List<string> _ingredientsNames = new List<string>();
+        [SerializeField] private BoxCollider boxCollider;
+        public Action OnMouseOverClick;
+        public Action OnMouseOverCattle;
+        
 
-    public void RemoveBubbles()
-    {
-        foreach (Bubble bubble in _bubbles)
+        private void OnMouseOver()
         {
-            bubble.DestroyBubble();
+            OnMouseOverCattle?.Invoke();
         }
 
-        if (_ingredientsNames != null) _ingredientsNames.Clear();
+        private void OnMouseDown()
+        {
+            OnMouseOverClick?.Invoke();
+        }
+
+
+        public void ActiveBubble(Sprite sprite, string name)
+        {
+            if (_ingredientsNames.Count>4)
+            {
+                RemoveBubbles();
+            }
+            _ingredientsNames.Add(name);
+            bubbles[_ingredientsNames.Count - 1].SetSprite(sprite);
+        }
+
+
+        public void RemoveBubbles()
+        {
+            foreach (Bubble bubble in bubbles)
+            {
+                bubble.DestroyBubble();
+            }
+
+            if (_ingredientsNames != null) _ingredientsNames.Clear();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace CodeBase.Services.StaticData
         LevelStaticData ForLevel(string sceneKey);
 
         WindowConfig ForWindow(WindowId inventoryId);
-        List<IngredientStaticData> ForIngredients();
+        Dictionary<string,IngredientStaticData> ForIngredients();
         List<FormulaStaticData> ForFormulas();
     }
 }

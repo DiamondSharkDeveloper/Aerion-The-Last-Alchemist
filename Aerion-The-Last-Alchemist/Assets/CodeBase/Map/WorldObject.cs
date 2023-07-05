@@ -11,7 +11,7 @@ namespace CodeBase.Map
         {
             _eventArgs = eventArgs;
         }
-
+        
         public void OnTileEvent()
         {
             Event?.Invoke(this, _eventArgs);

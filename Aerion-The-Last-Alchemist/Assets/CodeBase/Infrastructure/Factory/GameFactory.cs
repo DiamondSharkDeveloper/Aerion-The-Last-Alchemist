@@ -50,16 +50,16 @@ namespace CodeBase.Infrastructure.Factory
             _persistentProgressService = persistentProgressService;
             _windowService = windowService;
             _stateMachine = stateMachine;
-            foreach (IngredientStaticData ingredientStaticData in _staticData.ForIngredients())
+            Dictionary<string, IngredientStaticData> ingredientStaticDic = _staticData.ForIngredients();
+            foreach (string ingredientStaticData in ingredientStaticDic.Keys)
             {
-                _ingredients.Add(ingredientStaticData.name);
+                _ingredients.Add(ingredientStaticData);
             }
 
             _treesPath.Add(AssetAddress.TreePath01);
             _treesPath.Add(AssetAddress.TreePath02);
             _treesPath.Add(AssetAddress.TreePath03);
             _treesPath.Add(AssetAddress.TreePath04);
-            _treesPath.Add(AssetAddress.TreePath06);
 
             _rockPath.Add(AssetAddress.RockPath01);
             _rockPath.Add(AssetAddress.RockPath02);
@@ -88,14 +88,14 @@ namespace CodeBase.Infrastructure.Factory
                     MeshRenderer renderer =
                         mapCoordinates[count].Tile.gameObject.GetComponentsInChildren<MeshRenderer>()[1];
                     renderer.enabled = true;
-                    float size = _randomService.Next(200, 500);
+                    float size = _randomService.Next(300, 600);
 
                     if (mapCoordinates[count].Type == TileTypeEnum.Water)
                     {
                         renderer.transform.localScale = new Vector3(1,
-                            size, 1);
+                            3000, 1);
                         renderer.transform.localPosition = new Vector3(renderer.transform.localPosition.x,
-                            -size/10, renderer.transform.localPosition.z);
+                            -300, renderer.transform.localPosition.z);
                     }
                     else
                     {
@@ -108,10 +108,7 @@ namespace CodeBase.Infrastructure.Factory
 
                 WorldTile worldTile = mapCoordinates[count].Tile.gameObject.AddComponent<WorldTile>();
                 worldTile.Construct(mapCoordinates[count]);
-                worldTile.Event += (sender, args) =>
-                {
-                    move?.Invoke(args);
-                };
+                worldTile.Event += (sender, args) => { move?.Invoke(args); };
                 switch (mapCoordinates[count].TileObjectType)
                 {
                     case TileObjectType.Trees:
@@ -143,35 +140,32 @@ namespace CodeBase.Infrastructure.Factory
         private async Task CreateTree(MyTile mapCoordinate)
         {
             GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
-            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
-                mapCoordinate.Tile.gameObject.transform);
-            RandomSize(gameObject, 9, 15);
+            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition);//);
+            RandomSize(gameObject, 15, 35);
+            Quaternion transformLocalRotation = gameObject.transform.localRotation;
+            transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
+            gameObject.transform.localRotation = transformLocalRotation;
         }
 
         private async Task CreateRock(MyTile mapCoordinate)
         {
             GameObject prefab = await _assets.Load<GameObject>(_rockPath[_randomService.Next(0, _rockPath.Count)]);
-            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
-                mapCoordinate.Tile.gameObject.transform);
+            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition);//);
             gameObject.transform.localPosition = new Vector3(0, 0.2f, 0);
-            RandomRotation(gameObject);
-            RandomSize(gameObject, 6, 14);
+            Quaternion transformLocalRotation = gameObject.transform.localRotation;
+            transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 181), 0);
+            gameObject.transform.localRotation = transformLocalRotation;
+            RandomSize(gameObject, 60, 140);
         }
 
         private float RandomSize(GameObject gameObject, int min, int max)
         {
             float size = _randomService.Next(min, max
-            ) * 0.1f;
-            gameObject.transform.localScale *= size;
+            );
+            gameObject.transform.localScale *= size * 0.01f;
             return size;
         }
 
-        private void RandomRotation(GameObject gameObject)
-        {
-            Quaternion transformLocalRotation = gameObject.transform.localRotation;
-            transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 181), 0);
-            gameObject.transform.localRotation = transformLocalRotation;
-        }
 
         private async Task<GameObject> GetTyleByType(TileTypeEnum mapCoordinateType, Vector3 at)
         {
@@ -206,7 +200,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateHero(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
-            _hero = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            _hero = InstantiateRegistered(prefab, at.StartWorldPosition);//);
             return _hero;
         }
 
@@ -215,7 +209,7 @@ namespace CodeBase.Infrastructure.Factory
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
             parent.OnStandAction = action;
             GameObject house =
-                InstantiateRegistered(prefab, parent.StartWorldPosition, parent.Tile.gameObject.transform);
+                InstantiateRegistered(prefab, parent.StartWorldPosition);//);
             house.transform.localRotation = Quaternion.Euler(-90, 0, 0);
             return house;
         }
@@ -223,7 +217,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
-            GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition, at.Tile.gameObject.transform);
+            GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition);//);
             LootPiece lootPiece = loot.GetComponent<LootPiece>();
             at.OnStandAction = () =>
             {
@@ -274,8 +268,7 @@ namespace CodeBase.Infrastructure.Factory
             }
 
             GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creatureGameObject = InstantiateRegistered(prefab, position,
-                parent.transform);
+            GameObject creatureGameObject = InstantiateRegistered(prefab, position);//);
             return creatureGameObject;
         }
 
@@ -314,7 +307,6 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.TreePath02);
             await _assets.Load<GameObject>(AssetAddress.TreePath03);
             await _assets.Load<GameObject>(AssetAddress.TreePath04);
-            await _assets.Load<GameObject>(AssetAddress.TreePath06);
 
             await _assets.Load<GameObject>(AssetAddress.RockPath01);
             await _assets.Load<GameObject>(AssetAddress.RockPath02);

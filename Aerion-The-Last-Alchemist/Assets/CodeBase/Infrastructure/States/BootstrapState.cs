@@ -52,7 +52,6 @@ namespace CodeBase.Infrastructure.States
             RegisterAssetProvider();
             _services.RegisterSingle<IRandomService>(new RandomService());
             _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
-         
             _services.RegisterSingle<IUIFactory>(new UIFactory(
                 _services.Single<IAssetProvider>(),
                 _services.Single<IStaticDataService>(),

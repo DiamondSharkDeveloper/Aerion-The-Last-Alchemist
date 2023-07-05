@@ -14,7 +14,7 @@ namespace CodeBase.StaticData
         private const string StaticDataIngredientsPath = "Static Data/Ingredients";
         private const string StaticDataFormulasPath = "Static Data/Formulas";
         private Dictionary<string, LevelStaticData> _levels;
-        private List<IngredientStaticData> _ingredients; 
+        private Dictionary<string,IngredientStaticData> _ingredients; 
         private List<FormulaStaticData> _formulas; 
         private Dictionary<WindowId, WindowConfig> _windowConfigs;
 
@@ -27,7 +27,7 @@ namespace CodeBase.StaticData
             _levels = Resources
                 .LoadAll<LevelStaticData>(LevelsDataPath)
                 .ToDictionary(x => x.levelKey, x => x);
-            _ingredients = Resources.LoadAll<IngredientStaticData>(StaticDataIngredientsPath).ToList();
+            _ingredients = Resources.LoadAll<IngredientStaticData>(StaticDataIngredientsPath).ToDictionary(x => x.name, x => x);
             _formulas=Resources.LoadAll<FormulaStaticData>(StaticDataFormulasPath).ToList();
         }
 
@@ -46,7 +46,7 @@ namespace CodeBase.StaticData
                 ? windowConfig
                 : null;
 
-        public List<IngredientStaticData> ForIngredients() => _ingredients;
+        public Dictionary<string,IngredientStaticData> ForIngredients() => _ingredients;
         public List<FormulaStaticData> ForFormulas() => _formulas;
         
     }

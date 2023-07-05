@@ -34,7 +34,7 @@ namespace CodeBase.UI.Windows.Inventory
             Progress.gameData.lootData.Changed += RefreshItem;
         }
 
-        public void Initialize(List<IngredientStaticData> ingredientStaticData,
+        public void Initialize(Dictionary<string,IngredientStaticData> ingredientStaticData,
             List<FormulaStaticData> formulaStaticData,Action<Sprite,string> onHold)
         {
             _isPotionTab = false;
@@ -111,26 +111,25 @@ namespace CodeBase.UI.Windows.Inventory
             }
         }
 
-        private void CreateIngredients(List<IngredientStaticData> ingredientStaticData, Action<Sprite, string> onHold)
+        private void CreateIngredients(Dictionary<string,IngredientStaticData> ingredientStaticData, Action<Sprite, string> onHold)
         {
-            for (int i = 0; i < ingredientStaticData.Count; i++)
+            foreach (string key in ingredientStaticData.Keys)
             {
-                _ingredientsKeys.Add(ingredientStaticData[i].name);
-                _items[ingredientStaticData[i].name] = Instantiate(cellprefab).GetComponent<CellItem>();
-                _items[ingredientStaticData[i].name].transform.SetParent(content.transform, false);
-                _items[ingredientStaticData[i].name].SetItem(ingredientStaticData[i].lootIcon,ingredientStaticData[i].name);
-                _items[ingredientStaticData[i].name].OnClick += onHold;
+                _ingredientsKeys.Add(key);
+                _items[key] = Instantiate(cellprefab).GetComponent<CellItem>();
+                _items[key].transform.SetParent(content.transform, false);
+                _items[key].SetItem(ingredientStaticData[key].lootIcon,key);
+                _items[key].OnClick += onHold;
 
-                if (Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(ingredientStaticData[i]
-                        .name))
+                if (Progress.gameData.lootData.lootPiecesInDataDictionary.Dictionary.ContainsKey(key))
                 {
                     RefreshItem(
                         Progress.gameData.lootData.lootPiecesInDataDictionary
-                            .Dictionary[ingredientStaticData[i]?.name]);
+                            .Dictionary[ingredientStaticData[key]?.name]);
                 }
                 else
                 {
-                    _items[ingredientStaticData[i].name].Hide();
+                    _items[key].Hide();
                 }
             }
         }

@@ -12,6 +12,7 @@ namespace CodeBase.StaticData
         public new string name;
         public int efect;
         public PotionType potionType;
+        public BaseType baseType;
         [Range(1,4)]
         public int potionLevel;
         public string description;

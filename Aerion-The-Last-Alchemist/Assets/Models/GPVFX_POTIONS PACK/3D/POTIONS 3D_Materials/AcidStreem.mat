@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AcidStreem
+  m_Shader: {fileID: 4800000, guid: a774a7fbe167e7b4689826d405703842, type: 3}
+  m_ValidKeywords:
+  - VERTEX
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapDetail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionTex:
+        m_Texture: {fileID: 2800000, guid: 33ba5140ff8350742a9be1b79eeefd82, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SideNoiseTex:
+        m_Texture: {fileID: 2800000, guid: f2040196b62b5444b82ba8ea2bba5ec5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopNoiseTex:
+        m_Texture: {fileID: 2800000, guid: f2040196b62b5444b82ba8ea2bba5ec5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amount: 6.91
+    - _Brightness: 1.302
+    - _BumpScale: 1
+    - _ContrastMt: 1
+    - _Cutoff: 0.5
+    - _DepthOffset: -2.4
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EdgeWidth: 0.057
+    - _Foam: 33.5
+    - _GlossMapScale: 1
+    - _Glossiness: 0.4472136
+    - _GlossyReflections: 1
+    - _Height: 0.00000001
+    - _HorSpeed: 0
+    - _IntensityMicrowave: 0.5
+    - _IntensityMt: 1
+    - _IntensityNm: 1
+    - _IntensityNmDetail: 1
+    - _MainDetailFlow: 1
+    - _MainDetailScale: 1
+    - _Metallic: 0
+    - _MicrowaveScale: 1
+    - _Mode: 0
+    - _NoiseScale: 0.378
+    - _NormalmapDetailScale: 0.5
+    - _NormalmapDetailSpeed: 0.5
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _ParallaxScale: 1
+    - _Reflectivity: 0.672
+    - _ReverseFlow: 1
+    - _RimPower: 6.8
+    - _SmoothnessTextureChannel: 0
+    - _SoftFactor: 0.5
+    - _Softness: 0
+    - _SpecularHighlights: 1
+    - _SpeedV: 7.11
+    - _SrcBlend: 1
+    - _Stretch: 3.47
+    - _TopScale: 0
+    - _TopSpread: 0.02
+    - _UVSec: 0
+    - _VERTEX: 1
+    - _VertSpeed: 2.1
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0.7411765, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 1, g: 0.18823531, b: 0.11764707, a: 1}
+    - _RimColor: {r: 1, g: 0.18823531, b: 0.11764707, a: 0}
+    - _TColor: {r: 1, g: 0.18823531, b: 0.11764707, a: 0.78039217}
+    - _WaterColor: {r: 1, g: 0.18823531, b: 0.11764707, a: 1}
+  m_BuildTextureStacks: []
