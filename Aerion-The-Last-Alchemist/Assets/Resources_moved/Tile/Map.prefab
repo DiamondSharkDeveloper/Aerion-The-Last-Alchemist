@@ -163,7 +163,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3892444593073096430}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1.2, z: 1}
+  m_CellSize: {x: 1.75, y: 2.1, z: 1.75}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 1
   m_CellSwizzle: 1
@@ -193,8 +193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4973492803607565095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.7, z: 0}
-  m_LocalScale: {x: 300, y: 1, z: 300}
+  m_LocalPosition: {x: 0, y: -9.31, z: 0}
+  m_LocalScale: {x: 500, y: 12, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5787820784827137271}
@@ -228,7 +228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d02726e6d7add0498127cca37a8bb9f, type: 2}
+  - {fileID: 2100000, guid: e34b45b8ceffa224980e2b4f6ed3c5aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,6 +260,14 @@ PrefabInstance:
     - target: {fileID: 6786204767174223748, guid: e6d675133b0618f4fb634990076dd975, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786204767174223748, guid: e6d675133b0618f4fb634990076dd975, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786204767174223748, guid: e6d675133b0618f4fb634990076dd975, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6786204767174223748, guid: e6d675133b0618f4fb634990076dd975, type: 3}
       propertyPath: m_LocalPosition.x

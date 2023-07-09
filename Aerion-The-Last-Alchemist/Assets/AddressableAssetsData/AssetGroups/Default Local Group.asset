@@ -73,10 +73,6 @@ MonoBehaviour:
     m_Address: TreesPrefab01
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 30f7c43e163741f4792a54aa1a3fb3f0
-    m_Address: TreesPrefab04
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: cf6a11ee30c749942998f145d9001d69
     m_Address: TreesPrefab02
     m_ReadOnly: 0
@@ -118,7 +114,83 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e34b45b8ceffa224980e2b4f6ed3c5aa
-    m_Address: Assets/TrueClouds/ExampleScenes/Materials/CloudMaterial.mat
+    m_Address: CloudMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 61d8fdc0c243f8841b318c3a2cb721db
+    m_Address: Flower_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bfee1b8c3ec70a4fad7f41172707700
+    m_Address: Flower_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9d0510c895e4234ba8a5ccae057a853
+    m_Address: Flower_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c068c5e4d5f6ac3428d8437cfd21e143
+    m_Address: Flower_6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2193f37b9371cc64e8490eadef5de886
+    m_Address: Flower_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 50a874b4c4a5bb048a1e139206f6b99c
+    m_Address: Flower_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b9aa2c02d1f2a734aa685aebed10047f
+    m_Address: Mushroom_01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7860203f13cab9f428c2e95f2cb49924
+    m_Address: Mushroom_03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 65329bc9b7a9f0249aa55190e72357a7
+    m_Address: Mushroom_02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d27eb9034f0f6d4439a3ceb331e95aff
+    m_Address: Grass_blade_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f7e0afbf4758c5d41b5ce80c6ad84adb
+    m_Address: Grass_blade_8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c62dd2cc6199ebe4ca4f930415888beb
+    m_Address: Grass_blade_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9c286bb3dd77394fa5b8637c3e423a8
+    m_Address: Grass_blade_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d0c1a2ca18b9684cbf1f22203ee9bd2
+    m_Address: Grass_blade_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 851295b33e8c4454b96cf29d5251ae00
+    m_Address: Grass_blade_7
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ff892a31d542c549ae8ff91bfb0ea8f
+    m_Address: Grass_blades_9
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3fe72124002e79c42814acfcc31e6584
+    m_Address: Grass_blades_10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e0532ed50bb55547b79162a1193a07a
+    m_Address: Grass_blade_6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8909a40c3ce6ef4faaa79c1fb99103f
+    m_Address: Grass_blade_2
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

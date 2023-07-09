@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelKey: forest
   seaInterval: 2
-  mapSize: 40
+  mapSize: 60
   waterSize: 160
   swampSize: 100
   rocksSize: 80
-  treesSize: 400
+  treesSize: 1200
+  mushroomSize: 150
+  flowerSize: 300
+  grassSize: 400
   ingredientsValue: 30
   heroPosition: 220
   housePosition: 311

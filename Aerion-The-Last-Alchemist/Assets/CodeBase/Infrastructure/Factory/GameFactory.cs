@@ -32,10 +32,18 @@ namespace CodeBase.Infrastructure.Factory
         private Tilemap _tilemap;
         private GameObject _mapGameObject;
         private GameObject _hero;
+        private GameObject _trees;
+        private GameObject _tiles;
+        private GameObject _grass;
         private List<MyTile> _mapCoordinates;
+        private List<Vector3> _positionsInTile;
         private List<string> _ingredients = new List<string>();
-        private List<string> _treesPath = new List<string>();
+        private float _step = 0.5f;
+
         private List<string> _rockPath = new List<string>();
+        private List<string> _grassPath = new List<string>();
+        private List<string> _mushroomsPath = new List<string>();
+        private List<string> _flowerPath = new List<string>();
 
         public GameFactory(
             IAssetProvider assets,
@@ -56,15 +64,44 @@ namespace CodeBase.Infrastructure.Factory
                 _ingredients.Add(ingredientStaticData);
             }
 
-            _treesPath.Add(AssetAddress.TreePath01);
-            _treesPath.Add(AssetAddress.TreePath02);
-            _treesPath.Add(AssetAddress.TreePath03);
-            _treesPath.Add(AssetAddress.TreePath04);
 
             _rockPath.Add(AssetAddress.RockPath01);
             _rockPath.Add(AssetAddress.RockPath02);
             _rockPath.Add(AssetAddress.RockPath03);
             _rockPath.Add(AssetAddress.RockPath04);
+
+            _flowerPath.Add(AssetAddress.FlowerPath01);
+            _flowerPath.Add(AssetAddress.FlowerPath02);
+            _flowerPath.Add(AssetAddress.FlowerPath03);
+            _flowerPath.Add(AssetAddress.FlowerPath04);
+            _flowerPath.Add(AssetAddress.FlowerPath06);
+            _flowerPath.Add(AssetAddress.FlowerPath05);
+
+            _grassPath.Add(AssetAddress.GrassPath01);
+            _grassPath.Add(AssetAddress.GrassPath02);
+            _grassPath.Add(AssetAddress.GrassPath03);
+            _grassPath.Add(AssetAddress.GrassPath04);
+            _grassPath.Add(AssetAddress.GrassPath05);
+            _grassPath.Add(AssetAddress.GrassPath06);
+            _grassPath.Add(AssetAddress.GrassPath07);
+            _grassPath.Add(AssetAddress.GrassPath08);
+            _grassPath.Add(AssetAddress.GrassPath09);
+            _grassPath.Add(AssetAddress.GrassPath10);
+
+            _mushroomsPath.Add(AssetAddress.MushroomPath01);
+            _mushroomsPath.Add(AssetAddress.MushroomPath02);
+            _mushroomsPath.Add(AssetAddress.MushroomPath03);
+
+            _positionsInTile = new List<Vector3>(9);
+            _positionsInTile.Add(new Vector3(0, 0, 0));
+            _positionsInTile.Add(new Vector3(_step, 0, 0));
+            _positionsInTile.Add(new Vector3(0, 0, _step));
+            _positionsInTile.Add(new Vector3(_step, 0, _step));
+            _positionsInTile.Add(new Vector3(-_step, 0, _step));
+            _positionsInTile.Add(new Vector3(_step, 0, -_step));
+            _positionsInTile.Add(new Vector3(-_step, 0, -_step));
+            _positionsInTile.Add(new Vector3(-_step, 0, 0));
+            _positionsInTile.Add(new Vector3(0, 0, -_step));
         }
 
         public List<ISavedProgressReader> ProgressReaders { get; }
@@ -72,6 +109,9 @@ namespace CodeBase.Infrastructure.Factory
 
         public async Task CreateMap(List<MyTile> mapCoordinates, LevelStaticData staticData, Action<EventArgs> move)
         {
+            _trees = new GameObject("forrest");
+            _grass = new GameObject("grass");
+            _tiles = new GameObject("Tiles");
             await CreateTileMap();
             List<MyTile> creatureTile = new List<MyTile>();
             for (var i = 0; i < mapCoordinates.Count; i++)
@@ -83,12 +123,13 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinates[count].Tile.gameObject = await GetTyleByType(mapCoordinates[count].Type,
                     mapCoordinates[count].StartWorldPosition);
                 mapCoordinates[count].Tile.gameObject.transform.localRotation = Quaternion.Euler(0, 30, 0);
+                mapCoordinates[count].Tile.gameObject.transform.localScale *= 1.75f;
                 if (mapCoordinates[count].IsEdge)
                 {
                     MeshRenderer renderer =
                         mapCoordinates[count].Tile.gameObject.GetComponentsInChildren<MeshRenderer>()[1];
                     renderer.enabled = true;
-                    float size = _randomService.Next(300, 600);
+                    float size = _randomService.Next(100, 500);
 
                     if (mapCoordinates[count].Type == TileTypeEnum.Water)
                     {
@@ -123,6 +164,15 @@ namespace CodeBase.Infrastructure.Factory
                     case TileObjectType.Creature:
                         creatureTile.Add(mapCoordinates[count]);
                         break;
+                    case TileObjectType.Flower:
+                        await CreateGrass(mapCoordinates[count]);
+                        break;
+                    case TileObjectType.Mushrooms:
+                        await CreateGrass(mapCoordinates[count]);
+                        break;
+                    case TileObjectType.Grass:
+                        await CreateGrass(mapCoordinates[count]);
+                        break;
                 }
             }
 
@@ -135,22 +185,111 @@ namespace CodeBase.Infrastructure.Factory
                         .CreatureDada.ForCreature(staticData.creaturesId[count]));
                 });
             }
+
+            Cleanup();
         }
 
         private async Task CreateTree(MyTile mapCoordinate)
         {
-            GameObject prefab = await _assets.Load<GameObject>(_treesPath[_randomService.Next(0, _treesPath.Count)]);
-            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition);//);
-            RandomSize(gameObject, 15, 35);
-            Quaternion transformLocalRotation = gameObject.transform.localRotation;
-            transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
-            gameObject.transform.localRotation = transformLocalRotation;
+            GameObject forestPlantation = new GameObject(mapCoordinate.CellPosition + " forestPlantation");
+            forestPlantation.transform.SetParent(_trees.transform);
+            GameObject prefab= await _assets.Load<GameObject>(AssetAddress.TreePath01);
+            switch (mapCoordinate.FloraTipe)
+            {
+                case FloraTipe.Palm:
+                    break;
+                case FloraTipe.Pine:
+                    prefab = await _assets.Load<GameObject>(AssetAddress.TreePath02);
+                    break;
+                case FloraTipe.Xmas:
+                    prefab = await _assets.Load<GameObject>(AssetAddress.TreePath03);
+                    break;
+                case FloraTipe.None:
+                    return;
+                    break;
+            }
+
+            int count = _randomService.Next(0, _positionsInTile.Count);
+            float minSize = 13;
+            int maxSize = 40;
+
+            _positionsInTile.Shuffle();
+
+            for (int i = 0; i < count; i++)
+            {
+                GameObject gameObject = InstantiateRegistered(prefab,
+                    mapCoordinate.StartWorldPosition + _positionsInTile[i], forestPlantation.transform);
+                RandomSize(gameObject, minSize, maxSize);
+                Quaternion transformLocalRotation = gameObject.transform.localRotation;
+                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
+                gameObject.transform.localRotation = transformLocalRotation;
+            }
+        }
+
+        private async Task CreateGrass(MyTile mapCoordinate)
+        {
+            GameObject grassPlantation = new GameObject(mapCoordinate.CellPosition + " grassPlantation");
+            grassPlantation.transform.SetParent(_grass.transform);
+            int count = _randomService.Next(0, 150);
+            float faunaCount=0;
+            GameObject floraPrefab =await _assets.Load<GameObject>(_mushroomsPath[_randomService.Next(0, _mushroomsPath.Count)]);
+            switch (mapCoordinate.FloraTipe)
+            {
+                case FloraTipe.Mushroom:
+                     faunaCount = _randomService.Next(0, count*0.03f);
+                    break;
+                case FloraTipe.Flower:
+                    faunaCount = _randomService.Next(0, count*0.15f);
+                    floraPrefab =await _assets.Load<GameObject>(_flowerPath[_randomService.Next(0, _flowerPath.Count)]);
+                    break;
+                case FloraTipe.Grass:
+                    faunaCount = 0;
+                    break;
+            }
+
+            
+            float minSize = 80;
+            int maxSize = 175;
+            List<Vector3> positions = new List<Vector3>();
+            for (int i = 0; i < count; i++)
+            {
+                Vector3 pos = new Vector3();
+                do
+                {
+                    pos = new Vector3(_randomService.Next(-0.75f, 0.75f), 0.17f, _randomService.Next(-0.75f, 0.75f));
+                    if (!positions.Contains(pos))
+                    {
+                        positions.Add(pos);
+                    }
+                } while (!positions.Contains(pos));
+
+                GameObject gameObject;
+                if (faunaCount > 0)
+                {
+                    gameObject = InstantiateRegistered(floraPrefab,
+                        mapCoordinate.StartWorldPosition+pos, grassPlantation.transform);
+                    faunaCount--;
+                }
+                else
+                {
+                    maxSize =50 ;
+                    minSize = 100;
+                    gameObject = InstantiateRegistered(await _assets.Load<GameObject>(_grassPath[_randomService.Next(0, _grassPath.Count)]),
+                        mapCoordinate.StartWorldPosition +pos, grassPlantation.transform);
+                }
+
+                RandomSize(gameObject, minSize, maxSize);
+                Quaternion transformLocalRotation = gameObject.transform.localRotation;
+                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
+                gameObject.transform.localRotation = transformLocalRotation;
+            }
         }
 
         private async Task CreateRock(MyTile mapCoordinate)
         {
             GameObject prefab = await _assets.Load<GameObject>(_rockPath[_randomService.Next(0, _rockPath.Count)]);
-            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition);//);
+            GameObject gameObject = InstantiateRegistered(prefab, mapCoordinate.StartWorldPosition,
+                mapCoordinate.Tile.gameObject.transform); //);
             gameObject.transform.localPosition = new Vector3(0, 0.2f, 0);
             Quaternion transformLocalRotation = gameObject.transform.localRotation;
             transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 181), 0);
@@ -158,10 +297,9 @@ namespace CodeBase.Infrastructure.Factory
             RandomSize(gameObject, 60, 140);
         }
 
-        private float RandomSize(GameObject gameObject, int min, int max)
+        private float RandomSize(GameObject gameObject, float min, float max)
         {
-            float size = _randomService.Next(min, max
-            );
+            float size = _randomService.Next(min, max);
             gameObject.transform.localScale *= size * 0.01f;
             return size;
         }
@@ -200,7 +338,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateHero(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HeroPath);
-            _hero = InstantiateRegistered(prefab, at.StartWorldPosition);//);
+            _hero = InstantiateRegistered(prefab, at.StartWorldPosition); //);
             return _hero;
         }
 
@@ -209,7 +347,7 @@ namespace CodeBase.Infrastructure.Factory
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.HousePath);
             parent.OnStandAction = action;
             GameObject house =
-                InstantiateRegistered(prefab, parent.StartWorldPosition);//);
+                InstantiateRegistered(prefab, parent.StartWorldPosition); //);
             house.transform.localRotation = Quaternion.Euler(-90, 0, 0);
             return house;
         }
@@ -217,7 +355,7 @@ namespace CodeBase.Infrastructure.Factory
         public async Task<GameObject> CreateLoot(MyTile at)
         {
             GameObject prefab = await _assets.Load<GameObject>(AssetAddress.LootPath);
-            GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition);//);
+            GameObject loot = InstantiateRegistered(prefab, at.StartWorldPosition + new Vector3(0, 0.3f, 0)); //);
             LootPiece lootPiece = loot.GetComponent<LootPiece>();
             at.OnStandAction = () =>
             {
@@ -268,7 +406,7 @@ namespace CodeBase.Infrastructure.Factory
             }
 
             GameObject prefab = await _assets.Load<GameObject>(path);
-            GameObject creatureGameObject = InstantiateRegistered(prefab, position);//);
+            GameObject creatureGameObject = InstantiateRegistered(prefab, position); //);
             return creatureGameObject;
         }
 
@@ -306,12 +444,33 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.TreePath01);
             await _assets.Load<GameObject>(AssetAddress.TreePath02);
             await _assets.Load<GameObject>(AssetAddress.TreePath03);
-            await _assets.Load<GameObject>(AssetAddress.TreePath04);
 
             await _assets.Load<GameObject>(AssetAddress.RockPath01);
             await _assets.Load<GameObject>(AssetAddress.RockPath02);
             await _assets.Load<GameObject>(AssetAddress.RockPath03);
             await _assets.Load<GameObject>(AssetAddress.RockPath04);
+
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath01);
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath02);
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath03);
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath04);
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath06);
+            await _assets.Load<GameObject>(AssetAddress.FlowerPath05);
+
+            await _assets.Load<GameObject>(AssetAddress.GrassPath01);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath02);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath03);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath04);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath05);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath06);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath07);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath08);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath09);
+            await _assets.Load<GameObject>(AssetAddress.GrassPath10);
+
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath01);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath02);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath03);
         }
 
         private GameObject InstantiateRegistered(GameObject prefab, Vector3 at)

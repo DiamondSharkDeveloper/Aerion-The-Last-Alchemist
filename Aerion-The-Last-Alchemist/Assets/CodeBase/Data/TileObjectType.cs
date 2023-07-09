@@ -10,6 +10,9 @@ namespace CodeBase.Data
         Creature,
         Trees,
         Rock,
-        Edge
+        Edge,
+        Mushrooms,
+        Grass,
+        Flower
     }
 }

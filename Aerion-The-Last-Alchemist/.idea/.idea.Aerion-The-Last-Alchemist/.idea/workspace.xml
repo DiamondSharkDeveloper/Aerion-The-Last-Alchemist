@@ -7,567 +7,62 @@
     <list default="true" id="49f6c8da-8501-430d-8f55-59d73b139ce2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/TileObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/TileObjectType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LabState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LabState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/Bubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/LaboratoryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/LaboratoryWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Map/WorldObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Map/WorldObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/FormulaStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/FormulaStaticData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/IStaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/IStaticDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/StaticDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free/SwampGrass/Materials/SwampGrass Displacement.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free/SwampGrass/Materials/SwampGrass Displacement.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION A.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION A.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION B.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION B.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION C.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION C.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION D.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION D.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION E.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D PREFABS/POTION E.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Bottle Fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Bottle Fill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Bottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Bottle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Detail_Cracked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION A_2D Detail_Cracked.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Bottle Fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Bottle Fill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Bottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Bottle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Detail_Cracked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION B_2D Detail_Cracked.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Bottle Fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Bottle Fill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Bottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Bottle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Detail_Cracked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION C_2D Detail_Cracked.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Bottle Fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Bottle Fill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Bottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Bottle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Detail_Cracked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION D_2D Detail_Cracked.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Bottle Fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Bottle Fill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Bottle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Bottle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Detail_Cracked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D Sprites/POTION E_2D Detail_Cracked.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle A Glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle A Glass.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle B Glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle B Glass.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle C Glass..png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle C Glass..png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle D glass..png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle D glass..png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle E Glass..png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle E Glass..png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION A.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION A.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION B.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION B.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION C.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION C.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION D.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION D.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION E.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/3D PREFABS/GPVFX_POTION E.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion B_Fill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion B_Fill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion D_Fill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion D_Fill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_CORK.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_CORK.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION A.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION A.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION B.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION B.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION C.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION C.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION D.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION D.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION E.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Default/GPVFX_POTION E.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion A_Explode.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion A_Explode.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion B_Exploded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion B_Exploded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion C_Exploded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion C_Exploded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion D_Exploded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion D_Exploded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion E_Exploded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Exploded/GPVFX_Potion E_Exploded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Textures/3D Fill Material 2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Textures/3D Fill Material 2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Textures/cork 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/3D/POTIONS_Textures/cork 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Automaton.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Automaton.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion A_FX.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion A_FX.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion B_FX.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion B_FX.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion C_FX.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion C_FX.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion D_FX.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/GPVFX_Potion D_FX.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION A.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION A.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION B.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION B.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION C.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION C.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION C_Exploded.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION C_Exploded.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION D.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION D.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION D_FX.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION D_FX.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION E.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/POTION E.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Automaton Fwd.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Automaton Fwd.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Automaton.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Automaton.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Explode.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion A_Explode.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion B_Explode.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion B_Explode.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion B_Explode.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion B_Explode.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion C_Explode.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion C_Explode.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion D_Explode.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion D_Explode.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion E_Explode.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion E_Explode.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion E_Explode.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/Animation Controllers/Potion E_Explode.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Apalu.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Apalu.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/DEMO.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/DEMO.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GPVFX_POTIONS DEMO.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GPVFX_POTIONS DEMO.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GPVFX_Potions DEMO.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GPVFX_Potions DEMO.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Gameplan Logo_Semi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Gameplan Logo_Semi.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GardensC_03_1.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/GardensC_03_1.otf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/IMG_0440.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/IMG_0440.JPG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Skybox.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/TEMP/Skybox.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_Glass Shards.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_Glass Shards.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Automaton.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Automaton.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Dispel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Dispel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Entangle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Entangle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Interrupt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Interrupt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Mute.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Mute.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Summon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX PREFABS/GPVFX_MAGIC PREFABS/GPVFX_Summon.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltop B.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltop B.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltrop A.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltrop A.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Break.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Break.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Burst.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Burst.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt Swarm.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt Swarm.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute Bubble.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute Bubble.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Summon.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Summon.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Line Nova Circles.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Line Nova Circles.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Magic Burst Sparks.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Magic Burst Sparks.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Potions_Entangle.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Potions_Entangle.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Sparkle.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Sparkle.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Glass Magique.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Glass Magique.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Glass Shards.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Glass Shards.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Interrupt.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/GPVFX_Interrupt.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/Potion Automaton.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Meshes/Potion Automaton.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Bubble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Bubble.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Circle line burst.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Circle line burst.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/DISPEL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/DISPEL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Dispel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Dispel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Disrupt 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Disrupt 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Immobilize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Immobilize.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Interrupt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/GPVFX_Magic_Interrupt.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic Particle Burst.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic Particle Burst.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Dispel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Dispel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Entangle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Entangle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Interrupt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Interrupt.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Mute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Mute.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Summon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Magic_Summon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Sparkle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPVFX_POTIONS PACK/VFX/VFX_Textures/Sparkle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Materials/Baker_house.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Materials/Baker_house.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Materials/Barrel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Materials/Barrel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Baker_house.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Baker_house.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Barrel.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Barrel.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Materials/Baker_house_snow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Models/Materials/Baker_house_snow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Prefabs/Baker_house.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Prefabs/Baker_house.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Prefabs/Barrel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Prefabs/Barrel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/SceneSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/SceneSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Textures/Baker_house.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Textures/Baker_house.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Textures/Barrel.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Baker House/Textures/Barrel.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Book-Page Curl/Example/podium material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Book-Page Curl/Example/podium material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/Penguin/Materials/penguin.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/Penguin/Materials/penguin.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/cat/Materials/cat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/cat/Materials/cat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/cat/fbx/Materials/cat2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/cat/fbx/Materials/cat2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/duck/FBX/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/duck/FBX/Materials/No Name.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/duck/Materials/loveduck.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/duck/Materials/loveduck.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/flower_monster/Materials/flower.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/flower_monster/Materials/flower.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/mole_monster/Materials/mole.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/mole_monster/Materials/mole.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/sheep/Materials/sheep.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Animals/sheep/Materials/sheep.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Lisovyk_Pbr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Lisovyk_Pbr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Vodianic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Vodianic.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block6.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block_white.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/block_white.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/final.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/final.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/start.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/block/Materials/start.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/shadow/shadow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/shadow/shadow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Customizable Skybox Documentaion.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Customizable Skybox Documentaion.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/Clouds.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/Clouds.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/Material.003.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/Material.003.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/No Name.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/No Name.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/dark trunk.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/dark trunk.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/darken leafs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/darken leafs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/earth.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/earth.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/green tree.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/green tree.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/pine tree green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/pine tree green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/trunk.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Materials/trunk.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Low Poly Island.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Low Poly Island.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/Material.003.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/Material.003.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/No Name.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/No Name.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/dark trunk.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/dark trunk.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/darken leafs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/darken leafs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/earth.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/earth.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/green tree.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/green tree.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/pine brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/pine brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/pine tree green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/pine tree green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/trunk.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Model/Materials/trunk.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Scenes/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Scenes/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day6.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day6.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day7.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Day7.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Morning4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Night4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Materials/Sunset5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Map/MyTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Map/MyTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/IRandomService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/IRandomService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/RandomService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/RandomService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/LevelStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/LevelStaticData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Albedo_L.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Albedo_L.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Pbr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Pbr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Base_Wood_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Base_Wood_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_ClayGround_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_ClayGround_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_CoalGround_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_CoalGround_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Desert_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Desert_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_DiamondGround_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_DiamondGround_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_GoldGround_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_GoldGround_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_IronGround_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_IronGround_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Lake_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Lake_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Pasture_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Pasture_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_River_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_River_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Stone_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Stone_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Wasteland_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Wasteland_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Water_Low.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/Hexlands_Water_Low.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/TEMP-Plane.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Materials/TEMP-Plane.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Prefabs/HexTile_Desert.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hexlands_LowPolyStyle/Prefabs/HexTile_Desert.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/House.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_1_Albedo (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/House_2_Albedo (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1_Albedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/House_1_Albedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/House_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/House_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/House/Materials/Models.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/House/Materials/Models.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFXFree_Demo_Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFXFree_Demo_Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize Water Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize Water Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass_diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass_diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder001Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder001Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder002Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder002Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder005Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder005Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder006Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder006Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder007Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder007Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder008Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder008Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder009Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Cylinder009Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line001Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line001Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line002Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line002Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line005Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line005Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line054Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line054Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line090Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line090Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line091Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line091Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line092Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line092Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line093Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line093Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line094Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line094Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line095Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line095Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line096Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line096Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line097Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line097Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line098Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line098Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line112Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line112Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line113Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Line113Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/BackGround_Tree.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/BackGround_Tree.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_04.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_05.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_05.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_06.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_06.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_07.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_07.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_10_House.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_10_House.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_10_Tree.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Materials/Tree_10_Tree.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object001Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object001Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object002Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object002Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object003Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object003Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object004Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object004Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object005Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object005Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object006Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object006Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object007Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object007Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object008Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New Folder/Map/Object008Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_large.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_large.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_medium.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_medium.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_small.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_small.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_large.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_large.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_small.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Pine_crown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Pine_crown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_large.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_large.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_small.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_H.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_H.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_MT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_MT.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_N.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_N.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 3/Materials/Rock_3_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 3/Materials/Rock_3_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/new Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/new Rock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/WaterFall/Water stay.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/WaterFall/Water stay.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/WaterFall/Waterfall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/WaterFall/Waterfall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/textures/Item.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/textures/Item.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Rocks/meshes/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Rocks/meshes/Materials/No Name.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Rocks/meshes/Materials/rock_01Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Rocks/meshes/Materials/rock_01Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Materials/1K_Body-TXTR.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Materials/1K_Body-TXTR.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Materials/Space_Shooter_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/SpaceShip/Materials/Space_Shooter_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Materials/stars.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Materials/stars.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Materials/target.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Materials/target.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Meshes/Materials/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Meshes/Materials/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Meshes/Materials/shipdoor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Meshes/Materials/shipdoor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Background.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Background.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/BulletEnemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/BulletEnemy.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/BulletPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/BulletPlayer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Enemy1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Enemy1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Models/Materials/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Media/Models/Materials/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Hero/Materials/Knight_diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Hero/Materials/Knight_diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Loot/LootPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Loot/LootPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/RockTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/RockTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/SwampTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/SwampTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/WaterTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/WaterTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Tile/GrassGexPrefab1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Tile/GrassGexPrefab1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Tile/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Tile/Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Tile/WaterGexPrefab1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Tile/WaterGexPrefab1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab06.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab06.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Creature.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Creature.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_Profiles/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_Profiles/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Purple.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StrategyCameraLite/Example/Scenes/Materials/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -592,6 +87,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/96/cb4fd6d4/LoopType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/870dcb826aa94138bd46a28dbdcf63809800/3d/b5b8590d/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/870dcb826aa94138bd46a28dbdcf63809800/f9/d39860be/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/0f/3e5c4837/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/80/9113e0ee/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/a5/3fbd9878/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/b0/f6ab059b/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -716,7 +212,8 @@
       <workItem from="1687215336793" duration="33182000" />
       <workItem from="1688257001205" duration="24748000" />
       <workItem from="1688454700846" duration="845000" />
-      <workItem from="1688594800203" duration="301000" />
+      <workItem from="1688594800203" duration="14035000" />
+      <workItem from="1688860612073" duration="6443000" />
     </task>
     <servers />
   </component>

@@ -16,6 +16,7 @@ namespace CodeBase.Map
         public readonly bool IsEdge;
         public bool IsAvailable;
         public TileObjectType TileObjectType;
+        public FloraTipe FloraTipe=FloraTipe.None;
         
         public  Action OnStandAction;
 

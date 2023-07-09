@@ -65,6 +65,9 @@ namespace CodeBase.Services.Level
             GenerateHouseTile(staticData);
             GenerateHeroTile(staticData);
             GenerateIngredientTile(staticData.ingredientsValue);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.flowerSize, staticData.mapSize,true, TileObjectType.Flower);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.flowerSize, staticData.mapSize,true, TileObjectType.Grass);
+            GenerateObstaclesByType(TileTypeEnum.Grass, staticData.mushroomSize, staticData.mapSize,true, TileObjectType.Mushrooms);
             GenerateObstaclesByType(TileTypeEnum.Grass, staticData.treesSize, staticData.mapSize,true, TileObjectType.Trees);
             GenerateObstaclesByType(TileTypeEnum.Swamp, staticData.swampSize, staticData.mapSize,false);
             GenerateObstaclesByType(TileTypeEnum.Water, staticData.waterSize, staticData.mapSize,true);
@@ -139,8 +142,11 @@ namespace CodeBase.Services.Level
         {
             do
             {
+                
                 int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
                 List<int> neighbours = GetNeighbours(randTileNumber, mapSize);
+                int trees=_randomService.Next(0, 3);
+                
                 for (int i = 0; i < neighbours.Count; i++)
                 {
                     if (amount > 0)
@@ -149,7 +155,33 @@ namespace CodeBase.Services.Level
                         {
                             _mapCoordinates[neighbours[i]].TileObjectType = objectType;
                             _mapCoordinates[neighbours[i]].Type = type;
-
+                            switch (objectType)
+                            {
+                                case TileObjectType.Trees:
+                                    switch (trees)
+                                    {
+                                        case 0:
+                                            _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Palm;
+                                            break;  
+                                        case 1:
+                                            _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Pine;
+                                            break; 
+                                        case 2:
+                                            _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Xmas;
+                                            break;
+                                    }
+                                    break;
+                                case TileObjectType.Mushrooms:
+                                        _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Mushroom;
+                                    break;
+                                case TileObjectType.Flower:
+                                    _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Flower;
+                                    break;
+                                case TileObjectType.Grass:
+                                    _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Grass;
+                                    break;
+                            }
+                          
                             amount--;
                         }
                     }
