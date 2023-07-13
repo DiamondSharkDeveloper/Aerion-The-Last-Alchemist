@@ -18,13 +18,13 @@ MonoBehaviour:
   waterSize: 160
   swampSize: 100
   rocksSize: 80
-  treesSize: 1200
+  treesSize: 1500
   mushroomSize: 150
   flowerSize: 300
   grassSize: 600
   ingredientsValue: 30
-  heroPosition: 220
-  housePosition: 311
+  heroPosition: 311
+  housePosition: 322
   creaturesType: 000000000100000002000000
   creaturesId:
   - Lisovic0forest

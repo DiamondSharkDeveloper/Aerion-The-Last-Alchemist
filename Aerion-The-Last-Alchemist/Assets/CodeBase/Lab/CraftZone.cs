@@ -8,7 +8,9 @@ using CodeBase.Services.StaticData;
 using CodeBase.StaticData;
 using CodeBase.UI.Elements;
 using CodeBase.UI.Windows;
+using CodeBase.UI.Windows.Inventory.Formula;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +32,7 @@ namespace CodeBase.Lab
         [SerializeField] private FireStick _fireStick;
         [SerializeField]private Sprite _empty;
         [SerializeField]private Sprite _poison;
+        [SerializeField] private FormulaPage page;
         private IPersistentProgressService _persistentProgressService;
         private BaseType _waterBase;
         private IStaticDataService _staticDataService;
@@ -51,9 +54,17 @@ namespace CodeBase.Lab
             fire.gameObject.SetActive(false);
             kettlePotionsSprite.gameObject.SetActive(false);
             SetLightColor(new Color(1, 1, 1, 0));
-            kettlePotionsSprite.color *= new Color(1, 1, 1, 0);
+            kettlePotionsSprite.color *= new Color(0, 0, 0, 0);
             openIngredientButton.Init(windowService);
-            openFormulaButton.Init(windowService, data => { }, false);
+            openFormulaButton.Init(windowService, data =>
+            {
+                page.transform.parent.gameObject.SetActive(true);
+                page.SetPage(data, persistentProgressService.Progress.gameData.lootData, staticData =>
+                {
+                    page.transform.parent.gameObject.SetActive(false);
+                } ,false);
+            }, false);
+            page.transform.parent.gameObject.SetActive(false);
             foreach (Bottle bottle in bottles)
             {
                 bottle.OnClick += bottle1 => { _currentObject = bottle1; };
@@ -145,6 +156,7 @@ namespace CodeBase.Lab
 
         private IEnumerator Craft(FormulaStaticData formulaStaticData)
         {
+            page.transform.parent.gameObject.SetActive(false);
             Color potionColor = GetPotionsColor(formulaStaticData.potionType);
             if (!string.IsNullOrEmpty(formulaStaticData.name))
             {
@@ -183,6 +195,7 @@ namespace CodeBase.Lab
             bubblesParticleSystem.gameObject.SetActive(false);
             yield return new WaitForSecondsRealtime(3);
             kettlePotionsSprite.gameObject.SetActive(false);
+            kettlePotionsSprite.color *= new Color(0, 0, 0, 0);
             SetLightColor(new Color(1, 1, 1, 0));
             ingredientHandler.RemoveBubbles();
             kettleAnimator.SetTrigger(Idle);

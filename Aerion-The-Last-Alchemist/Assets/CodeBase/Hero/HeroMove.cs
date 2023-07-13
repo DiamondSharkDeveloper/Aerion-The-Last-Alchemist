@@ -14,7 +14,7 @@ namespace CodeBase.Hero
     {
         private IInputService _inputService;
         private MyTile _currentTile;
-        private float moveSpeed = 2f;
+        private float moveSpeed = 1.8f;
         private TweenerCore<Vector3, Vector3, VectorOptions> _core;
         private LookAtTarget _lookAtTarget;
         public bool canMove = true;
@@ -33,10 +33,10 @@ namespace CodeBase.Hero
             {
                 _core?.Kill();
                 transform.SetParent(tile.Tile.gameObject.transform);
-                float speed = Vector3.Distance(transform.position,
-                    tile.StartWorldPosition)*moveSpeed;
                 _core = transform.DOMove(new Vector3(tile.StartWorldPosition.x,transform.position.y,tile.StartWorldPosition.z),
-                    speed);
+                    Vector3.Distance(transform.position,
+                        tile.StartWorldPosition) /
+                    moveSpeed);
                 _core.onComplete += () =>
                 {
                     transform.localPosition = Vector3.zero;

@@ -22,12 +22,9 @@ namespace CodeBase.Lab
                 if (!_formulaStaticDataDic.ContainsKey(formulaStaticData.baseType))
                 {
                     _formulaStaticDataDic.Add(formulaStaticData.baseType,
-                        new List<FormulaStaticData>(formulaStaticDatas));
+                        new List<FormulaStaticData>());
                 }
-                else
-                {
-                    _formulaStaticDataDic[formulaStaticData.baseType].Add(formulaStaticData);
-                }
+                _formulaStaticDataDic[formulaStaticData.baseType].Add(formulaStaticData);
             }
         }
 
@@ -37,14 +34,14 @@ namespace CodeBase.Lab
             if (isCattleEmpty)
             {
                 formulaStaticData.sprite = _empty;
-               
+
                 return formulaStaticData;
             }
 
             if (ingredients == null || ingredients.Count == 0)
             {
                 formulaStaticData.sprite = _empty;
-                formulaStaticData.name = "emty";
+                formulaStaticData.name = "empty";
                 return formulaStaticData;
             }
 

@@ -17,8 +17,15 @@ namespace CodeBase.UI.Windows.Inventory.Formula
         [SerializeField] private GameObject ingredientsHolder;
         [SerializeField] private Sprite backItemSprite;
 
-        public void SetPage(FormulaStaticData staticData, LootData lootData, Action<FormulaStaticData> brewAction)
+        public void SetPage(FormulaStaticData staticData, LootData lootData, Action<FormulaStaticData> brewAction,bool isBook=true)
         {
+            if (!isBook)
+            {
+                _brewButton.onClick.AddListener(() =>
+                {
+                    brewAction?.Invoke(staticData);
+                });
+            }
             potionNameText.text = staticData.potionType + " Potion" + " Level " + staticData.potionLevel;
             items.Add(potion);
             potion.SetItem(staticData.sprite,staticData.potionType.ToString());
@@ -38,8 +45,12 @@ namespace CodeBase.UI.Windows.Inventory.Formula
             if (avaliableIngedientsCount == staticData.ingredients.Count)
             {
                 _brewButtonImage.sprite = _brewButtonActiveSprite;
-                _brewButton.onClick.AddListener(() => { brewAction?.Invoke(staticData); });
+                _brewButton.onClick.AddListener(() =>
+                {
+                    brewAction?.Invoke(staticData);
+                });
             }
+            
         }
     }
 }

@@ -128,7 +128,10 @@ namespace CodeBase.Services.Level
         {
             foreach (int neighbour in GetNeighbours(staticData.housePosition, staticData.mapSize))
             {
-                _mapCoordinates[neighbour].TileObjectType = TileObjectType.House;
+                foreach (int i in GetNeighbours( neighbour, staticData.mapSize))
+                {
+                    _mapCoordinates[i].TileObjectType = TileObjectType.House;
+                }
             }
         }
 

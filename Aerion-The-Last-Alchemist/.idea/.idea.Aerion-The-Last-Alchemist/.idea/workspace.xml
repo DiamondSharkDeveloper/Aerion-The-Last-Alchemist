@@ -6,36 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="49f6c8da-8501-430d-8f55-59d73b139ce2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/FloraTipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/FloraTipe.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/PotionCrafter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/PotionCrafter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle E Glass..png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/2D/2D Potions/2D_Variation/Bottle E Glass..png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Grass/SM_Prop_Grass_new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Lisovyk_Pbr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Lisovyk_Pbr.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Lisovyk_lighter (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Vodianic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Creatures/Lis/Vodianic.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion E_Fill.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Grass/SM_Prop_Grass_new.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Pine_tree_atlas_BaseMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Pine_tree_atlas_BaseMap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_xmass-tree_Deciduous_leaves_BaseMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_xmass-tree_Deciduous_leaves_BaseMap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_xmass-tree_Xmass_tree_BaseMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_xmass-tree_Xmass_tree_BaseMap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Formula  Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Formula  Window.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulaPagePrefab(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/book/FormulaPagePrefab(Clone).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature dark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature dark.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_06.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_06.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_07.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_08.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_08.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_09.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Mushrooms/Mushroom_09.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
@@ -138,10 +120,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23568">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14216">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23568" />
+      <option name="pid" value="14216" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -191,7 +173,7 @@
       <workItem from="1688454700846" duration="845000" />
       <workItem from="1688594800203" duration="14035000" />
       <workItem from="1688860612073" duration="9339000" />
-      <workItem from="1689211749157" duration="18536000" />
+      <workItem from="1689211749157" duration="24088000" />
     </task>
     <servers />
   </component>
@@ -298,52 +280,52 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>76</line>
+          <line>87</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="76" containingFunctionPresentation="lambda expression inside method 'Init'">
             <startOffsets>
-              <option value="3424" />
+              <option value="3921" />
             </startOffsets>
             <endOffsets>
-              <option value="3437" />
+              <option value="3934" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>169</line>
+          <line>181</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="165" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="6810" />
+              <option value="7370" />
             </startOffsets>
             <endOffsets>
-              <option value="6846" />
+              <option value="7406" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>173</line>
+          <line>185</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="169" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="6898" />
+              <option value="7458" />
             </startOffsets>
             <endOffsets>
-              <option value="6941" />
+              <option value="7501" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>163</line>
+          <line>175</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="161" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="6617" />
+              <option value="7177" />
             </startOffsets>
             <endOffsets>
-              <option value="6716" />
+              <option value="7276" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="202" />
@@ -415,16 +397,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/PotionCrafter.cs</url>
-          <line>63</line>
+          <line>60</line>
           <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\PotionCrafter.cs" initialLine="63" containingFunctionPresentation="method 'CheckFormula'">
             <startOffsets>
-              <option value="2179" />
+              <option value="2086" />
             </startOffsets>
             <endOffsets>
-              <option value="2191" />
+              <option value="2098" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaPage.cs" initialLine="42" containingFunctionPresentation="lambda expression inside method 'SetPage'">
+            <startOffsets>
+              <option value="2147" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2178" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/Formula/FormulaPage.cs</url>
+          <line>44</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\Formula\FormulaPage.cs" initialLine="37" containingFunctionPresentation="method 'SetPage'">
+            <startOffsets>
+              <option value="1912" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1973" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="211" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
