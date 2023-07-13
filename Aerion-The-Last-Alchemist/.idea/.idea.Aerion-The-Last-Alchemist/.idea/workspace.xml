@@ -7,62 +7,48 @@
     <list default="true" id="49f6c8da-8501-430d-8f55-59d73b139ce2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/TileObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/TileObjectType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Map/MyTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Map/MyTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Level/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/IRandomService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/IRandomService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/RandomService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Randomizer/RandomService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/LevelStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/LevelStaticData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion A_Fill.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion C_Fill.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Corks.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/Potion Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Albedo_L.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Albedo_L.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Pbr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hero/Alchemist_Pbr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_large.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_large.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_medium.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_medium.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_small.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Mushrooms/Mushroom_small.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_large.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_large.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_small.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Deciduous_tree_small.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Pine_crown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Pine_crown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Materials/Texture_atlas_trees_Pine_Deciduous_BaseMap.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_large.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_large.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_small.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/Pine_tree_small.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/TT_checker_2048x2048_UV_GRID.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_N.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 2/Materials/Rock_2_N.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 3/Materials/Rock_3_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Rock/Textures/Rock 3/Materials/Rock_3_D.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_1.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_1.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_2.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_2.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_3.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_3.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_4.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_4.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_5.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_5.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_6.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_6.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_7.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_7.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_8.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_8.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Deciduous_trunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Deciduous_trunk.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_Pine_Deciduous_BaseMap (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_Pine_Deciduous_BaseMap (2).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/House/HousePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Loot/LootPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Loot/LootPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Materials/Tile/GrassTileMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Tile/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Tile/Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Trees/TreesPrefab04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blade_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blade_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +199,8 @@
       <workItem from="1688257001205" duration="24748000" />
       <workItem from="1688454700846" duration="845000" />
       <workItem from="1688594800203" duration="14035000" />
-      <workItem from="1688860612073" duration="6443000" />
+      <workItem from="1688860612073" duration="9339000" />
+      <workItem from="1689211749157" duration="1084000" />
     </task>
     <servers />
   </component>

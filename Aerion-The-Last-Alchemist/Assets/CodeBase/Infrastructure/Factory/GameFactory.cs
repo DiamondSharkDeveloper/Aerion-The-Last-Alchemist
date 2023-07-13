@@ -91,6 +91,12 @@ namespace CodeBase.Infrastructure.Factory
             _mushroomsPath.Add(AssetAddress.MushroomPath01);
             _mushroomsPath.Add(AssetAddress.MushroomPath02);
             _mushroomsPath.Add(AssetAddress.MushroomPath03);
+            _mushroomsPath.Add(AssetAddress.MushroomPath04);
+            _mushroomsPath.Add(AssetAddress.MushroomPath05);
+            _mushroomsPath.Add(AssetAddress.MushroomPath06);
+            _mushroomsPath.Add(AssetAddress.MushroomPath07);
+            _mushroomsPath.Add(AssetAddress.MushroomPath08);
+            _mushroomsPath.Add(AssetAddress.MushroomPath09);
 
             _positionsInTile = new List<Vector3>(9);
             _positionsInTile.Add(new Vector3(0, 0, 0));
@@ -221,7 +227,7 @@ namespace CodeBase.Infrastructure.Factory
                     mapCoordinate.StartWorldPosition + _positionsInTile[i], forestPlantation.transform);
                 RandomSize(gameObject, minSize, maxSize);
                 Quaternion transformLocalRotation = gameObject.transform.localRotation;
-                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
+                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 360), 0);
                 gameObject.transform.localRotation = transformLocalRotation;
             }
         }
@@ -230,8 +236,11 @@ namespace CodeBase.Infrastructure.Factory
         {
             GameObject grassPlantation = new GameObject(mapCoordinate.CellPosition + " grassPlantation");
             grassPlantation.transform.SetParent(_grass.transform);
-            int count = _randomService.Next(0, 150);
+          
+            int count = _randomService.Next(0, 200);
             float faunaCount=0;
+            float minSize = 80;
+            int maxSize = 175;
             GameObject floraPrefab =await _assets.Load<GameObject>(_mushroomsPath[_randomService.Next(0, _mushroomsPath.Count)]);
             switch (mapCoordinate.FloraTipe)
             {
@@ -239,17 +248,19 @@ namespace CodeBase.Infrastructure.Factory
                      faunaCount = _randomService.Next(0, count*0.03f);
                     break;
                 case FloraTipe.Flower:
+                    minSize = 20;
+                    maxSize = 40;
                     faunaCount = _randomService.Next(0, count*0.15f);
                     floraPrefab =await _assets.Load<GameObject>(_flowerPath[_randomService.Next(0, _flowerPath.Count)]);
                     break;
                 case FloraTipe.Grass:
+                   
                     faunaCount = 0;
                     break;
             }
 
             
-            float minSize = 80;
-            int maxSize = 175;
+          
             List<Vector3> positions = new List<Vector3>();
             for (int i = 0; i < count; i++)
             {
@@ -272,7 +283,7 @@ namespace CodeBase.Infrastructure.Factory
                 }
                 else
                 {
-                    maxSize =50 ;
+                    maxSize =30 ;
                     minSize = 100;
                     gameObject = InstantiateRegistered(await _assets.Load<GameObject>(_grassPath[_randomService.Next(0, _grassPath.Count)]),
                         mapCoordinate.StartWorldPosition +pos, grassPlantation.transform);
@@ -280,7 +291,7 @@ namespace CodeBase.Infrastructure.Factory
 
                 RandomSize(gameObject, minSize, maxSize);
                 Quaternion transformLocalRotation = gameObject.transform.localRotation;
-                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 181), 0);
+                transformLocalRotation.eulerAngles = new Vector3(0, _randomService.Next(0, 360), 0);
                 gameObject.transform.localRotation = transformLocalRotation;
             }
         }
@@ -292,7 +303,7 @@ namespace CodeBase.Infrastructure.Factory
                 mapCoordinate.Tile.gameObject.transform); //);
             gameObject.transform.localPosition = new Vector3(0, 0.2f, 0);
             Quaternion transformLocalRotation = gameObject.transform.localRotation;
-            transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 181), 0);
+            transformLocalRotation.eulerAngles = new Vector3(90, _randomService.Next(0, 360), 0);
             gameObject.transform.localRotation = transformLocalRotation;
             RandomSize(gameObject, 60, 140);
         }
@@ -471,6 +482,12 @@ namespace CodeBase.Infrastructure.Factory
             await _assets.Load<GameObject>(AssetAddress.MushroomPath01);
             await _assets.Load<GameObject>(AssetAddress.MushroomPath02);
             await _assets.Load<GameObject>(AssetAddress.MushroomPath03);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath04);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath05);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath06);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath07);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath08);
+            await _assets.Load<GameObject>(AssetAddress.MushroomPath09);
         }
 
         private GameObject InstantiateRegistered(GameObject prefab, Vector3 at)

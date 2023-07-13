@@ -47,6 +47,12 @@ namespace CodeBase.Infrastructure.Factory
         public const string MushroomPath01="Mushroom_01";
         public const string MushroomPath02="Mushroom_02";
         public const string MushroomPath03="Mushroom_03";
+        public const string MushroomPath04="Mushroom_04";
+        public const string MushroomPath05="Mushroom_05";
+        public const string MushroomPath06="Mushroom_06";
+        public const string MushroomPath07="Mushroom_07";
+        public const string MushroomPath08="Mushroom_08";
+        public const string MushroomPath09="Mushroom_09";
         
         
     }

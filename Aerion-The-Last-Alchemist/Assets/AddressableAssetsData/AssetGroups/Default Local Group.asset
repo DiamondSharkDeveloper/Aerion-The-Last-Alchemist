@@ -193,6 +193,30 @@ MonoBehaviour:
     m_Address: Grass_blade_2
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 75455935cfe20fe488b6ee41eddde7fb
+    m_Address: Mushroom_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d1722c02dd6f8c547ba677e068814266
+    m_Address: Mushroom_05
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 07871eac744abeb4abf7e527115afa1b
+    m_Address: Mushroom_06
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6fb23f738a841404ea85e648a6018dfe
+    m_Address: Mushroom_07
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 13e042eaee25750418c816f50a4151a8
+    m_Address: Mushroom_08
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1209fcad3b10d9d4c8e09fd5f85d3633
+    m_Address: Mushroom_09
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:
