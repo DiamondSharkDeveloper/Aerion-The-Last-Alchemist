@@ -32,7 +32,14 @@ namespace CodeBase.UI.Windows.Inventory
         protected override void SubscribeUpdates()
         {
             Progress.gameData.lootData.Changed += RefreshItem;
+            _onClose += () => {  Progress.gameData.lootData.Changed -= RefreshItem;};
         }
+
+        private void OnDisable()
+        {
+            Progress.gameData.lootData.Changed -= RefreshItem;
+        }
+        
 
         public void Initialize(Dictionary<string,IngredientStaticData> ingredientStaticData,
             List<FormulaStaticData> formulaStaticData,Action<Sprite,string> onHold)

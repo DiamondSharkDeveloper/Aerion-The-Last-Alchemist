@@ -21,6 +21,7 @@ namespace CodeBase.UI.Windows.Inventory
         protected override void SubscribeUpdates()
         {
             Progress.gameData.lootData.Changed += RefreshItem;
+            _onClose += () => {  Progress.gameData.lootData.Changed -= RefreshItem;};
         }
     }
 }

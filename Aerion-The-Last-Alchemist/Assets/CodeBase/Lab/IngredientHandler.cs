@@ -9,7 +9,6 @@ namespace CodeBase.Lab
     {
         [SerializeField] private List<Bubble> bubbles = new List<Bubble>();
         private readonly List<string> _ingredientsNames = new List<string>();
-        [SerializeField] private BoxCollider boxCollider;
         public Action OnMouseOverClick;
         public Action OnMouseOverCattle;
         
@@ -45,5 +44,8 @@ namespace CodeBase.Lab
 
             if (_ingredientsNames != null) _ingredientsNames.Clear();
         }
+
+        public List<string> GetIngredients() => _ingredientsNames;
+
     }
 }

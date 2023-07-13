@@ -20,5 +20,6 @@ MonoBehaviour:
   name: Green Level 1
   efect: 10
   potionType: 3
+  baseType: 3
   potionLevel: 1
   description: 

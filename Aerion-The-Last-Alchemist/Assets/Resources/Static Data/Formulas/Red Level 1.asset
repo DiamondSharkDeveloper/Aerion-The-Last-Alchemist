@@ -20,5 +20,6 @@ MonoBehaviour:
   name: Red  Level 1
   efect: 10
   potionType: 0
+  baseType: 2
   potionLevel: 1
   description: 

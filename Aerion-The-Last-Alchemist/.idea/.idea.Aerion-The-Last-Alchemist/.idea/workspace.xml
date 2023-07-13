@@ -6,49 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="49f6c8da-8501-430d-8f55-59d73b139ce2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aerion-The-Last-Alchemist/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap 5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Flowers/Materials/Foliage_atlas_base_2_Tree_large_leaves_BaseMap.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_1.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_1.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_2.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_2.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_3.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_3.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_4.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_4.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_5.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_5.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_6.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_6.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_7.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_7.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_8.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Grass/Grass_blade_8.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Grass/Tall_grass_blades_2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Deciduous_trunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Deciduous_trunk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Pine_trunk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Materials/Xmass_tree_texture_base-color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_Pine_Deciduous_BaseMap (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_Pine_Deciduous_BaseMap (2).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/New/Trees/new/Texture_atlas_trees_deciduous_DefaultMaterial_BaseMap.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Levels/Level 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Camera/Strategy Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Creatures/Creature Vodianic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blade_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blade_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Grass/Grass_blades_9.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/Bottle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/Bottle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Lab/PotionCrafter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Lab/PotionCrafter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/IngredientsWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/InventoryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/InventoryWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Green Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Green Level 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Red Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Red Level 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Yellow Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Static Data/Formulas/Yellow Level 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lab.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,10 +120,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23568">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23568" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -200,7 +173,7 @@
       <workItem from="1688454700846" duration="845000" />
       <workItem from="1688594800203" duration="14035000" />
       <workItem from="1688860612073" duration="9339000" />
-      <workItem from="1689211749157" duration="1084000" />
+      <workItem from="1689211749157" duration="11663000" />
     </task>
     <servers />
   </component>
@@ -307,81 +280,120 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="46" containingFunctionPresentation="lambda expression inside method 'Init'">
+          <line>76</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="76" containingFunctionPresentation="lambda expression inside method 'Init'">
             <startOffsets>
-              <option value="2464" />
+              <option value="3424" />
             </startOffsets>
             <endOffsets>
-              <option value="2488" />
+              <option value="3437" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="163" />
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs</url>
-          <line>33</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\IngredientHandler.cs" initialLine="37" containingFunctionPresentation="method 'ActiveBubble'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
+          <line>170</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="165" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="854" />
+              <option value="6878" />
             </startOffsets>
             <endOffsets>
-              <option value="882" />
+              <option value="6914" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="165" />
+          <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/IngredientHandler.cs</url>
-          <line>34</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\IngredientHandler.cs" initialLine="38" containingFunctionPresentation="method 'ActiveBubble'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
+          <line>174</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="169" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="895" />
+              <option value="6966" />
             </startOffsets>
             <endOffsets>
-              <option value="950" />
+              <option value="7009" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="166" />
+          <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/Bubble.cs</url>
-          <line>11</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\Bubble.cs" initialLine="11" containingFunctionPresentation="method 'SetSprite'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/CraftZone.cs</url>
+          <line>164</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\CraftZone.cs" initialLine="161" containingFunctionPresentation="method 'Craft'">
             <startOffsets>
-              <option value="303" />
+              <option value="6685" />
             </startOffsets>
             <endOffsets>
-              <option value="339" />
+              <option value="6784" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="177" />
+          <option name="timeStamp" value="202" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/Bubble.cs</url>
-          <line>12</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\Bubble.cs" initialLine="12" containingFunctionPresentation="method 'SetSprite'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Data/LootData.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Data\LootData.cs" initialLine="13" containingFunctionPresentation="method 'Collect'">
             <startOffsets>
-              <option value="352" />
+              <option value="323" />
             </startOffsets>
             <endOffsets>
-              <option value="393" />
+              <option value="388" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="178" />
+          <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/CodeBase/Lab/Bottle.cs</url>
-          <line>80</line>
-          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Lab\Bottle.cs" initialLine="79" containingFunctionPresentation="method 'PourOut'">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Data/LootData.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Data\LootData.cs" initialLine="22" containingFunctionPresentation="method 'Collect'">
             <startOffsets>
-              <option value="2219" />
+              <option value="634" />
             </startOffsets>
             <endOffsets>
-              <option value="2257" />
+              <option value="656" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="180" />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Data/LootData.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Data\LootData.cs" initialLine="19" containingFunctionPresentation="method 'Collect'">
+            <startOffsets>
+              <option value="550" />
+            </startOffsets>
+            <endOffsets>
+              <option value="606" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Data/LootData.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\Data\LootData.cs" initialLine="15" containingFunctionPresentation="method 'Collect'">
+            <startOffsets>
+              <option value="419" />
+            </startOffsets>
+            <endOffsets>
+              <option value="488" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/Inventory/InventoryWindow.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Work\Git\Aerion\Aerion-The-Last-Alchemist\Aerion-The-Last-Alchemist\Assets\CodeBase\UI\Windows\Inventory\InventoryWindow.cs" initialLine="22" containingFunctionPresentation="method 'SubscribeUpdates'">
+            <startOffsets>
+              <option value="696" />
+            </startOffsets>
+            <endOffsets>
+              <option value="746" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="207" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
