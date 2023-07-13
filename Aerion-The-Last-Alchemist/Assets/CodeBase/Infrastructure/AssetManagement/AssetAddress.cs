@@ -44,6 +44,10 @@ namespace CodeBase.Infrastructure.Factory
         public const string FlowerPath05="Flower_5";
         public const string FlowerPath06="Flower_6";
         
+        public const string BushPath01="Bush_1";
+        public const string BushPath02="Bush_2";
+        public const string BushPath03="Bush_3";
+        
         public const string MushroomPath01="Mushroom_01";
         public const string MushroomPath02="Mushroom_02";
         public const string MushroomPath03="Mushroom_03";

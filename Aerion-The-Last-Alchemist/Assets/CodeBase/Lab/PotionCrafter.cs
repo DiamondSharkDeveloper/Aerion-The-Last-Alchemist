@@ -41,7 +41,7 @@ namespace CodeBase.Lab
                 return formulaStaticData;
             }
 
-            if (ingredients == null && ingredients.Count == 0)
+            if (ingredients == null || ingredients.Count == 0)
             {
                 formulaStaticData.sprite = _empty;
                 formulaStaticData.name = "emty";

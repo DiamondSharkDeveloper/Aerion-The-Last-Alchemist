@@ -116,7 +116,7 @@ namespace CodeBase.Lab
             {
                 if (bottle.type == formulaStaticData.baseType)
                 {
-                    bottle.transform.DOMove(new Vector3(0, 0.9f, bottle.transform.position.z), 2f);
+                    bottle.transform.DOMoveY( 0.9f, 2f);
                     bottle.OnCatle.Invoke();
                 }
             }

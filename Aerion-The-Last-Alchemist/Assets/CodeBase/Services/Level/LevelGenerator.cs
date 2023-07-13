@@ -145,7 +145,7 @@ namespace CodeBase.Services.Level
                 
                 int randTileNumber = _randomService.Next(0, _mapCoordinates.Count);
                 List<int> neighbours = GetNeighbours(randTileNumber, mapSize);
-                int trees=_randomService.Next(0, 3);
+                int trees=_randomService.Next(0, 4);
                 
                 for (int i = 0; i < neighbours.Count; i++)
                 {
@@ -169,6 +169,10 @@ namespace CodeBase.Services.Level
                                         case 2:
                                             _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Xmas;
                                             break;
+                                    }
+                                    if (i>0&&_randomService.Next(0, 5)<1)
+                                    {
+                                        _mapCoordinates[neighbours[i]].FloraTipe = FloraTipe.Bush;   
                                     }
                                     break;
                                 case TileObjectType.Mushrooms:

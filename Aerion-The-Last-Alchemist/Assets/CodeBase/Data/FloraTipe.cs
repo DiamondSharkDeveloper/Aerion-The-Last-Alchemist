@@ -6,5 +6,6 @@
     Palm,
     Flower,
     Mushroom,
-    Grass
+    Grass,
+    Bush
 }

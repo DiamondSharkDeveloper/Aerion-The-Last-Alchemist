@@ -217,6 +217,18 @@ MonoBehaviour:
     m_Address: Mushroom_09
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a9bf0fe3ce7225345b9d4f90b4b0c6dd
+    m_Address: Bush_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0cec810e940fb1248bccf03f85256476
+    m_Address: Bush_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bf29360dccf4b2c49ba78d90e71658ff
+    m_Address: Bush_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f23e817e6bcda384cb585f0cf1553895, type: 2}
   m_SchemaSet:
